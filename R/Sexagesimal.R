@@ -19,3 +19,4 @@
 sexagesimal <- function(x,y,z){
   x-(y/60)-(z/3600)
 }
+
