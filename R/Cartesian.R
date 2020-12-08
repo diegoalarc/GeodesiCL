@@ -32,9 +32,9 @@
 #' value <- cartesian(4,h, rad_lat, rad_lon)
 #' print(value)
 cartesian <- function(a,b,c,d){
-  valueX <- (as.numeric(Elipsoide[a,2])/sqrt(1 - as.numeric(Elipsoide[a,6])*sin(c)^2)+b)*cos(c)*cos(d)
-  valueY <- (as.numeric(Elipsoide[a,2])/sqrt(1 - as.numeric(Elipsoide[a,6])*sin(c)^2)+b)*cos(c)*sin(d)
-  valueZ <- ((as.numeric(Elipsoide[a,2])/sqrt(1 - as.numeric(Elipsoide[a,6])*sin(c)^2))*(1 - as.numeric(Elipsoide[a,6]))+b)*sin(c)
+  valueX <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2)+b)*cos(c)*cos(d)
+  valueY <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2)+b)*cos(c)*sin(d)
+  valueZ <- ((as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2))*(1 - as.numeric(Ellipsoids[a,6]))+b)*sin(c)
   values <- data.frame(valueX, valueY, valueZ)
   names(values) <- c("X", "Y", "Z")
   return(values)

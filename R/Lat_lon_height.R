@@ -22,8 +22,8 @@
 Lat_lon_height <- function(a,x,y,z){
   d <- sqrt(x^2+y^2)
   lon <- atan(y/x)
-  lat <- atan((z+as.numeric(Elipsoide[a,5])*as.numeric(Elipsoide[a,7])*sin(atan((as.numeric(Elipsoide[a,2])*z)/(as.numeric(Elipsoide[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Elipsoide[a,2])*as.numeric(Elipsoide[a,6])*cos(atan((as.numeric(Elipsoide[a,2])*z)/(as.numeric(Elipsoide[a,5])*sqrt(x^2+y^2))))^3))
-  N <- as.numeric(Elipsoide[a,2])/sqrt(1 - as.numeric(Elipsoide[a,6])*sin(lat)^2)
+  lat <- atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3))
+  N <- as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(lat)^2)
   H <- (d/cos(lat))-N
   values <- data.frame(as.numeric(lat), as.numeric(lon), as.numeric(H))
   names(values) <- c("lat", "lon", "H")

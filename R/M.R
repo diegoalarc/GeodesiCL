@@ -21,6 +21,6 @@
 #' value1 <- M(4, value)
 #' print(value1)
 M <- function(x,y){
-  value <- as.numeric(Elipsoide[x,2])*(1 - as.numeric(Elipsoide[x,6]))/(1 - as.numeric(Elipsoide[x,6])*sin(y)^2)^(3/2)
+  value <- as.numeric(Ellipsoids[x,2])*(1 - as.numeric(Ellipsoids[x,6]))/(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)^(3/2)
   return(value)
 }

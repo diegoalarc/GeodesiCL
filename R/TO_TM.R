@@ -42,17 +42,17 @@
 #' value <- TO_TM(4, sexa_lat, sexa_lon, CM, SC_FACTOR_Ko, FE, FN)
 #' print(value)
 TO_TM <- function(a,b,c,d,e,f,g){
-  N <- as.numeric(Elipsoide[a,2])/sqrt(1-as.numeric(Elipsoide[a,6])*sin(b*pi/180)^2)
+  N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(b*pi/180)^2)
   DELTA_LAMBA <- (c-d)*3600
-  a1 <- as.numeric(Elipsoide[a,14])*b
-  b1 <- as.numeric(Elipsoide[a,15])*sin(2*(b*pi/180))
-  c1 <- as.numeric(Elipsoide[a,16])*sin(4*(b*pi/180))
-  d1 <- as.numeric(Elipsoide[a,17])*sin(6*(b*pi/180))
-  e1 <- as.numeric(Elipsoide[a,18])*sin(8*(b*pi/180))
-  f1 <- as.numeric(Elipsoide[a,19])*sin(10*(b*pi/180))
+  a1 <- as.numeric(Ellipsoids[a,14])*b
+  b1 <- as.numeric(Ellipsoids[a,15])*sin(2*(b*pi/180))
+  c1 <- as.numeric(Ellipsoids[a,16])*sin(4*(b*pi/180))
+  d1 <- as.numeric(Ellipsoids[a,17])*sin(6*(b*pi/180))
+  e1 <- as.numeric(Ellipsoids[a,18])*sin(8*(b*pi/180))
+  f1 <- as.numeric(Ellipsoids[a,19])*sin(10*(b*pi/180))
   Be <- a1-b1+c1-d1+e1-f1
   t <- tan(b*pi/180)
-  n <- sqrt(as.numeric(Elipsoide[a,7]))*cos(b*pi/180)
+  n <- sqrt(as.numeric(Ellipsoids[a,7]))*cos(b*pi/180)
   N1 <- (1/2)*(DELTA_LAMBA^2)*N*sin(b*pi/180)*cos(b*pi/180)*(Sin_1^2)
   N2 <- (1/24)*(DELTA_LAMBA^4)*N*sin(b*pi/180)*(cos(b*pi/180)^3)*(Sin_1^4)*(5-(t^2)+(9*n^2)+(4*(n^4)))
   N3 <- (1/720)*(DELTA_LAMBA^6)*N*sin(b*pi/180)*(cos(b*pi/180)^5)*(Sin_1^6)*(61-(58*(t^2))+(720*(n^2))-(350*(t^2)*(n^2)))
