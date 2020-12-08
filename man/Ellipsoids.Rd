@@ -6,30 +6,46 @@
 \title{Ellipsoids}
 \format{
 A \code{data.frame} with 19 columns, which are:
-\describe{
-\item{Ellipsoids}{Contains the names of each ellipsoid.}
-\item{a}{Semi major axis of each ellipsoid.}
-\item{1/f}{1/Flattening of each ellipsoid.}
-\item{f}{Flattening of each ellipsoid.}
-\item{b}{Semi minor axis of each ellipsoid.}
-\item{e^2}{1st eccentricity squared of each ellipsoid.}
-\item{eü¾†ˆ¼^2}{2nd eccentricity squared of each ellipsoid.}
-\item{A}{A Constant.}
-\item{B}{B Constant.}
-\item{C}{C Constant.}
-\item{D}{D Constant.}
-\item{E}{E Constant.}
-\item{F}{F Constant.}
-\item{Alfa}{Alfa Constant.}
-\item{Beta}{Beta Constant.}
-\item{Gamma}{Gamma Constant.}
-\item{Delta}{Delta Constant.}
-\item{Epsilon}{Epsilon Constant.}
-\item{Zeta}{Zeta Constant.}
-}
 }
 \usage{
 Ellipsoids
+}
+\arguments{
+\item{Ellipsoids}{Contains the names of each ellipsoid.}
+
+\item{a}{Semi major axis of each ellipsoid.}
+
+\item{1/f}{1/Flattening of each ellipsoid.}
+
+\item{f}{Flattening of each ellipsoid.}
+
+\item{b}{Semi minor axis of each ellipsoid.}
+
+\item{e^2}{1st eccentricity squared of each ellipsoid.}
+
+\item{eü¾†ˆ¼^2}{2nd eccentricity squared of each ellipsoid.}
+
+\item{A}{A Constant.}
+
+\item{B}{B Constant.}
+
+\item{C}{C Constant.}
+
+\item{D}{D Constant.}
+
+\item{E}{E Constant.}
+
+\item{F}{F Constant.}
+
+\item{Alfa}{Alfa Constant.}
+
+\item{Beta}{Beta Constant.}
+
+\item{Gamma}{Gamma Constant.}
+
+\item{Delta}{Delta Constant.}
+
+\item{Epsilon}{Epsilon Constant.}
 }
 \description{
 Contains the values for conversion of the Ellipsoids 'PSAD-56', 'SAD-69', 'WGS-84', 'GRS-80 (SIRGAS)'.

@@ -6,9 +6,6 @@
 \title{Sin1}
 \format{
 A \code{numeric} with the value of sin 1"., which is:
-\describe{
-\item{Sin_1}{Value of sin 1".}
-}
 }
 \usage{
 Sin_1
