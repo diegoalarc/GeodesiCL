@@ -27,7 +27,7 @@ g <- -33
 m <- 38
 s <- 30.123456
 
-Value in radians
+# Value in radians
 rad_lat <- radians(g, m, s)
 print(rad_lat)
 
@@ -36,8 +36,11 @@ g <- -71
 m <- 18
 s <- 44.86475
 
-Value in radians
+# Value in radians
 rad_lon <- radians(g,m,s)
+
+# ELLIPSOIDAL HEIGHT (h)
+h <- 31.885
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 value <- cartesian(4,h, rad_lat, rad_lon)
