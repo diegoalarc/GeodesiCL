@@ -22,11 +22,11 @@
 geodesic <- function(a,x,y,z){
 #  Ellipsoids <- NULL
   d <- sqrt(x^2+y^2)
-  lat <- (atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)))*180/pi
+  lat <- atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3))
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(lat)^2)
-  lon <- (atan(y/x))*180/pi
+  lon <- atan(y/x)
   H <- (d/cos(lat))-N
-  values <- data.frame(as.numeric(lat), as.numeric(lon), as.numeric(H))
+  values <- data.frame(as.numeric(lat*180/pi), as.numeric(lon*180/pi), as.numeric(H))
   names(values) <- c("Lat", "Lon", "H")
   return(values)
 }
