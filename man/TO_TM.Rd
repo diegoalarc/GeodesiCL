@@ -39,7 +39,7 @@ g <- -33
 m <- 12
 s <- 27.11457
 
-# Value in radians
+# Value in sexagesimal
 sexa_lat <- sexagesimal(g, m, s)
 
 # Lon
@@ -47,7 +47,7 @@ g1 <- -71
 m1 <- 18
 s1 <- 44.86475
 
-# Value in radians
+# Value in sexagesimal
 sexa_lon <- sexagesimal(g1, m1, s1)
 
 # ELLIPSOIDAL HEIGHT (h)

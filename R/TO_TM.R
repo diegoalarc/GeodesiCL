@@ -25,7 +25,7 @@
 #' m <- 12
 #' s <- 27.11457
 #'
-#' # Value in radians
+#' # Value in sexagesimal
 #' sexa_lat <- sexagesimal(g, m, s)
 #'
 #' # Lon
@@ -33,7 +33,7 @@
 #' m1 <- 18
 #' s1 <- 44.86475
 #'
-#' # Value in radians
+#' # Value in sexagesimal
 #' sexa_lon <- sexagesimal(g1, m1, s1)
 #'
 #' # ELLIPSOIDAL HEIGHT (h)
@@ -65,7 +65,8 @@ TO_TM <- function(a,b,c,d,e,f,g){
   E3 <- 1/120*DELTA_LAMBA^5*N*cos(b*pi/180)^5*Sin_1^5*(5-18*t^2+t^4+14*n^2-58*t^2*n^2)
   X <- e*(E1+E2+E3)
   East <- X+f
-  values <- data.frame(as.numeric(East), as.numeric(North), as.numeric(X), as.numeric(Y))
-  names(values) <- c("East", "North", "X", "Y")
+  values <- data.frame(as.numeric(East), as.numeric(North), as.numeric(X), as.numeric(Y), as.numeric(DELTA_LAMBA), as.numeric(a1), as.numeric(b1), as.numeric(c1), as.numeric(d1)
+                       , as.numeric(e1), as.numeric(f1), as.numeric(Be), as.numeric(t), as.numeric(n), as.numeric(N1), as.numeric(N2), as.numeric(N3), as.numeric(E1), as.numeric(E2), as.numeric(E3))
+  names(values) <- c("East", "North", "X", "Y", "DELTA_LAMBA","a1", "b1", "c1", "d1", "e1", "f1", "B", "t", "n", "N1", "N2", "N3", "E1", "E2", "E3")
   return(values)
 }
