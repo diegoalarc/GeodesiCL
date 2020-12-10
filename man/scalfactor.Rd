@@ -20,6 +20,8 @@ Scale factor calculation.
 \examples{
 # Test data
 EAST <- 224200
+h <- 2500
+Dhz <- 728.5
 
 # Use the Geodesic distance from the function "Geodis"
 arch_data <- geodis(h,Dhz)
