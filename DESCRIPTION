@@ -1,14 +1,22 @@
-Package: GeodesiCL
 Type: Package
+Package: GeodesiCL
 Title: Geometric Geodesy Functions
 Version: 0.1.0
 Date: 2020-12-10
-Author: Diego Alonso Alarcon Diaz
-Maintainer: Diego Alonso Alarcon Diaz <diego.alarcondiaz@gmail.com>, Karla Francisca Riquelme Carrillo <karla.rcarrillo@outlook.com>
+Authors@R: c(
+    person("Diego Alonso", "Alarcon Diaz", email = "diego.alarcondiaz@gmail.com", role = c("cre","aut")),
+    person("Karla Francisca", "Riquelme Carrillo", email = "karla.rcarrillo@outlook.com", role = "aut"))
 Description: Geometric geodesy functions applied to ellipsoids in Chile (for the moment) created to speed up and facilitate their calculation.
 License: GPL-3
+URL: https://github.com/diegoalarc/GeodesiCL
+Depends:
+    R (>= 3.5.0)
+VignetteBuilder:
+    knitr
 Encoding: UTF-8
+Language: en-US
 LazyData: true
-Depends: 
-    R (>= 3.50)
 RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
