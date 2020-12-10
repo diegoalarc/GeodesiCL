@@ -3,9 +3,9 @@
 \docType{data}
 \name{Ellipsoids}
 \alias{Ellipsoids}
-\title{Ellipsoids}
+\title{Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GRS-80 SIRGAS.}
 \format{
-A \code{data.frame} with 19 columns, which are:
+A data frame with 19 columns:
 \describe{
  \item{Ellipsoids}{Contains the names of each ellipsoid.}
  \item{a}{Semi major axis of each ellipsoid.}
@@ -32,6 +32,11 @@ A \code{data.frame} with 19 columns, which are:
 Ellipsoids
 }
 \description{
-Contains the values for conversion of the Ellipsoids 'PSAD-56', 'SAD-69', 'WGS-84', 'GRS-80 (SIRGAS)'.
+Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GRS-80 SIRGAS.
+}
+\examples{
+\dontrun{
+ Ellipsoids
+}
 }
 \keyword{datasets}

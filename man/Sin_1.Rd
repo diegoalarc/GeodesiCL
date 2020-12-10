@@ -3,7 +3,7 @@
 \docType{data}
 \name{Sin_1}
 \alias{Sin_1}
-\title{Sin_1"}
+\title{Contains the values of sin 1".}
 \format{
 A \code{numeric} with the value of sin 1"., which is:
 \describe{
@@ -15,5 +15,10 @@ Sin_1
 }
 \description{
 Contains the values of sin 1".
+}
+\examples{
+\dontrun{
+ Sin_1
+}
 }
 \keyword{datasets}
