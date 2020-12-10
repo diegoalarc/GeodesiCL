@@ -12,6 +12,7 @@
 #' value <- E2(4)
 #' print(value)
 E2 <- function(x){
+#  Ellipsoids <- NULL
   value <- 1 - as.numeric(Ellipsoids[x,6])
   return(value)
 }

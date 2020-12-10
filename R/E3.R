@@ -21,6 +21,7 @@
 #' value1 <- E3(4, value)
 #' print(value1)
 E3 <- function(x,y){
+#  Ellipsoids <- NULL
   value <- (1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)
   return(value)
 }

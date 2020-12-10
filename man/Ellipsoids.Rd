@@ -13,7 +13,7 @@ A data frame with 19 columns:
  \item{f}{Flattening of each ellipsoid.}
  \item{b}{Semi minor axis of each ellipsoid.}
  \item{e^2}{1st eccentricity squared of each ellipsoid.}
- \item{eü¾†ˆ¼^2}{2nd eccentricity squared of each ellipsoid.}
+ \item{e'^2}{2nd eccentricity squared of each ellipsoid.}
  \item{A}{A Constant.}
  \item{B}{B Constant.}
  \item{C}{C Constant.}

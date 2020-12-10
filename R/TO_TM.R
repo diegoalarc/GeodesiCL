@@ -42,6 +42,8 @@
 #' value <- TO_TM(4, sexa_lat, sexa_lon, CM, SC_FACTOR_Ko, FE, FN)
 #' print(value)
 TO_TM <- function(a,b,c,d,e,f,g){
+#  Ellipsoids <- NULL
+#  Sin_1 <- NULL
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(b*pi/180)^2)
   DELTA_LAMBA <- (c-d)*3600
   a1 <- as.numeric(Ellipsoids[a,14])*b

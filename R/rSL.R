@@ -21,6 +21,7 @@
 #' value1 <- rSL(4, value)
 #' print(value1)
 rSL <- function(x,y){
+#  Ellipsoids <- NULL
   r <- as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y)
   S <- (as.numeric(Ellipsoids[x,2])*(1 - as.numeric(Ellipsoids[x,6]))/(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)^(3/2))*y
   L <- (as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y))*y
