@@ -1,11 +1,11 @@
 Package: GeodesiCL
 Type: Package
-Title: Geometric Geodesy functions
+Title: Geometric Geodesy Functions
 Version: 0.1.0
-Date: 2020-12-08
+Date: 2020-12-10
 Author: Diego Alonso Alarcon Diaz
 Maintainer: Diego Alonso Alarcon Diaz <diego.alarcondiaz@gmail.com>, Karla Francisca Riquelme Carrillo <karla.rcarrillo@outlook.com>
-Description: Geometric Geodesy functions applied to ellipsoids in Chile (for the moment) created to speed up and facilitate their calculation.
+Description: Geometric geodesy functions applied to ellipsoids in Chile (for the moment) created to speed up and facilitate their calculation.
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
