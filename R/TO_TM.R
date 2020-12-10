@@ -55,14 +55,14 @@ TO_TM <- function(a,b,c,d,e,f,g){
   Be <- a1-b1+c1-d1+e1-f1
   t <- tan(b*pi/180)
   n <- sqrt(as.numeric(Ellipsoids[a,7]))*cos(b*pi/180)
-  N1 <- (1/2)*(DELTA_LAMBA^2)*N*sin(b*pi/180)*cos(b*pi/180)*(Sin_1^2)
-  N2 <- (1/24)*(DELTA_LAMBA^4)*N*sin(b*pi/180)*(cos(b*pi/180)^3)*(Sin_1^4)*(5-(t^2)+(9*n^2)+(4*(n^4)))
-  N3 <- (1/720)*(DELTA_LAMBA^6)*N*sin(b*pi/180)*(cos(b*pi/180)^5)*(Sin_1^6)*(61-(58*(t^2))+(720*(n^2))-(350*(t^2)*(n^2)))
-  Y <- e*(N1+N2+N3+Be)
+  N1 <- 1/2*DELTA_LAMBA^2*N*sin(b*pi/180)*cos(b*pi/180)*(Sin_1^2)
+  N2 <- 1/24*DELTA_LAMBA^4*N*sin(b*pi/180)*cos(b*pi/180)^3*(Sin_1^4)*(5-t^2+9*n^2+4*n^4)
+  N3 <- 1/720*DELTA_LAMBA^6*N*sin(b*pi/180)*cos(b*pi/180)^5*(Sin_1^6)*(61-58*t^2+720*n^2-350*t^2*n^2)
+  Y <- e*(Be+N1+N2+N3)
   North <- Y+g
   E1 <- DELTA_LAMBA*N*cos(b*pi/180)*Sin_1
-  E2 <- (1/6)*(DELTA_LAMBA^3)*N*(cos(b*pi/180)^3)*(Sin_1^3)*(1-(t^2)+(n^2))
-  E3 <- (1/120)*(DELTA_LAMBA^5)*N*(cos(b*pi/180)^5)*(Sin_1^5)*(5-(18*(t^2))+(t^4)+(14*(n^2))-(58*(t^2)*(n^2)))
+  E2 <- 1/6*DELTA_LAMBA^3*N*cos(b*pi/180)^3*Sin_1^3*(1-t^2+n^2)
+  E3 <- 1/120*DELTA_LAMBA^5*N*cos(b*pi/180)^5*Sin_1^5*(5-18*t^2+t^4+14*n^2-58*t^2*n^2)
   X <- e*(E1+E2+E3)
   East <- X+f
   values <- data.frame(as.numeric(East), as.numeric(North), as.numeric(X), as.numeric(Y))
