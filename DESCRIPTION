@@ -19,4 +19,15 @@ LazyData: true
 RoxygenNote: 7.1.1
 Suggests: 
     knitr,
-    rmarkdown
+    rmarkdown,
+    sp,
+    rgdal,
+	  dplyr,
+	  tibble
+Imports:
+  	knitr,
+    rmarkdown,
+    sp,
+    rgdal,
+  	dplyr,
+  	tibble
