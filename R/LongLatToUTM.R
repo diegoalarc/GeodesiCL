@@ -46,7 +46,7 @@ LongLatToUTM <- function(x, y, units = 'm') {
     stop("multiple zone/hemisphere detected")
 
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
-    as.data.frame() %>%
+    data.frame() %>%
     dplyr::mutate(zone = zone, hemisphere = hemisphere)
   res
   return(res)
