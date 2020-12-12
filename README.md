@@ -8,7 +8,7 @@ This was a project created between [Diego Alarcón](https://www.linkedin.com/in/d
 
 ##
 
-### Installation
+## Installation
 #### Install system dependencies
 Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system.
 
