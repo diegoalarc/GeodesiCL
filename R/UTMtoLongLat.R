@@ -22,7 +22,7 @@
 #' # Zone
 #' zone <- 18
 #'
-#' # Hemisphere
+#' # Hemisphere could be "north" or "south"
 #' Hemisphere <- "south"
 #'
 #' value <- UTMtoLongLat(utm_df,zone,Hemisphere)
