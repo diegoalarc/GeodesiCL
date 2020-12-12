@@ -41,7 +41,8 @@ LongLatToUTM <- function(x, y, units = 'm') {
     "+proj=utm +zone=", zone,
     " +ellps=WGS84",
     " +", hemisphere,
-    " +units=", units)
+    " +units=", units,
+    " +datum=WGS84")
   if (dplyr::n_distinct(CRSstring) > 1L)
     stop("multiple zone/hemisphere detected")
 
