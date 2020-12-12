@@ -4,6 +4,12 @@
 \name{reexports}
 \alias{reexports}
 \alias{\%>\%}
+\alias{SpatialPoints}
+\alias{spTransform}
+\alias{proj4string}
+\alias{coordinates}
+\alias{CRS}
+\alias{mutate}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -11,6 +17,10 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
+  \item{dplyr}{\code{\link[dplyr]{mutate}}}
+
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
+
+  \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
 }}
 
