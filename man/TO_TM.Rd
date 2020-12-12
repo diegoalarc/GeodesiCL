@@ -4,14 +4,14 @@
 \alias{TO_TM}
 \title{TO_TM}
 \usage{
-TO_TM(a, c, b, d, e, f, g)
+TO_TM(a, b, c, d, e, f, g)
 }
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{c}{Sexagesimal longitude.}
+\item{b}{Sexagesimal longitude.}
 
-\item{b}{Sexagesimal latitude.}
+\item{c}{Sexagesimal latitude.}
 
 \item{d}{Central meridian.}
 
