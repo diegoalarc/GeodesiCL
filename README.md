@@ -1,12 +1,12 @@
 # GeodesiCL
 ### Attention: Still in beta test
 
-##
+## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to Geometric Geodesy applying the necessary basic formulas.
 
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
-We currently have two ways to install this package, as it is not yet finalized for posting to [cran] (https://cran.r-project.org/).
+We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
 ## First option
 
