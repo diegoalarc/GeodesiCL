@@ -11,9 +11,9 @@ This was a project created between [Diego Alarcón](https://www.linkedin.com/in/d
 #### Install system dependencies
 Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system.
 
- * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) 
- * Ubuntu: `sudo apt install gdal-bin libgdal-dev ` 
- * MacOS: ask Siri
+ * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/).
+ * Ubuntu: `sudo apt install gdal-bin libgdal-dev `
+ * MacOS: ask Siri.
 
 We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
