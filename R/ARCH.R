@@ -5,6 +5,7 @@
 #' @param x Rope
 #'
 #' @return value
+#' @export
 #'
 #' @examples
 #' # Test data
@@ -12,7 +13,6 @@
 #'
 #' value <- ARCH(ROPE)
 #' print(value)
-#' @export
 ARCH <- function(x){
   value1 <- (x^3)/(24*63780000*63780000)
   value2 <- value1*1000000

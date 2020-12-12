@@ -18,7 +18,7 @@ value
 To calculate the value of r, S and L
 }
 \examples{
-# Lat
+# Latitude
 g <- -33
 m <- 38
 s <- 30.123456
