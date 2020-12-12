@@ -1,4 +1,4 @@
-# GeodesiCL: A beginning within geometric geodesy
+# GeodesiCL: A beginning inside geometric geodesy
 ###### Attention: Still in beta test
 
 ## To begin with
