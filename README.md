@@ -18,19 +18,19 @@ Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed 
 
 We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
-## First option
+### First option
 
 To use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and simply copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
 
-### Install the animove R package itself
+#### Install the GeodesiCL R package itself
 ```r
 install.package("devtools")
 install_github("diegoalarc/GeodesiCL")
 ```
 !["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
 
-## Second option
+### Second option
 
 Or if you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed devtools you could just copy the following command:
 
