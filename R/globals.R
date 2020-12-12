@@ -28,3 +28,7 @@ sp::CRS
 #' @importFrom dplyr mutate
 #' @export
 dplyr::mutate
+
+#' @importFrom dplyr n_distinct
+#' @export
+dplyr::n_distinct

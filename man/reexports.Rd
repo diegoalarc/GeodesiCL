@@ -10,6 +10,7 @@
 \alias{coordinates}
 \alias{CRS}
 \alias{mutate}
+\alias{n_distinct}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -17,7 +18,7 @@ These objects are imported from other packages. Follow the links
 below to see their documentation.
 
 \describe{
-  \item{dplyr}{\code{\link[dplyr]{mutate}}}
+  \item{dplyr}{\code{\link[dplyr]{mutate}}, \code{\link[dplyr]{n_distinct}}}
 
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
 
