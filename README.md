@@ -12,9 +12,8 @@ We currently have two ways to install this package, as it is not yet finalized f
 
 To use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and simply copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
-install.package("devtools")
-
-install_github("diegoalarc/GeodesiCL")
+#### install.package("devtools")
+#### install_github("diegoalarc/GeodesiCL")
 
 !["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
 
@@ -22,7 +21,7 @@ install_github("diegoalarc/GeodesiCL")
 
 Or if you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed devtools you could just copy the following command:
 
-devtools::install_github("diegoalarc/GeodesiCL")
+#### devtools::install_github("diegoalarc/GeodesiCL")
 
 !["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r2.png "Example Image 2")
 
