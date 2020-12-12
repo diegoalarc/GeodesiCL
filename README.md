@@ -28,7 +28,8 @@ Or if you already have experience using [R](https://www.r-project.org/) & [RStud
 ##
 
 We do hope you enjoy the package and give us your feedback in order to make this package better, easy and accurate as possible.
-
+***
+*As entertaining fact, the name of the package is because geodesy is written geodesia in Spanish and CL represents the acronym of my country Chile but strangely you can see an A writing GeodesiA in Spanish (lol).
 ***
 ### *GNU General Public License v3.0 - Copyright (C)*
 
