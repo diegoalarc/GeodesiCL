@@ -1,4 +1,4 @@
-# GeodesiCL: A little journey into Geometric Geodesy.
+# `GeodesiCL`: A little journey into Geometric Geodesy.
 ###### Attention: Still in beta test
 ***
 ## To begin with
