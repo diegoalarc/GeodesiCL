@@ -24,6 +24,8 @@ devtools::install_github("diegoalarc/GeodesiCL")
 
 !["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r2.png "Example Image 2")
 
+##
+
 We do hope you enjoy the package and give us your feedback in order to make this package better, easy and accurate as possible.
 
 ***
