@@ -7,6 +7,7 @@ This was a project created between [Diego Alarcón](https://www.linkedin.com/in/d
 To use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and simply copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
 install.package("devtools")
+
 install_github("diegoalarc/GeodesiCL")
 
 !["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
