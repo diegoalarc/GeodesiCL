@@ -29,7 +29,7 @@ install_github("diegoalarc/GeodesiCL")
 
 ### Second option
 
-Or if you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed devtools you could just copy the following command:
+If you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed devtools you could just copy the following command:
 
 ```r
 devtools::install_github("diegoalarc/GeodesiCL")
