@@ -1,5 +1,5 @@
-# GeodesiCL
-### Attention: Still in beta test
+# GeodesiCL: A beginning within geometric geodesy
+###### Attention: Still in beta test
 
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to Geometric Geodesy applying the necessary basic formulas.
