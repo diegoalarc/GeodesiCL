@@ -22,12 +22,14 @@ Suggests:
     rmarkdown,
     sp,
     rgdal,
-	  dplyr,
-	  tibble
+	dplyr,
+	tibble,
+	magrittr
 Imports:
   	knitr,
     rmarkdown,
     sp,
     rgdal,
   	dplyr,
-  	tibble
+  	tibble,
+  	magrittr

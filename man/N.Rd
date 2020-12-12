@@ -18,15 +18,15 @@ value
 To calculate the value of N
 }
 \examples{
-# Lat
+# Latitude
 g <- -33
 m <- 38
 s <- 30.123456
 
-value <- radians(g, m, s)
-print(value)
+rad_lat <- radians(g, m, s)
+print(rad_lat)
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value1 <- N(4, value)
-print(value1)
+value <- N(4, rad_lat)
+print(value)
 }

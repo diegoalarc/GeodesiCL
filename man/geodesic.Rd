@@ -28,6 +28,6 @@ y <- -5060304.1659587
 z <- -3473256.69328603
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value <- geodesic(4,x,y,z)
+value <- geodesic(4, x, y, z)
 print(value)
 }

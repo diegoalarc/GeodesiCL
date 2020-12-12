@@ -20,7 +20,7 @@ value
 Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 }
 \examples{
-# Lat
+# Latitude
 g <- -33
 m <- 38
 s <- 30.123456

@@ -4,14 +4,14 @@
 \alias{TO_TM}
 \title{TO_TM}
 \usage{
-TO_TM(a, b, c, d, e, f, g)
+TO_TM(a, c, b, d, e, f, g)
 }
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{b}{Sexagesimal latitude.}
-
 \item{c}{Sexagesimal longitude.}
+
+\item{b}{Sexagesimal latitude.}
 
 \item{d}{Central meridian.}
 
@@ -34,25 +34,26 @@ SC_FACTOR_Ko <- 0.99960
 FE <- 500000.00000
 FN <- 10000000.00000
 
-# Lat
-g <- -33
-m <- 12
-s <- 27.11457
+# Longitude
+g <- -71
+m <- 18
+s <- 44.86475
 
 # Value in sexagesimal
-sexa_lat <- sexagesimal(g, m, s)
+sexa_long <- sexagesimal(g, m, s)
 
-# Lon
-g1 <- -71
-m1 <- 18
-s1 <- 44.86475
+# Latitude
+g1 <- -33
+m1 <- 12
+s1 <- 27.11457
 
 # Value in sexagesimal
-sexa_lon <- sexagesimal(g1, m1, s1)
+sexa_lat <- sexagesimal(g1, m1, s1)
 
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
-value <- TO_TM(4, sexa_lat, sexa_lon, CM, SC_FACTOR_Ko, FE, FN)
+# Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
+value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN)
 print(value)
 }

@@ -3,8 +3,8 @@
 #' Geodesic coordinate transformation to TM
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' @param b Sexagesimal latitude.
 #' @param c Sexagesimal longitude.
+#' @param b Sexagesimal latitude.
 #' @param d Central meridian.
 #' @param e Scale factor Ko.
 #' @param f False East (FE).
@@ -20,28 +20,32 @@
 #' FE <- 500000.00000
 #' FN <- 10000000.00000
 #'
-#' # Lat
-#' g <- -33
-#' m <- 12
-#' s <- 27.11457
+#' # Longitude
+#' g <- -71
+#' m <- 18
+#' s <- 44.86475
 #'
 #' # Value in sexagesimal
-#' sexa_lat <- sexagesimal(g, m, s)
+#' sexa_long <- sexagesimal(g, m, s)
 #'
-#' # Lon
-#' g1 <- -71
-#' m1 <- 18
-#' s1 <- 44.86475
+#' # Latitude
+#' g1 <- -33
+#' m1 <- 12
+#' s1 <- 27.11457
 #'
 #' # Value in sexagesimal
-#' sexa_lon <- sexagesimal(g1, m1, s1)
+#' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
 #' # ELLIPSOIDAL HEIGHT (h)
 #' h <- 31.885
 #'
-#' value <- TO_TM(4, sexa_lat, sexa_lon, CM, SC_FACTOR_Ko, FE, FN)
+#' # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
+#' value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN)
 #' print(value)
-TO_TM <- function(a,b,c,d,e,f,g){
+TO_TM <- function(a, c, b, d, e, f, g){
+# To put everything in the same long and lat order in each equation these were
+# only changed in the function of (a, b, c, d, e, g) towards (a, c, b, d, e, g).
+
 #  Ellipsoids <- NULL
 #  Sin_1 <- NULL
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(b*pi/180)^2)

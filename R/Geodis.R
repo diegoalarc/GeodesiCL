@@ -13,9 +13,9 @@
 #' h <- 2500
 #' Dhz <- 728.5
 #'
-#' value <- geodis(h,Dhz)
+#' value <- geodis(h, Dhz)
 #' print(value)
-geodis <- function(x,y){
+geodis <- function(x, y){
   A <- (63780000+x)/63780000
   B <- y/((63780000+x)/63780000)
   values <- data.frame(as.numeric(A), as.numeric(B))

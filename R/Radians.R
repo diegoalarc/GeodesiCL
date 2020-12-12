@@ -16,7 +16,7 @@
 #' s <- 30.123456
 #' value <- radians(g, m, s)
 #' print(value)
-radians <- function(x,y,z){
+radians <- function(x, y, z){
   value <- (x-(y/60)-(z/3600))*pi/180
   return(value)
 }

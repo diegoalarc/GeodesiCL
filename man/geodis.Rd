@@ -22,6 +22,6 @@ Reduction of the horizontal distance to the Ellipsoid.
 h <- 2500
 Dhz <- 728.5
 
-value <- geodis(h,Dhz)
+value <- geodis(h, Dhz)
 print(value)
 }

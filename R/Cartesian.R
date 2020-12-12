@@ -4,14 +4,22 @@
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 #' @param b ELLIPSOIDAL HEIGHT.
-#' @param c Radian Latitude.
-#' @param d Radian longitude.
+#' @param c Radian longitude.
+#' @param d Radian Latitude.
 #'
 #' @return value
 #' @export
 #'
 #' @examples
-#' # Lat
+#' # Longitude
+#' g <- -71
+#' m <- 18
+#' s <- 44.86475
+#'
+#' # Value in radians
+#' rad_long <- radians(g,m,s)
+#'
+#' # Latitude
 #' g <- -33
 #' m <- 38
 #' s <- 30.123456
@@ -20,25 +28,17 @@
 #' rad_lat <- radians(g, m, s)
 #' print(rad_lat)
 #'
-#' # Lon
-#' g <- -71
-#' m <- 18
-#' s <- 44.86475
-#'
-#' # Value in radians
-#' rad_lon <- radians(g,m,s)
-#'
 #' # ELLIPSOIDAL HEIGHT (h)
 #' h <- 31.885
 #'
 #' # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' value <- cartesian(4,h, rad_lat, rad_lon)
+#' value <- cartesian(4, h, rad_long, rad_lat)
 #' print(value)
 cartesian <- function(a,b,c,d){
 #  Ellipsoids <- NULL
-  valueX <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2)+b)*cos(c)*cos(d)
-  valueY <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2)+b)*cos(c)*sin(d)
-  valueZ <- ((as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(c)^2))*(1 - as.numeric(Ellipsoids[a,6]))+b)*sin(c)
+  valueX <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*cos(c)
+  valueY <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*sin(c)
+  valueZ <- ((as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2))*(1 - as.numeric(Ellipsoids[a,6]))+b)*sin(d)
   values <- data.frame(valueX, valueY, valueZ)
   names(values) <- c("X", "Y", "Z")
   return(values)

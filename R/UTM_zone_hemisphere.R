@@ -9,23 +9,23 @@
 #' @export
 #'
 #' @examples
-#' # Lat
-#' g <- -33
-#' m <- 12
-#' s <- 27.11457
+#' #' # Longitude
+#' g <- -71
+#' m <- 18
+#' s <- 44.86475
 #'
 #' # Value in sexagesimal
-#' sexa_lat <- sexagesimal(g, m, s)
+#' sexa_long <- sexagesimal(g, m, s)
 #'
-#' # Lon
-#' g1 <- -71
-#' m1 <- 18
-#' s1 <- 44.86475
+#' # Latitude
+#' g1 <- -33
+#' m1 <- 12
+#' s1 <- 27.11457
 #'
 #' # Value in sexagesimal
-#' sexa_lon <- sexagesimal(g1, m1, s1)
+#' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
-#' value <- UTM_zone_hemisphere(sexa_lon, sexa_lat)
+#' value <- UTM_zone_hemisphere(sexa_long, sexa_lat)
 #' print(value)
 UTM_zone_hemisphere <- function(x, y) {
   value1 <- (floor((x + 180) / 6) %% 60) + 1

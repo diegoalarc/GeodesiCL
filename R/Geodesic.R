@@ -17,9 +17,9 @@
 #' z <- -3473256.69328603
 #'
 #' # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' value <- geodesic(4,x,y,z)
+#' value <- geodesic(4, x, y, z)
 #' print(value)
-geodesic <- function(a,x,y,z){
+geodesic <- function(a, x, y, z){
 #  Ellipsoids <- NULL
   d <- sqrt(x^2+y^2)
   lat <- atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3))

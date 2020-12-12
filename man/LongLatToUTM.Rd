@@ -20,22 +20,22 @@ data.frame
 To convert from Longitude and Latitude to UTM
 }
 \examples{
-# Lat
-g <- -33
-m <- 12
-s <- 27.11457
+# Longitude
+g <- -71
+m <- 18
+s <- 44.86475
 
 # Value in sexagesimal
-sexa_lat <- sexagesimal(g, m, s)
+sexa_long <- sexagesimal(g, m, s)
 
-# Lon
-g1 <- -71
-m1 <- 18
-s1 <- 44.86475
+# Latitude
+g1 <- -33
+m1 <- 12
+s1 <- 27.11457
 
 # Value in sexagesimal
-sexa_lon <- sexagesimal(g1, m1, s1)
+sexa_lat <- sexagesimal(g1, m1, s1)
 
-value <- LongLatToUTM(sexa_lon, sexa_lat, units = 'm')
+value <- LongLatToUTM(sexa_long, sexa_lat, units = 'm')
 print(value)
 }

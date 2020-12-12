@@ -10,13 +10,13 @@
 #' @export
 #'
 #' @examples
-#' # Lat
+#' # Latitude
 #' g <- -33
 #' m <- 38
 #' s <- 30.123456
 #' value <- sexagesimal(g, m, s)
 #' print(value)
-sexagesimal <- function(x,y,z){
+sexagesimal <- function(x, y, z){
   x-(y/60)-(z/3600)
 }
 

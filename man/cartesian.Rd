@@ -11,9 +11,9 @@ cartesian(a, b, c, d)
 
 \item{b}{ELLIPSOIDAL HEIGHT.}
 
-\item{c}{Radian Latitude.}
+\item{c}{Radian longitude.}
 
-\item{d}{Radian longitude.}
+\item{d}{Radian Latitude.}
 }
 \value{
 value
@@ -22,7 +22,15 @@ value
 To convert from Geodesic to Cartesian.
 }
 \examples{
-# Lat
+# Longitude
+g <- -71
+m <- 18
+s <- 44.86475
+
+# Value in radians
+rad_long <- radians(g,m,s)
+
+# Latitude
 g <- -33
 m <- 38
 s <- 30.123456
@@ -31,18 +39,10 @@ s <- 30.123456
 rad_lat <- radians(g, m, s)
 print(rad_lat)
 
-# Lon
-g <- -71
-m <- 18
-s <- 44.86475
-
-# Value in radians
-rad_lon <- radians(g,m,s)
-
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value <- cartesian(4,h, rad_lat, rad_lon)
+value <- cartesian(4, h, rad_long, rad_lat)
 print(value)
 }
