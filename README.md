@@ -6,23 +6,35 @@ This package was created to introduce topographical and related engineers in the
 
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
+### Installation
+#### Install system dependencies
+Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system.
+
+ * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/) 
+ * Ubuntu: `sudo apt install gdal-bin libgdal-dev ` 
+ * MacOS: ask Siri
+
 We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
 ## First option
 
 To use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and simply copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
-#### install.package("devtools")
-#### install_github("diegoalarc/GeodesiCL")
 
+### Install the animove R package itself
+```r
+install.package("devtools")
+install_github("diegoalarc/GeodesiCL")
+```
 !["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
 
 ## Second option
 
 Or if you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed devtools you could just copy the following command:
 
-#### devtools::install_github("diegoalarc/GeodesiCL")
-
+```r
+devtools::install_github("diegoalarc/GeodesiCL")
+```
 !["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r2.png "Example Image 2")
 
 ##
