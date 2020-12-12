@@ -5,6 +5,22 @@
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to Geometric Geodesy applying the necessary basic formulas.
 
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
+
+The ellipsoids within the package are as follows:
+```r
+  Ellipsoids          a	      f
+  PSAD-56            	6378160	1/298.25
+  SAD-69	            6378160	1/298.25
+  WGS84	              6378137	1/298.257223563
+  GRS80 SIRGAS      	6378137	1/298.257222101
+  GRS67	              6378160	1/298.25
+  Airy 1830	          6377563.396	1/299.3249646
+  Bessel 1841	        6377397.155	1/299.1528434
+  Clarke 1880	        6378249.145	1/293.465
+  Clarke 1866	        6378206.4	1/294.9786982
+  International 1924	6378388	1/297
+  Krasovsky 1940	    6378245	1/298.2997381
+```
 ***
 
 ## Installation

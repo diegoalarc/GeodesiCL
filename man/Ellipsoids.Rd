@@ -36,7 +36,18 @@ Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GR
 }
 \examples{
 \dontrun{
- Ellipsoids
+ Ellipsoids          a	      f
+ PSAD-56            	6378160	1/298.25
+ SAD-69	            6378160	1/298.25
+ WGS84	              6378137	1/298.257223563
+ GRS80 SIRGAS      	6378137	1/298.257222101
+ GRS67	              6378160	1/298.25
+ Airy 1830	          6377563.396	1/299.3249646
+ Bessel 1841	        6377397.155	1/299.1528434
+ Clarke 1880	        6378249.145	1/293.465
+ Clarke 1866	        6378206.4	1/294.9786982
+ International 1924	6378388	1/297
+ Krasovsky 1940	    6378245	1/298.2997381
 }
 }
 \keyword{datasets}
