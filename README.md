@@ -46,7 +46,8 @@ As entertaining fact, the name of the package is because geodesy is written geod
 ***
 ### Contribution
 
-We do hope you enjoy the package and give us your feedback in order to make this package better, easy and accurate as possible.! Open an issue to start a discussion: <https://github.com/diegoalarc/GeodesiCL/issues> 
+We do hope you enjoy the package and give us your feedback in order to make this package better, easy and accurate as possible.! Open an issue to start a discussion: 
+<https://github.com/diegoalarc/GeodesiCL/issues> 
 
 ### *GNU General Public License v3.0 - Copyright (C)*
 
