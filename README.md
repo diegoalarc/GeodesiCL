@@ -116,7 +116,7 @@ example(TO_TM)
 
 example(UTMtoLongLat)
 ```
-`UTM_zone_hemisphere`: To find from Longitude and Latitude the UTM zone.
+`UTM_zone_hemisphere`: To find the zone hemisphere from Longitude and Latitude the UTM zone.
 ```r
 ?UTM_zone_hemisphere
 

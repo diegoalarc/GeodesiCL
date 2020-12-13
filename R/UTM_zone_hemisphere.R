@@ -1,6 +1,6 @@
 #' UTM_zone_hemisphere
 #'
-#' To find from Longitude and Latitude the UTM zone.
+#' To find the zone hemisphere from Longitude and Latitude the UTM zone.
 #'
 #' @param x Sexagesimal longitude.
 #' @param y Sexagesimal latitude.
