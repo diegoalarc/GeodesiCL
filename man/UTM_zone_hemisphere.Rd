@@ -15,7 +15,7 @@ UTM_zone_hemisphere(x, y)
 value
 }
 \description{
-To find from Longitude and Latitude the UTM zone.
+To find the zone hemisphere from Longitude and Latitude the UTM zone.
 }
 \examples{
 #' # Longitude
