@@ -1,4 +1,4 @@
-# `GeodesiCL`: A little journey into Geometric Geodesy.
+# <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ###### Attention: Still in beta test
 ***
 ## To begin with
@@ -163,7 +163,7 @@ As entertaining fact, the name of the package is because __geodesy__ is written 
 ### Contribution
 
 We do hope you enjoy the package and give us your __feedback__ in order to make this package better, easy and accurate as possible.! Open an issue to start a discussion: 
- * <https://github.com/diegoalarc/GeodesiCL/issues> 
+ * <a href="https://github.com/diegoalarc/GeodesiCL/issues>`Issues press here!!!`</a>
 
 ***
 ### *GNU General Public License v3.0 - Copyright (C)*
