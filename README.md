@@ -24,7 +24,7 @@ The `Ellipsoids` within the package are as follows:
 ```
 
 The `formulas` contained in the `package` are as follows:
-```r
+
 `ARCH`: Rope reduction to elliptical arch.
 `cartesian`: To convert from Geodesic to Cartesian.
 `E2`: To calculate 1-e^2.
@@ -41,7 +41,6 @@ The `formulas` contained in the `package` are as follows:
 `TO_TM`: Geodesic coordinate transformation to TM.
 `UTMtoLongLat`: To convert from UTM to Longitude and Latitude.
 `UTM_zone_hemisphere`: To find from Longitude and Latitude the UTM zone.
-```
 
 In each of the `formulas` it is possible to reproduce an `example` as follows:
 ```r
