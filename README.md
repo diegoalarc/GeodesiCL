@@ -7,9 +7,8 @@ This package was created to introduce topographical and related engineers in the
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
 The `Ellipsoids` within the package are as follows:
-```r
 | Ellipsoids         | a           | 1/f           |
-| :----------------: | :---------: | :-----------: |
+| ------------------ | :---------: | ------------: |
 | PSAD56             | 6378388     | 297           |
 | SAD69              | 6378160     | 298.25        |
 | WGS84              | 6378137     | 298.257223563 |
@@ -21,9 +20,7 @@ The `Ellipsoids` within the package are as follows:
 | Clarke 1866        | 6378206.4   | 294.9786982   |
 | International 1924 | 6378388     | 297           |
 | Krasovsky 1940     | 6378245     | 298.2997381   |
-```
- 
- 
+
 The `formulas` contained in the package are as follows:
 
 `ARCH`: Rope reduction to elliptical arch.
