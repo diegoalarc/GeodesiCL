@@ -24,7 +24,7 @@ The `Ellipsoids` within the package are as follows:
 ***
 ## Functions
 
-The `functions` contained in the package are as follows:
+Here you can see the `functions` contained in the package. Is it possible to read its description by copying to the console `? + function` or if you want to see an example just using `example(function)` like the following:
 
 `ARCH`: Rope reduction to elliptical arch.
 ```r
