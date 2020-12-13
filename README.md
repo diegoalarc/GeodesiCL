@@ -133,7 +133,7 @@ Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed 
  * Ubuntu: `sudo apt install gdal-bin libgdal-dev`
  * MacOS: `brew install gdal --HEAD` or `brew install gdal`
 
-For more information [Click here](https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91)
+For more information on GDAL installation [Click here!](https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91)
 
 We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
 
