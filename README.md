@@ -157,12 +157,12 @@ devtools::install_github("diegoalarc/GeodesiCL")
 ***
 ### Interesting fact
 
-As entertaining fact, the name of the package is because geodesy is written geodesia in Spanish and CL represents the acronym of my country Chile but strangely you can see an A writing GeodesiA in Spanish (lol).
+As entertaining fact, the name of the package is because __geodesy__ is written __geodesia__ in Spanish and CL represents the acronym of my country __Chile__ but strangely you can see an A writing __GeodesiA__ in Spanish (lol).
 
 ***
 ### Contribution
 
-We do hope you enjoy the package and give us your feedback in order to make this package better, easy and accurate as possible.! Open an issue to start a discussion: 
+We do hope you enjoy the package and give us your __feedback__ in order to make this package better, easy and accurate as possible.! Open an issue to start a discussion: 
  * <https://github.com/diegoalarc/GeodesiCL/issues> 
 
 ***
