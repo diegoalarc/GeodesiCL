@@ -23,7 +23,7 @@ The `Ellipsoids` within the package are as follows:
 | Krasovsky 1940     | 6378245     | 298.2997381   |
 ```
 
-The `formulas` contained in the `package` are as follows:
+The `formulas` contained in the package are as follows:
 
 `ARCH`: Rope reduction to elliptical arch.
 ```r
