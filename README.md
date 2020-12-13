@@ -137,7 +137,7 @@ We currently have two ways to install this package, as it is not yet finalized f
 
 ### First option
 
-After we already have the `system dependencies`, to use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/). Next, you need to install the <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a> package in order to start with the installation of the `GeodesiCL` package and simply copy and paste the following command into the [RStudio](https://rstudio.com/) console:
+After we already have the `system dependencies`, to use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/). Next, you need to install the <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a> package in order to start with the installation of the `GeodesiCL` package, then just copy and paste the following command into the [RStudio](https://rstudio.com/) console:
 
 ```r
 install.package("devtools")
