@@ -1,6 +1,6 @@
 #' LongLatToUTM
 #'
-#' To convert from Longitude and Latitude to UTM
+#' To convert from Longitude and Latitude to UTM.
 #'
 #' @param x Sexagesimal longitude.
 #' @param y Sexagesimal latitude.

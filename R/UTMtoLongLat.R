@@ -1,6 +1,6 @@
 #' UTMtoLongLat
 #'
-#' To convert from UTM to Longitude and Latitude
+#' To convert from UTM to Longitude and Latitude.
 #'
 #' @param utm_df East and North UTM in a data.frame.
 #' @param zone Select UTM zone to work.

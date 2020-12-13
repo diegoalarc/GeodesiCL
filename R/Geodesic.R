@@ -16,7 +16,9 @@
 #' y <- -5060304.1659587
 #' z <- -3473256.69328603
 #'
-#' # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
+#' # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
+#' # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
+#' # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
 #' value <- geodesic(4, x, y, z)
 #' print(value)
 geodesic <- function(a, x, y, z){

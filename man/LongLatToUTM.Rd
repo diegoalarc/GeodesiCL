@@ -17,7 +17,7 @@ LongLatToUTM(x, y, units = "m")
 data.frame
 }
 \description{
-To convert from Longitude and Latitude to UTM
+To convert from Longitude and Latitude to UTM.
 }
 \examples{
 # Longitude

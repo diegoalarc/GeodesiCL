@@ -17,7 +17,7 @@ UTMtoLongLat(utm_df, zone, hemisphere)
 data.frame
 }
 \description{
-To convert from UTM to Longitude and Latitude
+To convert from UTM to Longitude and Latitude.
 }
 \examples{
 # Value for East

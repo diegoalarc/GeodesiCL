@@ -22,11 +22,37 @@ The `Ellipsoids` within the package are as follows:
 | International 1924 | 6378388     | 297           |
 | Krasovsky 1940     | 6378245     | 298.2997381   |
 ```
+
+The `formulas` contained in the `package` are as follows:
+```r
+`ARCH`: Rope reduction to elliptical arch.
+`cartesian`: To convert from Geodesic to Cartesian.
+`E2`: To calculate 1-e^2.
+`E3`: To calculate 1-e^2*sen(lat)^2.
+`geodesic`: To convert from Cartesian to Geodesic.
+`geodis`: Reduction of the horizontal distance to the Ellipsoid.
+`LongLatToUTM`: To convert from Longitude and Latitude to UTM.
+`M`: To calculate the value of M.
+`N`: To calculate the value of N.
+`radians`: Convert separated data in Degrees Minutes and Seconds to Radians.
+`rSL`: To calculate the value of r, S and L.
+`scalfactor`: Scale factor calculation.
+`sexagesimal`: Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
+`TO_TM`: Geodesic coordinate transformation to TM.
+`UTMtoLongLat`: To convert from UTM to Longitude and Latitude.
+`UTM_zone_hemisphere`: To find from Longitude and Latitude the UTM zone.
+```
+
+In each of the `formulas` it is possible to reproduce an `example` as follows:
+```r
+example(TO_TM)
+```
+
 ***
 
 ## Installation
 #### Install system dependencies
-Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system.
+Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system:
 
  * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/).
  * Ubuntu: `sudo apt install gdal-bin libgdal-dev`
@@ -67,4 +93,4 @@ We do hope you enjoy the package and give us your feedback in order to make this
 ***
 ### *GNU General Public License v3.0 - Copyright (C)*
 
-This script was made for testing purposes and can be used and modified in the future by those who deem it convenient.
+This script was made for testing purposes and may be used and modified in the future by those who see fit.
