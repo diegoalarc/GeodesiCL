@@ -27,66 +27,98 @@ The `formulas` contained in the package are as follows:
 
 `ARCH`: Rope reduction to elliptical arch.
 ```r
+?ARCH
+
 example(ARCH)
 ```
 `cartesian`: To convert from Geodesic to Cartesian.
 ```r
+?cartesian
+
 example(cartesian)
 ```
 `E2`: To calculate 1-e^2.
 ```r
+?E2
+
 example(E2)
 ```
 `E3`: To calculate 1-e^2*sen(lat)^2.
 ```r
+?E3
+
 example(E3)
 ```
 `geodesic`: To convert from Cartesian to Geodesic.
 ```r
+?geodesic
+
 example(geodesic)
 ```
 `geodis`: Reduction of the horizontal distance to the Ellipsoid.
 ```r
+?geodis
+
 example(geodis)
 ```
 `LongLatToUTM`: To convert from Longitude and Latitude to UTM.
 ```r
+?LongLatToUTM
+
 example(LongLatToUTM)
 ```
 `M`: To calculate the value of M.
 ```r
+?M
+
 example(M)
 ```
 `N`: To calculate the value of N.
 ```r
+?N
+
 example(N)
 ```
 `radians`: Convert separated data in Degrees Minutes and Seconds to Radians.
 ```r
+?radians
+
 example(radians)
 ```
 `rSL`: To calculate the value of r, S and L.
 ```r
+?rSL
+
 example(rSL)
 ```
 `scalfactor`: Scale factor calculation.
 ```r
+?scalfactor
+
 example(scalfactor)
 ```
 `sexagesimal`: Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 ```r
+?sexagesimal
+
 example(sexagesimal)
 ```
 `TO_TM`: Geodesic coordinate transformation to TM.
 ```r
+?TO_TM
+
 example(TO_TM)
 ```
 `UTMtoLongLat`: To convert from UTM to Longitude and Latitude.
 ```r
+?UTMtoLongLat
+
 example(UTMtoLongLat)
 ```
 `UTM_zone_hemisphere`: To find from Longitude and Latitude the UTM zone.
 ```r
+?UTM_zone_hemisphere
+
 example(UTM_zone_hemisphere)
 ```
 
