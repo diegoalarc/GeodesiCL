@@ -8,7 +8,7 @@ This was a project created between [Diego Alarcón](https://www.linkedin.com/in/d
 
 The `Ellipsoids` within the package are as follows:
 | Ellipsoids         | a           | 1/f           |
-| ------------------ | :---------: | ------------: |
+| :----------------: | :---------: | :-----------: |
 | PSAD56             | 6378388     | 297           |
 | SAD69              | 6378160     | 298.25        |
 | WGS84              | 6378137     | 298.257223563 |
@@ -20,6 +20,8 @@ The `Ellipsoids` within the package are as follows:
 | Clarke 1866        | 6378206.4   | 294.9786982   |
 | International 1924 | 6378388     | 297           |
 | Krasovsky 1940     | 6378245     | 298.2997381   |
+
+***
 
 The `formulas` contained in the package are as follows:
 
