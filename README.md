@@ -7,7 +7,7 @@ This package was created to introduce topographical and related engineers in the
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
 The `Ellipsoids` within the package are as follows:
-| __Ellipsoids __    | __a__       | __1/f__       |
+| __Ellipsoids__     | __a__       | __1/f__       |
 | :----------------: | :---------: | :-----------: |
 | PSAD56             | 6378388     | 297           |
 | SAD69              | 6378160     | 298.25        |
