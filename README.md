@@ -143,7 +143,7 @@ After we already have the `system dependencies`, to use this package you should 
 
 ```r
 install.packages("devtools")
-install_github("diegoalarc/GeodesiCL")
+devtools::install_github("diegoalarc/GeodesiCL")
 ```
 !["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
 
