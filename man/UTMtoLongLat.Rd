@@ -20,6 +20,9 @@ data.frame
 To convert from UTM to Longitude and Latitude.
 }
 \examples{
+# Point name
+Pto <- "St1"
+
 # Value for East
 East <- 650012.58
 
@@ -27,7 +30,7 @@ East <- 650012.58
 North <- 5590735.41
 
 # East and North as data.frame
-utm_df <- as.data.frame(cbind(East,North))
+utm_df <- as.data.frame(cbind(Pto,East,North))
 
 # Zone
 zone <- 18

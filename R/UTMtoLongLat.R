@@ -10,6 +10,9 @@
 #' @export
 #'
 #' @examples
+#' # Point name
+#' Pto <- "St1"
+#'
 #' # Value for East
 #' East <- 650012.58
 #'
@@ -17,7 +20,7 @@
 #' North <- 5590735.41
 #'
 #' # East and North as data.frame
-#' utm_df <- as.data.frame(cbind(East,North))
+#' utm_df <- as.data.frame(cbind(Pto,East,North))
 #'
 #' # Zone
 #' zone <- 18
@@ -28,10 +31,23 @@
 #' value <- UTMtoLongLat(utm_df,zone,Hemisphere)
 #' print(value)
 UTMtoLongLat <- function(utm_df, zone, hemisphere) {
-  CRSstring <- paste0("+proj=utm +zone=", zone, " +", hemisphere)
-  utmcoor <- sp::SpatialPoints(utm_df, proj4string = sp::CRS(CRSstring))
-  longlatcoor <- sp::spTransform(utmcoor, sp::CRS("+init=epsg:4326"))
-  value <- as.data.frame(longlatcoor)
-  names(value) <- c("Long", "Lat")
+
+
+  df <- data.frame(East = as.numeric(utm_df[,2]), North = as.numeric(utm_df[,3]))
+  sp::coordinates(df) <- c("East", "North")
+
+  CRSstring <- paste0(
+    "+proj=utm +zone=", zone,
+    " +ellps=WGS84",
+    " +", hemisphere,
+    " +units=m",
+    " +datum=WGS84")
+
+  sp::proj4string(df) <- sp::CRS(CRSstring)
+
+  res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
+    data.frame()
+  value <- as.data.frame(cbind(utm_df[,1],res))
+  names(value) <- c("Pt","East", "North")
   return(value)
 }

@@ -4,14 +4,14 @@
 \alias{LongLatToUTM}
 \title{LongLatToUTM}
 \usage{
-LongLatToUTM(x, y, units = "m")
+LongLatToUTM(longlat_df, units = "m")
 }
 \arguments{
+\item{units}{Select units for UTM to work.}
+
 \item{x}{Sexagesimal longitude.}
 
 \item{y}{Sexagesimal latitude.}
-
-\item{units}{Select units for UTM to work.}
 }
 \value{
 data.frame
@@ -20,6 +20,9 @@ data.frame
 To convert from Longitude and Latitude to UTM.
 }
 \examples{
+# Point name
+Pto <- "St1"
+
 # Longitude
 g <- -71
 m <- 18
@@ -36,6 +39,9 @@ s1 <- 27.11457
 # Value in sexagesimal
 sexa_lat <- sexagesimal(g1, m1, s1)
 
-value <- LongLatToUTM(sexa_long, sexa_lat, units = 'm')
+# East and North as data.frame
+longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
+
+value <- LongLatToUTM(longlat_df, units = 'm')
 print(value)
 }

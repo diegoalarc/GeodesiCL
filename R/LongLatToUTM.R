@@ -10,6 +10,9 @@
 #' @export
 #'
 #' @examples
+#' # Point name
+#' Pto <- "St1"
+#'
 #' # Longitude
 #' g <- -71
 #' m <- 18
@@ -26,15 +29,18 @@
 #' # Value in sexagesimal
 #' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
-#' value <- LongLatToUTM(sexa_long, sexa_lat, units = 'm')
+#' # East and North as data.frame
+#' longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
+#'
+#' value <- LongLatToUTM(longlat_df, units = 'm')
 #' print(value)
-LongLatToUTM <- function(x, y, units = 'm') {
+LongLatToUTM <- function(longlat_df, units = 'm'){
 
-  df <- data.frame(long = x, lat = y)
+  df <- data.frame(long = as.numeric(longlat_df[,2]), lat = as.numeric(longlat_df[,3]))
   sp::coordinates(df) <- c("long", "lat")
 
-  hemisphere <- ifelse(y > 0, "north", "south")
-  zone <- (floor((x + 180) / 6) %% 60) + 1
+  hemisphere <- ifelse(as.numeric(longlat_df[,3]) > 0, "north", "south")
+  zone <- (floor((as.numeric(longlat_df[,2]) + 180) / 6) %% 60) + 1
 
   sp::proj4string(df) <- sp::CRS("+init=epsg:4326")
   CRSstring <- paste0(
@@ -49,6 +55,7 @@ LongLatToUTM <- function(x, y, units = 'm') {
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>%
     dplyr::mutate(zone = zone, hemisphere = hemisphere)
-  res
-  return(res)
+  value <- as.data.frame(cbind(longlat_df[,1],res))
+  names(value) <- c("Pt","long", "lat")
+  return(value)
 }
