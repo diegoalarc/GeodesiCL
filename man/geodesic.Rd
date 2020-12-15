@@ -9,9 +9,9 @@ geodesic(a, XYZ_df, digits = 4)
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{XYZ_df}{Sexagesimal longitude and latitude as dataframe.}
 
-\item{longlat_df}{Sexagesimal longitude and latitude as dataframe.}
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 data.frame
@@ -24,9 +24,9 @@ To convert from Cartesian to Geodesic.
 Pto <- "St1"
 
 # Cartesian data
-x <- 1711591.78090565
-y <- -5060304.1659587
-z <- -3473256.69328603
+X <- 1711591.78090565
+Y <- -5060304.1659587
+Z <- -3473256.69328603
 
 # Pto, X, Y and Z as data.frame
 XYZ_df <- as.data.frame(cbind(Pto, X, Y, Z))

@@ -34,6 +34,9 @@ SC_FACTOR_Ko <- 0.99960
 FE <- 500000.00000
 FN <- 10000000.00000
 
+# Point name
+Pto <- "St1"
+
 # Longitude
 g <- -71
 m <- 18

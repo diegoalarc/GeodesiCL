@@ -4,12 +4,10 @@
 \alias{geodis}
 \title{Geodis}
 \usage{
-geodis(x, y, digits = 4)
+geodis(Data_fm, digits = 4)
 }
 \arguments{
-\item{x}{Ellipsoidal height.}
-
-\item{y}{Horizontal distance.}
+\item{Data_fm}{Point name, Ellipsoidal height and Horizontal distance as dataframe.}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
@@ -20,10 +18,18 @@ value
 Reduction of the horizontal distance to the Ellipsoid.
 }
 \examples{
-# Test data
+# Point name
+Pto <- "St1"
+
+# Ellipsoidal height
 h <- 2500
+
+# Horizontal distance
 Dhz <- 728.5
 
-value <- geodis(h, Dhz, digits = 4)
+# Ellipsoidal height and Horizontal distance as data.frame
+Ellips_Horzdist_df <- as.data.frame(cbind(Pto, h, Dhz))
+
+value <- geodis(Ellips_Horzdist_df, digits = 4)
 print(value)
 }

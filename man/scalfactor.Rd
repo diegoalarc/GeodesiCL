@@ -4,12 +4,10 @@
 \alias{scalfactor}
 \title{Scalfactor}
 \usage{
-scalfactor(x, y, digits = 4)
+scalfactor(EAST_Geodist_df, digits = 4)
 }
 \arguments{
-\item{x}{East coordinate.}
-
-\item{y}{Geodesic distance.}
+\item{EAST_Geodist_df}{East coordinate and Geodesic distance as data.frame.}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
@@ -20,14 +18,26 @@ value
 Scale factor calculation.
 }
 \examples{
-# Test data
+# Point name
+Pto <- "St1"
+
+# East coordinate.
 EAST <- 224200
+
+# Ellipsoidal height
 h <- 2500
+
+# Horizontal distance
 Dhz <- 728.5
 
-# Use the Geodesic distance from the function "Geodis"
-arch_data <- geodis(h,Dhz)
+# Ellipsoidal height and Horizontal distance as data.frame
+Ellips_Horzdist_df <- as.data.frame(cbind(Pto, h, Dhz))
 
-value <- scalfactor(EAST, arch_data[2], digits = 4)
+geodis <- geodis(Ellips_Horzdist_df, digits = 4)
+
+# East coordinate and Geodesic distance as data.frame
+EAST_Geodist_df <- as.data.frame(cbind(Pto, EAST, geodis[,3]))
+
+value <- scalfactor(EAST_Geodist_df, digits = 4)
 print(value)
 }

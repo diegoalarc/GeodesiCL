@@ -41,9 +41,9 @@
 #' print(value)
 cartesian <- function(a, longlat_df, digits = 4){
 #  Ellipsoids <- NULL
-  b <- longlat_df[,4]
-  c <- longlat_df[,2]
-  d <- longlat_df[,3]
+  b <- as.numeric(longlat_df[,4])
+  c <- as.numeric(longlat_df[,2])
+  d <- as.numeric(longlat_df[,3])
   valueX <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*cos(c)
   valueY <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*sin(c)
   valueZ <- ((as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2))*(1 - as.numeric(Ellipsoids[a,6]))+b)*sin(d)

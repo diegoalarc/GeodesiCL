@@ -3,7 +3,7 @@
 #' To convert from Cartesian to Geodesic.
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' @param longlat_df Sexagesimal longitude and latitude as dataframe.
+#' @param XYZ_df Sexagesimal longitude and latitude as dataframe.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return data.frame
@@ -14,9 +14,9 @@
 #' Pto <- "St1"
 #'
 #' # Cartesian data
-#' x <- 1711591.78090565
-#' y <- -5060304.1659587
-#' z <- -3473256.69328603
+#' X <- 1711591.78090565
+#' Y <- -5060304.1659587
+#' Z <- -3473256.69328603
 #'
 #' # Pto, X, Y and Z as data.frame
 #' XYZ_df <- as.data.frame(cbind(Pto, X, Y, Z))
@@ -28,10 +28,9 @@
 #' print(value)
 geodesic <- function(a, XYZ_df, digits = 4){
 #  Ellipsoids <- NULL
-  x <- XYZ_df[,2]
-  y <- XYZ_df[,3]
-  z <- XYZ_df[,4]
-
+  x <- as.numeric(XYZ_df[,2])
+  y <- as.numeric(XYZ_df[,3])
+  z <- as.numeric(XYZ_df[,4])
   d <- as.numeric(sqrt(x^2+y^2))
   lat <- as.numeric(atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)))
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(lat)^2)

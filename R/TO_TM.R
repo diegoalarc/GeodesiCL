@@ -20,6 +20,9 @@
 #' FE <- 500000.00000
 #' FN <- 10000000.00000
 #'
+#' # Point name
+#' Pto <- "St1"
+#'
 #' # Longitude
 #' g <- -71
 #' m <- 18
@@ -50,8 +53,8 @@
 TO_TM <- function(a, longlat_df, d, e, f, g, digits = 4){
   #  Ellipsoids <- NULL
   #  Sin_1 <- NULL
-  b <- longlat_df[,2]
-  c <- longlat_df[,3]
+  b <- as.numeric(longlat_df[,2])
+  c <- as.numeric(longlat_df[,3])
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(c*pi/180)^2)
   DELTA_LAMBA <- as.numeric((b-d)*3600)
   a1 <- as.numeric(Ellipsoids[a,14])*c
