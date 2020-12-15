@@ -4,10 +4,12 @@
 \alias{ARCH}
 \title{ARCH}
 \usage{
-ARCH(x)
+ARCH(x, digits = 4)
 }
 \arguments{
 \item{x}{Rope}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -19,6 +21,6 @@ Rope reduction to elliptical arch.
 # Test data
 ROPE <- 50000
 
-value <- ARCH(ROPE)
+value <- ARCH(ROPE, digits = 4)
 print(value)
 }

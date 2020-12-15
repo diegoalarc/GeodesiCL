@@ -4,7 +4,8 @@
 #'
 #' @param x Sexagesimal longitude.
 #' @param y Sexagesimal latitude.
-#' @param units Select units for UTM to work.
+#' @param units Select units for UTM to work. DEFAULT: 'm'
+#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return data.frame
 #' @export
@@ -32,11 +33,11 @@
 #' # East and North as data.frame
 #' longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
 #'
-#' value <- LongLatToUTM(longlat_df, units = 'm')
+#' value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
 #' print(value)
-LongLatToUTM <- function(longlat_df, units = 'm'){
+LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
 
-  df <- data.frame(long = as.numeric(longlat_df[,2]), lat = as.numeric(longlat_df[,3]))
+  df <- data.frame(long = round(as.numeric(longlat_df[,2]), digits), lat = round(as.numeric(longlat_df[,3]), digits))
   sp::coordinates(df) <- c("long", "lat")
 
   hemisphere <- ifelse(as.numeric(longlat_df[,3]) > 0, "north", "south")
@@ -54,8 +55,9 @@ LongLatToUTM <- function(longlat_df, units = 'm'){
 
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>%
-    dplyr::mutate(zone = zone, hemisphere = hemisphere)
-  value <- as.data.frame(cbind(longlat_df[,1],res))
-  names(value) <- c("Pt","long", "lat")
-  return(value)
+    dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
+
+  value <- as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[1]), digits), round(as.numeric(res[2]), digits)))
+  names(value) <- c("Pt","East", "North")
+  return(data.frame(value, res[3]))
 }

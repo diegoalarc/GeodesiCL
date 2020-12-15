@@ -5,6 +5,7 @@
 #' @param utm_df East and North UTM in a data.frame.
 #' @param zone Select UTM zone to work.
 #' @param hemisphere select between north or south (written in lowercase).
+#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return data.frame
 #' @export
@@ -26,12 +27,11 @@
 #' zone <- 18
 #'
 #' # Hemisphere could be "north" or "south"
-#' Hemisphere <- "south"
+#' hemisphere <- "south"
 #'
-#' value <- UTMtoLongLat(utm_df,zone,Hemisphere)
+#' value <- UTMtoLongLat(utm_df, zone, hemisphere, digits = 4)
 #' print(value)
-UTMtoLongLat <- function(utm_df, zone, hemisphere) {
-
+UTMtoLongLat <- function(utm_df, zone, hemisphere, digits = 4){
 
   df <- data.frame(East = as.numeric(utm_df[,2]), North = as.numeric(utm_df[,3]))
   sp::coordinates(df) <- c("East", "North")
@@ -47,7 +47,7 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere) {
 
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
-  value <- as.data.frame(cbind(utm_df[,1],res))
-  names(value) <- c("Pt","East", "North")
+  value <- as.data.frame(cbind(utm_df[,1],round(as.numeric(res[1]), digits), round(as.numeric(res[2]), digits)))
+  names(value) <- c("Pt","long", "lat")
   return(value)
 }

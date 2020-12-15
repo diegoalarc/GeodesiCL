@@ -4,12 +4,14 @@
 \alias{geodis}
 \title{Geodis}
 \usage{
-geodis(x, y)
+geodis(x, y, digits = 4)
 }
 \arguments{
 \item{x}{Ellipsoidal height.}
 
 \item{y}{Horizontal distance.}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -22,6 +24,6 @@ Reduction of the horizontal distance to the Ellipsoid.
 h <- 2500
 Dhz <- 728.5
 
-value <- geodis(h, Dhz)
+value <- geodis(h, Dhz, digits = 4)
 print(value)
 }

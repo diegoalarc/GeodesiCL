@@ -4,6 +4,7 @@
 #'
 #' @param x Ellipsoidal height.
 #' @param y Horizontal distance.
+#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return value
 #' @export
@@ -13,12 +14,12 @@
 #' h <- 2500
 #' Dhz <- 728.5
 #'
-#' value <- geodis(h, Dhz)
+#' value <- geodis(h, Dhz, digits = 4)
 #' print(value)
-geodis <- function(x, y){
-  A <- (63780000+x)/63780000
-  B <- y/((63780000+x)/63780000)
-  values <- data.frame(as.numeric(A), as.numeric(B))
+geodis <- function(x, y, digits = 4){
+  A <- as.numeric((63780000+x)/63780000)
+  B <- as.numeric(y/((63780000+x)/63780000))
+  values <- data.frame(round(A, digits), round(B, digits))
   names(values) <- c("Kh(h)", "GEODESIC DISTANCE")
   return(values)
 }

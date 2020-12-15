@@ -9,6 +9,7 @@
 #' @param e Scale factor Ko.
 #' @param f False East (FE).
 #' @param g False North (FN).
+#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return value
 #' @export
@@ -42,38 +43,33 @@
 #' # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
 #' # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
 #' # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-#' value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN)
+#' value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 #' print(value)
-TO_TM <- function(a, b, c, d, e, f, g){
+TO_TM <- function(a, b, c, d, e, f, g, digits = 4){
   #  Ellipsoids <- NULL
   #  Sin_1 <- NULL
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(c*pi/180)^2)
-  DELTA_LAMBA <- (b-d)*3600
+  DELTA_LAMBA <- as.numeric((b-d)*3600)
   a1 <- as.numeric(Ellipsoids[a,14])*c
   b1 <- as.numeric(Ellipsoids[a,15])*sin(2*(c*pi/180))
   c1 <- as.numeric(Ellipsoids[a,16])*sin(4*(c*pi/180))
   d1 <- as.numeric(Ellipsoids[a,17])*sin(6*(c*pi/180))
   e1 <- as.numeric(Ellipsoids[a,18])*sin(8*(c*pi/180))
   f1 <- as.numeric(Ellipsoids[a,19])*sin(10*(c*pi/180))
-  Be <- a1-b1+c1-d1+e1-f1
-  t <- tan(c*pi/180)
-  n <- sqrt(as.numeric(Ellipsoids[a,7]))*cos(c*pi/180)
-  N1 <- 1/2*DELTA_LAMBA^2*N*sin(c*pi/180)*cos(c*pi/180)*(Sin_1^2)
-  N2 <- 1/24*DELTA_LAMBA^4*N*sin(c*pi/180)*cos(c*pi/180)^3*(Sin_1^4)*(5-t^2+9*n^2+4*n^4)
-  N3 <- 1/720*DELTA_LAMBA^6*N*sin(c*pi/180)*cos(c*pi/180)^5*(Sin_1^6)*(61-58*t^2+720*n^2-350*t^2*n^2)
-  Y <- e*(Be+N1+N2+N3)
-  North <- Y+g
-  E1 <- DELTA_LAMBA*N*cos(c*pi/180)*Sin_1
-  E2 <- 1/6*DELTA_LAMBA^3*N*cos(c*pi/180)^3*Sin_1^3*(1-t^2+n^2)
-  E3 <- 1/120*DELTA_LAMBA^5*N*cos(c*pi/180)^5*Sin_1^5*(5-18*t^2+t^4+14*n^2-58*t^2*n^2)
-  X <- e*(E1+E2+E3)
-  East <- X+f
-  values <- data.frame(as.numeric(East), as.numeric(North), as.numeric(X), as.numeric(Y))
-#                     , as.numeric(DELTA_LAMBA), as.numeric(a1), as.numeric(b1), as.numeric(c1)
-#                     , as.numeric(d1), as.numeric(e1), as.numeric(f1), as.numeric(Be), as.numeric(t)
-#                     , as.numeric(n), as.numeric(N1), as.numeric(N2), as.numeric(N3), as.numeric(E1)
-#                     , as.numeric(E2), as.numeric(E3))
-# names(values) <- c("East", "North", "X", "Y", "DELTA_LAMBA","a1", "b1", "c1", "d1", "e1", "f1", "B", "t", "n", "N1", "N2", "N3", "E1", "E2", "E3")
+  Be <- as.numeric(a1-b1+c1-d1+e1-f1)
+  t <- as.numeric(tan(c*pi/180))
+  n <- as.numeric(sqrt(as.numeric(Ellipsoids[a,7]))*cos(c*pi/180))
+  N1 <- as.numeric(1/2*DELTA_LAMBA^2*N*sin(c*pi/180)*cos(c*pi/180)*(Sin_1^2))
+  N2 <- as.numeric(1/24*DELTA_LAMBA^4*N*sin(c*pi/180)*cos(c*pi/180)^3*(Sin_1^4)*(5-t^2+9*n^2+4*n^4))
+  N3 <- as.numeric(1/720*DELTA_LAMBA^6*N*sin(c*pi/180)*cos(c*pi/180)^5*(Sin_1^6)*(61-58*t^2+720*n^2-350*t^2*n^2))
+  Y <- as.numeric(e*(Be+N1+N2+N3))
+  North <- as.numeric(Y+g)
+  E1 <- as.numeric(DELTA_LAMBA*N*cos(c*pi/180)*Sin_1)
+  E2 <- as.numeric(1/6*DELTA_LAMBA^3*N*cos(c*pi/180)^3*Sin_1^3*(1-t^2+n^2))
+  E3 <- as.numeric(1/120*DELTA_LAMBA^5*N*cos(c*pi/180)^5*Sin_1^5*(5-18*t^2+t^4+14*n^2-58*t^2*n^2))
+  X <- as.numeric(e*(E1+E2+E3))
+  East <- as.numeric(X+f)
+  values <- as.data.frame(cbind(round(East, digits), round(North, digits), round(X, digits), round(Y, digits)))
   names(values) <- c("East", "North", "X", "Y")
   return(values)
 }

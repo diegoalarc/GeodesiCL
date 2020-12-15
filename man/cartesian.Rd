@@ -4,7 +4,7 @@
 \alias{cartesian}
 \title{Cartesian}
 \usage{
-cartesian(a, b, c, d)
+cartesian(a, b, c, d, digits = 4)
 }
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
@@ -14,6 +14,8 @@ cartesian(a, b, c, d)
 \item{c}{Radian longitude.}
 
 \item{d}{Radian Latitude.}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -43,6 +45,6 @@ print(rad_lat)
 h <- 31.885
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value <- cartesian(4, h, rad_long, rad_lat)
+value <- cartesian(4, h, rad_long, rad_lat, digits = 4)
 print(value)
 }

@@ -4,12 +4,14 @@
 \alias{scalfactor}
 \title{Scalfactor}
 \usage{
-scalfactor(x, y)
+scalfactor(x, y, digits = 4)
 }
 \arguments{
 \item{x}{East coordinate.}
 
 \item{y}{Geodesic distance.}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -26,6 +28,6 @@ Dhz <- 728.5
 # Use the Geodesic distance from the function "Geodis"
 arch_data <- geodis(h,Dhz)
 
-value <- scalfactor(EAST, arch_data[2])
+value <- scalfactor(EAST, arch_data[2], digits = 4)
 print(value)
 }

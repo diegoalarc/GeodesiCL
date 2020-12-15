@@ -4,7 +4,7 @@
 \alias{sexagesimal}
 \title{Sexagesimal}
 \usage{
-sexagesimal(x, y, z)
+sexagesimal(x, y, z, digits = 4)
 }
 \arguments{
 \item{x}{Value of Degree in Latitude or Longitude.}
@@ -12,6 +12,8 @@ sexagesimal(x, y, z)
 \item{y}{Value of Minute in Latitude or Longitude.}
 
 \item{z}{Value of Seconds in Latitude or Longitude.}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -24,6 +26,6 @@ Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 g <- -33
 m <- 38
 s <- 30.123456
-value <- sexagesimal(g, m, s)
+value <- sexagesimal(g, m, s, digits = 4)
 print(value)
 }
