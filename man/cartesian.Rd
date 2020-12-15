@@ -4,16 +4,12 @@
 \alias{cartesian}
 \title{Cartesian}
 \usage{
-cartesian(a, b, c, d, digits = 4)
+cartesian(a, longlat_df, digits = 4)
 }
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{b}{ELLIPSOIDAL HEIGHT.}
-
-\item{c}{Radian longitude.}
-
-\item{d}{Radian Latitude.}
+\item{longlat_df}{Sexagesimal longitude and latitude as dataframe.}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
@@ -24,6 +20,9 @@ value
 To convert from Geodesic to Cartesian.
 }
 \examples{
+# Point name
+Pto <- "St1"
+
 # Longitude
 g <- -71
 m <- 18
@@ -44,7 +43,10 @@ print(rad_lat)
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
+# Longitude and Latitude as data.frame
+longlat_df <- as.data.frame(cbind(Pto, rad_long, rad_lat, h))
+
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value <- cartesian(4, h, rad_long, rad_lat, digits = 4)
+value <- cartesian(4, longlat_df, digits = 4)
 print(value)
 }

@@ -7,13 +7,11 @@
 LongLatToUTM(longlat_df, units = "m", digits = 4)
 }
 \arguments{
+\item{longlat_df}{Sexagesimal longitude and latitude as dataframe.}
+
 \item{units}{Select units for UTM to work. DEFAULT: 'm'}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
-
-\item{x}{Sexagesimal longitude.}
-
-\item{y}{Sexagesimal latitude.}
 }
 \value{
 data.frame
@@ -41,7 +39,7 @@ s1 <- 27.11457
 # Value in sexagesimal
 sexa_lat <- sexagesimal(g1, m1, s1)
 
-# East and North as data.frame
+# Longitude and Latitude as data.frame
 longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
 
 value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)

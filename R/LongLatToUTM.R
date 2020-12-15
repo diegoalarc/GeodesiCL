@@ -2,8 +2,7 @@
 #'
 #' To convert from Longitude and Latitude to UTM.
 #'
-#' @param x Sexagesimal longitude.
-#' @param y Sexagesimal latitude.
+#' @param longlat_df Sexagesimal longitude and latitude as dataframe.
 #' @param units Select units for UTM to work. DEFAULT: 'm'
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
@@ -30,7 +29,7 @@
 #' # Value in sexagesimal
 #' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
-#' # East and North as data.frame
+#' # Longitude and Latitude as data.frame
 #' longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
 #'
 #' value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)

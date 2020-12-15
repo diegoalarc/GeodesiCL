@@ -48,6 +48,6 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere, digits = 4){
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
   value <- as.data.frame(cbind(utm_df[,1],round(as.numeric(res[1]), digits), round(as.numeric(res[2]), digits)))
-  names(value) <- c("Pt","long", "lat")
+  names(value) <- c("Pt", "long", "lat")
   return(value)
 }

@@ -3,8 +3,7 @@
 #' Geodesic coordinate transformation to TM.
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' @param b Sexagesimal longitude.
-#' @param c Sexagesimal latitude.
+#' @param longlat_df Sexagesimal longitude and latitude as dataframe.
 #' @param d Central meridian.
 #' @param e Scale factor Ko.
 #' @param f False East (FE).
@@ -37,17 +36,22 @@
 #' # Value in sexagesimal
 #' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
+#' # Longitude and Latitude as data.frame
+#' longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
+#'
 #' # ELLIPSOIDAL HEIGHT (h)
 #' h <- 31.885
 #'
 #' # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
 #' # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
 #' # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-#' value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
+#' value <- TO_TM(4, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 #' print(value)
-TO_TM <- function(a, b, c, d, e, f, g, digits = 4){
+TO_TM <- function(a, longlat_df, d, e, f, g, digits = 4){
   #  Ellipsoids <- NULL
   #  Sin_1 <- NULL
+  b <- longlat_df[,2]
+  c <- longlat_df[,3]
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(c*pi/180)^2)
   DELTA_LAMBA <- as.numeric((b-d)*3600)
   a1 <- as.numeric(Ellipsoids[a,14])*c

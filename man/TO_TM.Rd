@@ -4,14 +4,12 @@
 \alias{TO_TM}
 \title{TO_TM}
 \usage{
-TO_TM(a, b, c, d, e, f, g, digits = 4)
+TO_TM(a, longlat_df, d, e, f, g, digits = 4)
 }
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{b}{Sexagesimal longitude.}
-
-\item{c}{Sexagesimal latitude.}
+\item{longlat_df}{Sexagesimal longitude and latitude as dataframe.}
 
 \item{d}{Central meridian.}
 
@@ -52,12 +50,15 @@ s1 <- 27.11457
 # Value in sexagesimal
 sexa_lat <- sexagesimal(g1, m1, s1)
 
+# Longitude and Latitude as data.frame
+longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
+
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
 # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
 # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
 # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-value <- TO_TM(4, sexa_long, sexa_lat, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
+value <- TO_TM(4, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 print(value)
 }
