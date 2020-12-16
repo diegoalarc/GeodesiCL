@@ -32,3 +32,7 @@ dplyr::mutate
 #' @importFrom dplyr n_distinct
 #' @export
 dplyr::n_distinct
+
+#' @importFrom mapview mapview
+#' @export
+mapview::mapview

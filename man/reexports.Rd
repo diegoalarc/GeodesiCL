@@ -11,6 +11,7 @@
 \alias{CRS}
 \alias{mutate}
 \alias{n_distinct}
+\alias{mapview}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -21,6 +22,8 @@ below to see their documentation.
   \item{dplyr}{\code{\link[dplyr]{mutate}}, \code{\link[dplyr]{n_distinct}}}
 
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
+
+  \item{mapview}{\code{\link[mapview:mapView]{mapview}}}
 
   \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
 }}

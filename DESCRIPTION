@@ -22,4 +22,5 @@ Imports:
   sp, 
   dplyr, 
   magrittr,
-  rgdal
+  rgdal,
+  mapview
