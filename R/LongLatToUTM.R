@@ -80,7 +80,7 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
         "Name: ", value1$Pt, "<br>",
         "East: ", as.numeric(value1$East), "<br>",
         "North: ", as.numeric(value1$North), "<br>",
-        "zone hemisphere: ", value1$zone_hemisphere) %>%
+        "zone hemisphere: ", as.character(res[,3])) %>%
     lapply(htmltools::HTML)) %>%
     # add different provider tiles
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
