@@ -12,6 +12,12 @@
 \alias{mutate}
 \alias{n_distinct}
 \alias{mapview}
+\alias{popupTable}
+\alias{leaflet}
+\alias{addTiles}
+\alias{addMarkers}
+\alias{HTML}
+\alias{addProviderTiles}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -20,6 +26,12 @@ below to see their documentation.
 
 \describe{
   \item{dplyr}{\code{\link[dplyr]{mutate}}, \code{\link[dplyr]{n_distinct}}}
+
+  \item{htmltools}{\code{\link[htmltools]{HTML}}}
+
+  \item{leaflet}{\code{\link[leaflet:map-layers]{addMarkers}}, \code{\link[leaflet]{addProviderTiles}}, \code{\link[leaflet:map-layers]{addTiles}}, \code{\link[leaflet]{leaflet}}}
+
+  \item{leafpop}{\code{\link[leafpop:popup]{popupTable}}}
 
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
 

@@ -36,3 +36,27 @@ dplyr::n_distinct
 #' @importFrom mapview mapview
 #' @export
 mapview::mapview
+
+#' @importFrom leafpop popupTable
+#' @export
+leafpop::popupTable
+
+#' @importFrom leaflet leaflet
+#' @export
+leaflet::leaflet
+
+#' @importFrom leaflet addTiles
+#' @export
+leaflet::addTiles
+
+#' @importFrom leaflet addMarkers
+#' @export
+leaflet::addMarkers
+
+#' @importFrom htmltools HTML
+#' @export
+htmltools::HTML
+
+#' @importFrom leaflet addProviderTiles
+#' @export
+leaflet::addProviderTiles

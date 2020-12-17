@@ -52,11 +52,47 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
   if (dplyr::n_distinct(CRSstring) > 1L)
     stop("multiple zone/hemisphere detected")
 
+#  pjct_num <- rgdal::showEPSG(paste0("+proj=utm +zone=", zone, " +ellps=WGS84 +", hemisphere))
+
+  ######
+#  epsg_utm <- leaflet::leafletCRS(
+#    crsClass = "L.Proj.CRS",
+#    code = paste0("EPSG:",pjct_num),
+#   proj4def = paste0("+proj=utm +zone=", zone, " +ellps=WGS84 +", hemisphere, " +towgs84=0,0,0,0,0,0,0 +units=", units," +no_defs"),
+#    resolutions = 0.42*(2^(14:0)),
+#    origin = c(0, 0))
+  #####
+
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>%
     dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
   value <- as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[1]), digits), round(as.numeric(res[2]), digits)))
   names(value) <- c("Pt", "East", "North")
-  return(data.frame(value, res[3]))
+  value1 <- data.frame(value, res[3])
+
+  map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
+    leaflet::addMarkers(
+      data = df,
+      as.numeric(df$long), as.numeric(df$lat),
+      # create custom labels
+      label = paste(
+        "Name: ", value1$Pt, "<br>",
+        "East: ", as.numeric(value1$East), "<br>",
+        "North: ", as.numeric(value1$North), "<br>",
+        "zone hemisphere: ", value1$zone_hemisphere) %>%
+    lapply(htmltools::HTML)) %>%
+    # add different provider tiles
+    leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
+    leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%
+    leaflet::addProviderTiles("Stamen.Terrain", group = "Stamen.Terrain") %>%
+    leaflet::addProviderTiles("Esri.WorldStreetMap", group = "Esri.WorldStreetMap") %>%
+    leaflet::addProviderTiles("Wikimedia", group = "Wikimedia") %>%
+    leaflet::addProviderTiles("CartoDB.Positron", group = "CartoDB.Positron") %>%
+    leaflet::addProviderTiles("Esri.WorldImagery", group = "Esri.WorldImagery") %>%
+    leaflet::addLayersControl(baseGroups = c("OpenStreetMap", "Stamen.Toner",
+                                             "Stamen.Terrain", "Esri.WorldStreetMap",
+                                             "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
+                              position = "topleft")
+  return(list(value1, map))
 }

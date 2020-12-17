@@ -23,4 +23,7 @@ Imports:
   dplyr, 
   magrittr,
   rgdal,
+  leafpop,
+  htmltools,
+  leaflet,
   mapview
