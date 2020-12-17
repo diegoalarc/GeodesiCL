@@ -14,7 +14,7 @@ cartesian(a, longlat_df, digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-value
+data.frame with the data in the following order: "Pt", "X", "Y", "Z".
 }
 \description{
 To convert from Geodesic to Cartesian.
@@ -28,23 +28,23 @@ g <- -71
 m <- 18
 s <- 44.86475
 
-# Value in radians
-rad_long <- radians(g,m,s)
+# Value in sexagesimal
+sexa_long <- sexagesimal(g,m,s)
 
 # Latitude
 g <- -33
 m <- 38
 s <- 30.123456
 
-# Value in radians
-rad_lat <- radians(g, m, s)
-print(rad_lat)
+# Value in sexagesimal
+sexa_lat <- sexagesimal(g, m, s)
+print(sexa_lat)
 
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
 # Longitude and Latitude as data.frame
-longlat_df <- as.data.frame(cbind(Pto, rad_long, rad_lat, h))
+longlat_df <- data.frame(Pto, sexa_long, sexa_lat, h)
 
 # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 value <- cartesian(4, longlat_df, digits = 4)
