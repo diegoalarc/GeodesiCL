@@ -26,6 +26,8 @@ The <a href="https://en.wikipedia.org/wiki/Ellipsoid">`Ellipsoids`</a> within th
 
 Here you can see the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/function">`functions`</a> contained in the package. Is it possible to read its description by copying to the console `? + function` or if you want to see an example just using `example(function)` like the following:
 
+###### Check out each example, since most functions work with data.frame that has a specific order for its data.
+
 `ARCH`: Rope reduction to elliptical arch.
 ```r
 ?ARCH
@@ -80,6 +82,14 @@ example(M)
 
 example(N)
 ```
+
+`PlotLongLat`: To plot using Longitude and Latitude.
+```r
+?PlotLongLat
+
+example(PlotLongLat)
+```
+
 `radians`: Convert separated data in Degrees Minutes and Seconds to Radians.
 ```r
 ?radians

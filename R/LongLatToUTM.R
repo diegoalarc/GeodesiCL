@@ -2,7 +2,7 @@
 #'
 #' To convert from Longitude and Latitude to UTM.
 #'
-#' @param longlat_df Sexagesimal longitude and latitude as dataframe.
+#' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
 #' @param units Select units for UTM to work. DEFAULT: 'm'
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'

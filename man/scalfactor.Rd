@@ -7,7 +7,7 @@
 scalfactor(EAST_Geodist_df, digits = 4)
 }
 \arguments{
-\item{EAST_Geodist_df}{East coordinate and Geodesic distance as data.frame.}
+\item{EAST_Geodist_df}{Point name, East coordinate and Geodesic distance as data.frame.}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }

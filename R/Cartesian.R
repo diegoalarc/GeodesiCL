@@ -3,7 +3,7 @@
 #' To convert from Geodesic to Cartesian.
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-#' @param longlat_df Sexagesimal longitude and latitude as dataframe.
+#' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return data.frame with the data in the following order: "Pt", "X", "Y", "Z".

@@ -9,7 +9,7 @@ cartesian(a, longlat_df, digits = 4)
 \arguments{
 \item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
-\item{longlat_df}{Sexagesimal longitude and latitude as dataframe.}
+\item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }

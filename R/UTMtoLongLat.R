@@ -2,7 +2,7 @@
 #'
 #' To convert from UTM to Longitude and Latitude.
 #'
-#' @param utm_df East and North UTM in a data.frame.
+#' @param utm_df Point name, East and North UTM in a data.frame.
 #' @param zone Select UTM zone to work.
 #' @param hemisphere select between north or south (written in lowercase). DEFAULT: "south"
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4

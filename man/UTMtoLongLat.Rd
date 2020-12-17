@@ -7,7 +7,7 @@
 UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 }
 \arguments{
-\item{utm_df}{East and North UTM in a data.frame.}
+\item{utm_df}{Point name, East and North UTM in a data.frame.}
 
 \item{zone}{Select UTM zone to work.}
 
