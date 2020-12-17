@@ -4,14 +4,14 @@
 \alias{UTMtoLongLat}
 \title{UTMtoLongLat}
 \usage{
-UTMtoLongLat(utm_df, zone, hemisphere, digits = 4)
+UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 }
 \arguments{
 \item{utm_df}{East and North UTM in a data.frame.}
 
 \item{zone}{Select UTM zone to work.}
 
-\item{hemisphere}{select between north or south (written in lowercase).}
+\item{hemisphere}{select between north or south (written in lowercase). DEFAULT: "south"}
 
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
@@ -40,6 +40,6 @@ zone <- 18
 # Hemisphere could be "north" or "south"
 hemisphere <- "south"
 
-value <- UTMtoLongLat(utm_df, zone, hemisphere, digits = 4)
+value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 print(value)
 }
