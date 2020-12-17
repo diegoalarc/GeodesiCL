@@ -22,7 +22,7 @@ TO_TM(a, longlat_df, d, e, f, g, digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-value
+data.frame with the data in the following order: "East", "North", "X", "Y".
 }
 \description{
 Geodesic coordinate transformation to TM.

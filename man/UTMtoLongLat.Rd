@@ -16,7 +16,7 @@ UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-data.frame
+a list with a data.frame [[1]] and leaflet map [[2]].
 }
 \description{
 To convert from UTM to Longitude and Latitude.

@@ -12,7 +12,7 @@ scalfactor(EAST_Geodist_df, digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-value
+data.frame with the data in the following order: "Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM".
 }
 \description{
 Scale factor calculation.

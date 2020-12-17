@@ -12,7 +12,7 @@ geodis(Data_fm, digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-value
+data.frame with the data in the following order: "Pt", "Kh(h)", "GEODESIC DISTANCE".
 }
 \description{
 Reduction of the horizontal distance to the Ellipsoid.
@@ -28,7 +28,7 @@ h <- 2500
 Dhz <- 728.5
 
 # Ellipsoidal height and Horizontal distance as data.frame
-Ellips_Horzdist_df <- as.data.frame(cbind(Pto, h, Dhz))
+Ellips_Horzdist_df <- data.frame(Pto, h, Dhz)
 
 value <- geodis(Ellips_Horzdist_df, digits = 4)
 print(value)

@@ -10,7 +10,7 @@
 #' @param g False North (FN).
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return value
+#' @return data.frame with the data in the following order: "East", "North", "X", "Y".
 #' @export
 #'
 #' @examples

@@ -14,7 +14,7 @@ geodesic(a, XYZ_df, digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-data.frame
+data.frame with the data in the following order: "Pt", "Lat", "Lon", "H".
 }
 \description{
 To convert from Cartesian to Geodesic.

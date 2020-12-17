@@ -5,7 +5,7 @@
 #' @param EAST_Geodist_df East coordinate and Geodesic distance as data.frame.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return value
+#' @return data.frame with the data in the following order: "Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM".
 #' @export
 #'
 #' @examples

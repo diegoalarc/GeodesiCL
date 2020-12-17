@@ -6,7 +6,8 @@
 #' @param units Select units for UTM to work. DEFAULT: 'm'
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return data.frame
+#' @return a list with a data.frame [[1]] and leaflet map [[2]].
+#'
 #' @export
 #'
 #' @examples
@@ -30,7 +31,7 @@
 #' sexa_lat <- sexagesimal(g1, m1, s1)
 #'
 #' # Longitude and Latitude as data.frame
-#' longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
+#' longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 #'
 #' value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
 #' print(value)
@@ -67,7 +68,7 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
     data.frame() %>%
     dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits)))
+  value <- data.frame(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits))
   names(value) <- c("Pt", "East", "North")
   value1 <- data.frame(value, res[,3])
 

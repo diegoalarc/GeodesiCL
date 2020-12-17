@@ -6,7 +6,7 @@
 #' @param XYZ_df Sexagesimal longitude and latitude as dataframe.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return data.frame
+#' @return data.frame with the data in the following order: "Pt", "Lat", "Lon", "H".
 #' @export
 #'
 #' @examples

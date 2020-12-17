@@ -7,7 +7,8 @@
 #' @param hemisphere select between north or south (written in lowercase). DEFAULT: "south"
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return data.frame
+#' @return a list with a data.frame [[1]] and leaflet map [[2]].
+#'
 #' @export
 #'
 #' @examples
@@ -48,7 +49,7 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
 
-  value <- as.data.frame(cbind(utm_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits)))
+  value <- data.frame(utm_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
