@@ -2,7 +2,7 @@
 % Please edit documentation in R/Scalfactor.R
 \name{scalfactor}
 \alias{scalfactor}
-\title{Scalfactor}
+\title{To calculate scale factor calculation.}
 \usage{
 scalfactor(EAST_Geodist_df, digits = 4)
 }
@@ -15,7 +15,7 @@ scalfactor(EAST_Geodist_df, digits = 4)
 data.frame with the data in the following order: "Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM".
 }
 \description{
-Scale factor calculation.
+With this function it is possible to calculate the scale factor.
 }
 \examples{
 # Point name

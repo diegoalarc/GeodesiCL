@@ -2,7 +2,7 @@
 % Please edit documentation in R/TO_TM.R
 \name{TO_TM}
 \alias{TO_TM}
-\title{TO_TM}
+\title{To convert from Geographic coordinate to TM.}
 \usage{
 TO_TM(a, longlat_df, d, e, f, g, digits = 4)
 }
@@ -25,7 +25,7 @@ TO_TM(a, longlat_df, d, e, f, g, digits = 4)
 data.frame with the data in the following order: "East", "North", "X", "Y".
 }
 \description{
-Geodesic coordinate transformation to TM.
+With this function it is possible to convert from Geographic coordinate to TM using the Central meridian, Scale factor Ko, False East, False North and obtain the decimal precision that you assign.
 }
 \examples{
 # Test data

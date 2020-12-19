@@ -1,6 +1,6 @@
-#' TO_TM
+#' To convert from Geographic coordinate to TM.
 #'
-#' Geodesic coordinate transformation to TM.
+#' With this function it is possible to convert from Geographic coordinate to TM using the Central meridian, Scale factor Ko, False East, False North and obtain the decimal precision that you assign.
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 #' @param longlat_df Sexagesimal longitude and latitude as dataframe.

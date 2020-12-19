@@ -1,6 +1,6 @@
-#' Radians
+#' To convert separated data in Degrees Minutes and Seconds to Radians.
 #'
-#' Convert separated data in Degrees Minutes and Seconds to Radians.
+#' With this function it is possible to convert separated data in Degrees Minutes and Seconds to Radians.
 #'
 #' @param x Value of Degree in Latitude or Longitude.
 #' @param y Value of Minute in Latitude or Longitude.

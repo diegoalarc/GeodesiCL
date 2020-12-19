@@ -2,7 +2,7 @@
 % Please edit documentation in R/N.R
 \name{N}
 \alias{N}
-\title{N}
+\title{To calculate the value of N.}
 \usage{
 N(x, y, digits = 4)
 }
@@ -17,7 +17,7 @@ N(x, y, digits = 4)
 value
 }
 \description{
-To calculate the value of N.
+To calculate the value for the function of N.
 }
 \examples{
 # Latitude

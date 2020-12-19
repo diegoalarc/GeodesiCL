@@ -2,7 +2,7 @@
 % Please edit documentation in R/Radians.R
 \name{radians}
 \alias{radians}
-\title{Radians}
+\title{To convert separated data in Degrees Minutes and Seconds to Radians.}
 \usage{
 radians(x, y, z, digits = 4)
 }
@@ -19,7 +19,7 @@ radians(x, y, z, digits = 4)
 value
 }
 \description{
-Convert separated data in Degrees Minutes and Seconds to Radians.
+With this function it is possible to convert separated data in Degrees Minutes and Seconds to Radians.
 }
 \examples{
 # Lat

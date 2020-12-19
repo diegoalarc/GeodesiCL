@@ -26,4 +26,5 @@ Imports:
   leafpop,
   htmltools,
   leaflet,
+  usethis,
   mapview

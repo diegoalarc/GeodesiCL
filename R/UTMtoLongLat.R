@@ -1,6 +1,6 @@
-#' UTMtoLongLat
+#' To convert from UTM to Geographic coordinate.
 #'
-#' To convert from UTM to Longitude and Latitude.
+#' With this function it is possible to convert from UTM coordinate to Geographic coordinate.
 #'
 #' @param utm_df Point name, East and North UTM in a data.frame.
 #' @param zone Select UTM zone to work.

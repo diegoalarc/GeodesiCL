@@ -1,6 +1,6 @@
-#' rSL
-#'
 #' To calculate the value of r, S and L.
+#'
+#' With this function it is possible to calculate the value of r, S and L.
 #'
 #' @param x Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 #' @param pto_lat Point name and the latitude in radians as data.frame.

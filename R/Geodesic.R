@@ -1,6 +1,6 @@
-#' Geodesic
+#' To convert from Cartesian coordinate to Geographic coordinate.
 #'
-#' To convert from Cartesian to Geodesic.
+#' With this function it is possible to convert from Cartesian coordinate to Geographic coordinate and obtain the decimal precision that you assign.
 #'
 #' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 #' @param XYZ_df Sexagesimal longitude and latitude as dataframe.

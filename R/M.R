@@ -1,6 +1,6 @@
-#' M
-#'
 #' To calculate the value of M.
+#'
+#' To calculate the value for the function of M.
 #'
 #' @param x Selection of Ellipsoid to work between 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80', 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880', 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'.
 #' @param y Latitude in radians.

@@ -2,7 +2,7 @@
 % Please edit documentation in R/E2.R
 \name{E2}
 \alias{E2}
-\title{E2}
+\title{To calculate 1-e^2.}
 \usage{
 E2(x, digits = 4)
 }
@@ -15,7 +15,7 @@ E2(x, digits = 4)
 value
 }
 \description{
-To calculate 1-e^2
+To calculate the value for the function 1-e^2.
 }
 \examples{
 # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',

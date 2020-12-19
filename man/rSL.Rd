@@ -2,7 +2,7 @@
 % Please edit documentation in R/rSL.R
 \name{rSL}
 \alias{rSL}
-\title{rSL}
+\title{To calculate the value of r, S and L.}
 \usage{
 rSL(x, pto_lat, digits = 4)
 }
@@ -17,7 +17,7 @@ rSL(x, pto_lat, digits = 4)
 data.frame with the data in the following order: "Pt", "r", "S", "L".
 }
 \description{
-To calculate the value of r, S and L.
+With this function it is possible to calculate the value of r, S and L.
 }
 \examples{
 # Point name

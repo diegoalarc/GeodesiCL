@@ -1,6 +1,6 @@
-#' Geodis
-#'
 #' Reduction of the horizontal distance to the Ellipsoid.
+#'
+#' With this function it is possible to perform a reduction of the horizontal distance to the Ellipsoid.
 #'
 #' @param Data_fm Point name, Ellipsoidal height and Horizontal distance as dataframe.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4

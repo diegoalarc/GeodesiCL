@@ -28,13 +28,13 @@ Here you can see the <a href="https://www.rdocumentation.org/packages/base/versi
 
 ###### Check out each example, since most functions work with data.frame that has a specific order for its data.
 
-`ARCH`: Rope reduction to elliptical arch.
+`arch`: Rope reduction to elliptical arch.
 ```r
-?ARCH
+?arch
 
-example(ARCH)
+example(arch)
 ```
-`cartesian`: To convert from Geodesic to Cartesian.
+`cartesian`: To convert from Geographic coordinate to Cartesian coordinate.
 ```r
 ?cartesian
 
@@ -52,7 +52,7 @@ example(E2)
 
 example(E3)
 ```
-`geodesic`: To convert from Cartesian to Geodesic.
+`geodesic`: To convert from Cartesian coordinate to Geographic coordinate.
 ```r
 ?geodesic
 
@@ -64,7 +64,7 @@ example(geodesic)
 
 example(geodis)
 ```
-`LongLatToUTM`: To convert from Longitude and Latitude to UTM.
+`LongLatToUTM`: To convert from Geographic coordinate to UTM coordinate.
 ```r
 ?LongLatToUTM
 
@@ -83,14 +83,14 @@ example(M)
 example(N)
 ```
 
-`PlotLongLat`: To plot using Longitude and Latitude.
+`PlotLongLat`: To plot using Geographic coordinate.
 ```r
 ?PlotLongLat
 
 example(PlotLongLat)
 ```
 
-`radians`: Convert separated data in Degrees Minutes and Seconds to Radians.
+`radians`: To convert separated data in Degrees Minutes and Seconds to Radians.
 ```r
 ?radians
 
@@ -102,25 +102,25 @@ example(radians)
 
 example(rSL)
 ```
-`scalfactor`: Scale factor calculation.
+`scalfactor`: To calculate scale factor calculation.
 ```r
 ?scalfactor
 
 example(scalfactor)
 ```
-`sexagesimal`: Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
+`sexagesimal`: To convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 ```r
 ?sexagesimal
 
 example(sexagesimal)
 ```
-`TO_TM`: Geodesic coordinate transformation to TM.
+`TO_TM`: To convert from Geographic coordinate to TM.
 ```r
 ?TO_TM
 
 example(TO_TM)
 ```
-`UTMtoLongLat`: To convert from UTM to Longitude and Latitude.
+`UTMtoLongLat`: To convert from UTM to Geographic coordinate.
 ```r
 ?UTMtoLongLat
 

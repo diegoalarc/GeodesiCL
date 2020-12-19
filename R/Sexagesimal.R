@@ -1,6 +1,6 @@
-#' Sexagesimal
+#' To convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 #'
-#' Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
+#' With this function it is possible to convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 #'
 #' @param x Value of Degree in Latitude or Longitude.
 #' @param y Value of Minute in Latitude or Longitude.

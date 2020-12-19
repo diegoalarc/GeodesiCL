@@ -1,6 +1,6 @@
-#' LongLatToUTM
+#' To convert from Geographic coordinate to UTM coordinate.
 #'
-#' To convert from Longitude and Latitude to UTM.
+#' With this function it is possible to convert from Geographic coordinate to UTM coordinate.
 #'
 #' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
 #' @param units Select units for UTM to work. DEFAULT: 'm'

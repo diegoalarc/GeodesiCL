@@ -2,7 +2,7 @@
 % Please edit documentation in R/E3.R
 \name{E3}
 \alias{E3}
-\title{E3}
+\title{To calculate 1-e^2*sen(lat)^2.}
 \usage{
 E3(x, y, digits = 4)
 }
@@ -17,7 +17,7 @@ E3(x, y, digits = 4)
 value
 }
 \description{
-To calculate 1-e^2*sen(lat)^2
+To calculate the value for the function 1-e^2*sen(lat)^2.
 }
 \examples{
 # Lat

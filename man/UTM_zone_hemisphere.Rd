@@ -2,7 +2,7 @@
 % Please edit documentation in R/UTM_zone_hemisphere.R
 \name{UTM_zone_hemisphere}
 \alias{UTM_zone_hemisphere}
-\title{UTM_zone_hemisphere}
+\title{To find the zone hemisphere from Longitude and Latitude the UTM zone.}
 \usage{
 UTM_zone_hemisphere(x, y)
 }
@@ -15,7 +15,7 @@ UTM_zone_hemisphere(x, y)
 value
 }
 \description{
-To find the zone hemisphere from Longitude and Latitude the UTM zone.
+With this function it is possible to find the zone hemisphere from Geographic coordinate to obtain the UTM zone.
 }
 \examples{
 #' # Longitude

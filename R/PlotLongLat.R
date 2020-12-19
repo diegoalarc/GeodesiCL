@@ -1,6 +1,6 @@
-#' PlotLongLat
+#' To plot using Geographic coordinate.
 #'
-#' To plot using Longitude and Latitude.
+#' With this function it is possible to plot using Longitude and Latitude (Geographic coordinate).
 #'
 #' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
 #'

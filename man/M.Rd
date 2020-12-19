@@ -2,7 +2,7 @@
 % Please edit documentation in R/M.R
 \name{M}
 \alias{M}
-\title{M}
+\title{To calculate the value of M.}
 \usage{
 M(x, y, digits = 4)
 }
@@ -17,7 +17,7 @@ M(x, y, digits = 4)
 value
 }
 \description{
-To calculate the value of M.
+To calculate the value for the function of M.
 }
 \examples{
 # Latitude

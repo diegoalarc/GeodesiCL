@@ -2,7 +2,7 @@
 % Please edit documentation in R/Geodis.R
 \name{geodis}
 \alias{geodis}
-\title{Geodis}
+\title{Reduction of the horizontal distance to the Ellipsoid.}
 \usage{
 geodis(Data_fm, digits = 4)
 }
@@ -15,7 +15,7 @@ geodis(Data_fm, digits = 4)
 data.frame with the data in the following order: "Pt", "Kh(h)", "GEODESIC DISTANCE".
 }
 \description{
-Reduction of the horizontal distance to the Ellipsoid.
+With this function it is possible to perform a reduction of the horizontal distance to the Ellipsoid.
 }
 \examples{
 # Point name

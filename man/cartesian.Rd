@@ -2,7 +2,7 @@
 % Please edit documentation in R/Cartesian.R
 \name{cartesian}
 \alias{cartesian}
-\title{Cartesian}
+\title{To convert from Geographic coordinate to Cartesian coordinate.}
 \usage{
 cartesian(a, longlat_df, digits = 4)
 }
@@ -17,7 +17,7 @@ cartesian(a, longlat_df, digits = 4)
 data.frame with the data in the following order: "Pt", "X", "Y", "Z".
 }
 \description{
-To convert from Geodesic to Cartesian.
+With this function it is possible to convert from Geographic coordinate to Cartesian coordinate and obtain the decimal precision that you assign.
 }
 \examples{
 # Point name

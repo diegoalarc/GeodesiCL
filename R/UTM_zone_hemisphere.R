@@ -1,6 +1,6 @@
-#' UTM_zone_hemisphere
-#'
 #' To find the zone hemisphere from Longitude and Latitude the UTM zone.
+#'
+#' With this function it is possible to find the zone hemisphere from Geographic coordinate to obtain the UTM zone.
 #'
 #' @param x Sexagesimal longitude.
 #' @param y Sexagesimal latitude.

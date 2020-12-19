@@ -2,7 +2,7 @@
 % Please edit documentation in R/Sexagesimal.R
 \name{sexagesimal}
 \alias{sexagesimal}
-\title{Sexagesimal}
+\title{To convert separated data in Degrees Minutes and Seconds to Decimal degrees.}
 \usage{
 sexagesimal(x, y, z, digits = 4)
 }
@@ -19,7 +19,7 @@ sexagesimal(x, y, z, digits = 4)
 value
 }
 \description{
-Convert separated data in Degrees Minutes and Seconds to Decimal degrees.
+With this function it is possible to convert separated data in Degrees Minutes and Seconds to Decimal degrees.
 }
 \examples{
 # Latitude

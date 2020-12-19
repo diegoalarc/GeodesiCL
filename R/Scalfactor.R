@@ -1,6 +1,6 @@
-#' Scalfactor
+#' To calculate scale factor calculation.
 #'
-#' Scale factor calculation.
+#' With this function it is possible to calculate the scale factor.
 #'
 #' @param EAST_Geodist_df Point name, East coordinate and Geodesic distance as data.frame.
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4

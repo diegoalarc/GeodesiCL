@@ -2,7 +2,7 @@
 % Please edit documentation in R/Geodesic.R
 \name{geodesic}
 \alias{geodesic}
-\title{Geodesic}
+\title{To convert from Cartesian coordinate to Geographic coordinate.}
 \usage{
 geodesic(a, XYZ_df, digits = 4)
 }
@@ -17,7 +17,7 @@ geodesic(a, XYZ_df, digits = 4)
 data.frame with the data in the following order: "Pt", "Lat", "Lon", "H".
 }
 \description{
-To convert from Cartesian to Geodesic.
+With this function it is possible to convert from Cartesian coordinate to Geographic coordinate and obtain the decimal precision that you assign.
 }
 \examples{
 # Point name

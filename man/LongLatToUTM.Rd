@@ -2,7 +2,7 @@
 % Please edit documentation in R/LongLatToUTM.R
 \name{LongLatToUTM}
 \alias{LongLatToUTM}
-\title{LongLatToUTM}
+\title{To convert from Geographic coordinate to UTM coordinate.}
 \usage{
 LongLatToUTM(longlat_df, units = "m", digits = 4)
 }
@@ -17,7 +17,7 @@ LongLatToUTM(longlat_df, units = "m", digits = 4)
 a list with a data.frame [[1]] and leaflet map [[2]].
 }
 \description{
-To convert from Longitude and Latitude to UTM.
+With this function it is possible to convert from Geographic coordinate to UTM coordinate.
 }
 \examples{
 # Point name

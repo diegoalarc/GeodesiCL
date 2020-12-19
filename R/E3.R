@@ -1,6 +1,6 @@
-#' E3
+#' To calculate 1-e^2*sen(lat)^2.
 #'
-#' To calculate 1-e^2*sen(lat)^2
+#' To calculate the value for the function 1-e^2*sen(lat)^2.
 #'
 #' @param x Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
 #' @param y Latitude in radians.
