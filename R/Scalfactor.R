@@ -39,8 +39,8 @@ scalfactor <- function(EAST_Geodist_df, digits = 4){
   D_UTM <- as.numeric(y*K_UTM)
   DIF_DS <- as.numeric(D_UTM-y)
   PPM <- as.numeric((DIF_DS/D_UTM)*1000000)
-  values <- data.frame(EAST_Geodist_df[,1],round(valueX, digits), round(K_UTM, digits), round(D_UTM, digits),
-                       round(DIF_DS, digits), round(PPM, digits))
+  values <- as.data.frame(cbind(EAST_Geodist_df[,1],round(valueX, digits), round(K_UTM, digits), round(D_UTM, digits),
+                       round(DIF_DS, digits), round(PPM, digits)))
   names(values) <- c("Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM")
   return(values)
 }

@@ -68,9 +68,8 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
     data.frame() %>%
     dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- data.frame(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits))
-  names(value) <- c("Pt", "East", "North")
-  value1 <- data.frame(value, res[,3])
+  value <- as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits), as.character(res[,3])))
+  names(value) <- c("Pt", "East", "North", "zone_hemisphere")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
     leaflet::addMarkers(
@@ -78,10 +77,10 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
       as.numeric(df$long), as.numeric(df$lat),
       # create custom labels
       label = paste(
-        "Name: ", value1$Pt, "<br>",
-        "East: ", as.numeric(value1$East), "<br>",
-        "North: ", as.numeric(value1$North), "<br>",
-        "zone hemisphere: ", as.character(res[,3])) %>%
+        "Name: ", value$Pt, "<br>",
+        "East: ", as.numeric(value$East), "<br>",
+        "North: ", as.numeric(value$North), "<br>",
+        "zone hemisphere: ", as.character(value$zone_hemisphere)) %>%
     lapply(htmltools::HTML)) %>%
     # add different provider tiles
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
@@ -95,5 +94,5 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
                                              "Stamen.Terrain", "Esri.WorldStreetMap",
                                              "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
                               position = "topleft")
-  return(list(value1, map))
+  return(list(value, map))
 }

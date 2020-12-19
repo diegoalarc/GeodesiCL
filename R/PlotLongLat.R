@@ -44,7 +44,7 @@ PlotLongLat <- function(longlat_df){
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
 
-  value <- data.frame(longlat_df[,1],as.numeric(res[,1]), as.numeric(res[,2]))
+  value <- as.data.frame(cbind(longlat_df[,1],as.numeric(res[,1]), as.numeric(res[,2])))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
@@ -55,8 +55,8 @@ PlotLongLat <- function(longlat_df){
       label = paste(
         "Name: ", value$Pt, "<br>",
         "Longitude: ", as.numeric(value$Long), "<br>",
-        "Latitude: ", as.numeric(value$Lat)
-      ) %>% lapply(htmltools::HTML)) %>%
+        "Latitude: ", as.numeric(value$Lat)) %>%
+        lapply(htmltools::HTML)) %>%
     # add different provider tiles
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
     leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%

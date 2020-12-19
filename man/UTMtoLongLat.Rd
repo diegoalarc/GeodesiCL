@@ -32,7 +32,7 @@ East <- 650012.58
 North <- 5590735.41
 
 # East and North as data.frame
-utm_df <- as.data.frame(cbind(Pto,East,North))
+utm_df <- data.frame(Pto,East,North)
 
 # Zone
 zone <- 18

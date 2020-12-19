@@ -28,7 +28,7 @@ geodis <- function(Data_fm, digits = 4){
   y <- as.numeric(Data_fm[,3])
   A <- as.numeric((63780000+x)/63780000)
   B <- as.numeric(y/((63780000+x)/63780000))
-  values <- data.frame(Data_fm[,1], round(A, digits), round(B, digits))
+  values <- as.data.frame(cbind(Data_fm[,1], round(A, digits), round(B, digits)))
   names(values) <- c("Pt", "Kh(h)", "GEODESIC DISTANCE")
   return(values)
 }
