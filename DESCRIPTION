@@ -1,7 +1,7 @@
 Type: Package
 Package: GeodesiCL
 Title: Geometric Geodesy Functions
-Version: 0.1.0
+Version: 1.0.0
 Date: 2020-12-10
 Authors@R: c(
     person("Diego Alonso", "Alarcon Diaz", email = "diego.alarcondiaz@gmail.com", role = c("cre","aut")),
