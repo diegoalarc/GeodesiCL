@@ -28,7 +28,7 @@ Imports:
   htmltools,
   leaflet,
   profvis,
-  rmarkdown,
+  knitr,
   mapview
 Suggests: 
     testthat (>= 3.0.0),

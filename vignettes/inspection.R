@@ -1,5 +1,6 @@
 ## ----setup, include = FALSE---------------------------------------------------
 knitr::opts_chunk$set(
+  echo = TRUE,
   collapse = TRUE,
   comment = "#>"
 )
@@ -7,8 +8,6 @@ knitr::opts_chunk$set(
 ## -----------------------------------------------------------------------------
 library(GeodesiCL)
 library(profvis)
-
-# Function cartesian()
 
 # Point name
 Pto <- "St1"
@@ -43,8 +42,6 @@ profile
 library(GeodesiCL)
 library(profvis)
 
-# Function UTMtoLongLat()
-
 # Point name
 Pto <- "St1"
 
@@ -69,8 +66,6 @@ profile
 ## -----------------------------------------------------------------------------
 library(GeodesiCL)
 library(profvis)
-
-# Function LongLatToUTM()
 
 # Point name
 Pto <- "St1"
