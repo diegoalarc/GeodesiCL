@@ -1,5 +1,5 @@
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
-###### Attention: Still in beta test
+###### Attention: We are ready to go!!
 ***
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __Geometric Geodesy__ applying the necessary basic formulas.
