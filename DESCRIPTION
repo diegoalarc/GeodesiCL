@@ -32,7 +32,8 @@ Imports:
 Suggests: 
     testthat (>= 3.0.0),
     rmarkdown,
+    knitr,
     covr
 Config/testthat/edition: 3
 VignetteBuilder:
-    knitr
+    rmarkdown
