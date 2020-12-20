@@ -1,14 +1,11 @@
-## ----setup, include = FALSE---------------------------------------------------
-knitr::opts_chunk$set(
-  echo = TRUE,
-  collapse = TRUE,
-  comment = "#>"
-)
+## ---- echo=FALSE--------------------------------------------------------------
+knitr::opts_chunk$set(error = TRUE)
 
 ## -----------------------------------------------------------------------------
 library(GeodesiCL)
 library(profvis)
 
+## -----------------------------------------------------------------------------
 # Point name
 Pto <- "St1"
 
@@ -39,9 +36,6 @@ profile <- profvis(for (i in seq_len(100)) (cartesian(4, longlat_df, digits = 4)
 profile
 
 ## -----------------------------------------------------------------------------
-library(GeodesiCL)
-library(profvis)
-
 # Point name
 Pto <- "St1"
 
@@ -64,9 +58,6 @@ profile <- profvis(for (i in seq_len(100)) (UTMtoLongLat(utm_df, zone, hemispher
 profile
 
 ## -----------------------------------------------------------------------------
-library(GeodesiCL)
-library(profvis)
-
 # Point name
 Pto <- "St1"
 
@@ -91,5 +82,4 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
 profile <- profvis(for (i in seq_len(100)) (LongLatToUTM(longlat_df, units = 'm', digits = 4)))
 profile
-
 
