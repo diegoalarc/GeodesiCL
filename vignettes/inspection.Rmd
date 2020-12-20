@@ -1,5 +1,6 @@
 ---
 title: "GeodesiCL documentation for inspection"
+author: "Diego Alarcon"
 output: rmarkdown::html_vignette
 vignette: >
   %\VignetteIndexEntry{GeodesiCL}
