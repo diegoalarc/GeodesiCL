@@ -184,6 +184,6 @@ We do hope you enjoy the package and give us your __feedback__ in order to make 
 This script was made for testing purposes and may be used and modified in the future by those who see fit.
 
 ***
- <!-- badges: start -->
+  <!-- badges: start -->
   [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)](https://github.com/diegoalarc/GeodesiCL/actions)
   <!-- badges: end -->
