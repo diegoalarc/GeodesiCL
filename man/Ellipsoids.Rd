@@ -45,8 +45,8 @@ Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GR
  | GRS67              | 6378160     | 298.25        |
  | Airy 1830          | 6377563.396 | 299.3249646   |
  | Bessel 1841        | 6377397.155 | 299.1528434   |
- | Clarke 1880        | 6378249.145 | 293.465       |
  | Clarke 1866        | 6378206.4   | 294.9786982   |
+ | Clarke 1880        | 6378249.145 | 293.465       |
  | International 1924 | 6378388     | 297           |
  | Krasovsky 1940     | 6378245     | 298.2997381   |
 }

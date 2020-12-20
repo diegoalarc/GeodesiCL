@@ -16,8 +16,8 @@ The <a href="https://en.wikipedia.org/wiki/Ellipsoid">`Ellipsoids`</a> within th
 | GRS67              | 6378160     | 298.25        |
 | Airy 1830          | 6377563.396 | 299.3249646   |
 | Bessel 1841        | 6377397.155 | 299.1528434   |
-| Clarke 1880        | 6378249.145 | 293.465       |
 | Clarke 1866        | 6378206.4   | 294.9786982   |
+| Clarke 1880        | 6378249.145 | 293.465       |
 | International 1924 | 6378388     | 297           |
 | Krasovsky 1940     | 6378245     | 298.2997381   |
 
@@ -155,7 +155,7 @@ After we already have the `system dependencies`, to use this package you should 
 install.packages("devtools")
 devtools::install_github("diegoalarc/GeodesiCL")
 ```
-!["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r1.png "Example Image")
+!["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/man/image/r1.png "Example Image")
 
 ### Second option
 
@@ -164,7 +164,7 @@ If you already have experience using [R](https://www.r-project.org/) & [RStudio]
 ```r
 devtools::install_github("diegoalarc/GeodesiCL")
 ```
-!["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/image/r2.png "Example Image 2")
+!["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/man/image/r2.png "Example Image 2")
 
 ***
 ### Interesting fact

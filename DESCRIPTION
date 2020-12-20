@@ -21,6 +21,7 @@ Imports:
   dplyr, 
   magrittr,
   rgdal,
+  tibble,
   leafpop,
   htmltools,
   leaflet,

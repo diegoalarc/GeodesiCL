@@ -46,7 +46,7 @@ cartesian <- function(a, longlat_df, digits = 4){
   valueX <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*cos(c)
   valueY <- (as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2)+b)*cos(d)*sin(c)
   valueZ <- ((as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(d)^2))*(1 - as.numeric(Ellipsoids[a,6]))+b)*sin(d)
-  values <- data.frame(longlat_df[,1], round(valueX, digits), round(valueY, digits), round(valueZ, digits))
+  values <- tibble::as_tibble(data.frame(longlat_df[,1], round(valueX, digits), round(valueY, digits), round(valueZ, digits)))
   names(values) <- c("Pt", "X", "Y", "Z")
   return(values)
 }

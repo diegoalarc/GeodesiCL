@@ -76,7 +76,7 @@ TO_TM <- function(a, longlat_df, d, e, f, g, digits = 4){
   E3 <- as.numeric(1/120*DELTA_LAMBA^5*N*cos(c*pi/180)^5*Sin_1^5*(5-18*t^2+t^4+14*n^2-58*t^2*n^2))
   X <- as.numeric(e*(E1+E2+E3))
   East <- as.numeric(X+f)
-  values <- as.data.frame(cbind(round(East, digits), round(North, digits), round(X, digits), round(Y, digits)))
+  values <- tibble::as_tibble(as.data.frame(cbind(round(East, digits), round(North, digits), round(X, digits), round(Y, digits))))
   names(values) <- c("East", "North", "X", "Y")
   return(values)
 }

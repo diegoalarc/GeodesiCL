@@ -49,7 +49,7 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
 
-  value <- as.data.frame(cbind(utm_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits)))
+  value <- tibble::as_tibble(as.data.frame(cbind(utm_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits))))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%

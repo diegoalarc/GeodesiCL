@@ -34,7 +34,7 @@ rSL <- function(x, pto_lat, digits = 4){
   r <- as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y)
   S <- (as.numeric(Ellipsoids[x,2])*(1 - as.numeric(Ellipsoids[x,6]))/(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)^(3/2))*y
   L <- (as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y))*y
-  values <- data.frame(pto_lat[,1], round(r, digits), round(S, digits), round(L, digits))
+  values <- tibble::as_tibble(data.frame(pto_lat[,1], round(r, digits), round(S, digits), round(L, digits)))
   names(values) <- c("Pt", "r", "S", "L")
   return(values)
 }

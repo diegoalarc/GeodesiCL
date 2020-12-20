@@ -68,7 +68,7 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
     data.frame() %>%
     dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits), as.character(res[,3])))
+  value <- tibble::as_tibble(as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits), as.character(res[,3]))))
   names(value) <- c("Pt", "East", "North", "zone_hemisphere")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%

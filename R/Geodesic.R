@@ -36,7 +36,7 @@ geodesic <- function(a, XYZ_df, digits = 4){
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(lat)^2)
   lon <- as.numeric(atan(y/x))
   H <- as.numeric((d/cos(lat))-N)
-  values <- as.data.frame(cbind(XYZ_df[,1],round(lat*180/pi, digits), round(lon*180/pi, digits), round(H, digits)))
+  values <- tibble::as_tibble(as.data.frame(cbind(XYZ_df[,1],round(lat*180/pi, digits), round(lon*180/pi, digits), round(H, digits))))
   names(values) <- c("Pt", "Lat", "Lon", "H")
   return(values)
 }

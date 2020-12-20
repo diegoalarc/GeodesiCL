@@ -18,6 +18,7 @@
 \alias{addMarkers}
 \alias{HTML}
 \alias{addProviderTiles}
+\alias{as_tibble}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -38,5 +39,7 @@ below to see their documentation.
   \item{mapview}{\code{\link[mapview:mapView]{mapview}}}
 
   \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
+
+  \item{tibble}{\code{\link[tibble]{as_tibble}}}
 }}
 

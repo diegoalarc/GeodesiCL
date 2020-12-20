@@ -60,3 +60,7 @@ htmltools::HTML
 #' @importFrom leaflet addProviderTiles
 #' @export
 leaflet::addProviderTiles
+
+#' @importFrom tibble as_tibble
+#' @export
+tibble::as_tibble
