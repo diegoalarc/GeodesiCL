@@ -12,3 +12,12 @@ coverage:
         target: auto
         threshold: 1%
         informational: true
+
+  - name: Test coverage
+    if: matrix.r == '3.6'
+    run: |
+      Rscript -e 'remotes::install_github("r-lib/covr@gh-actions")'
+      Rscript -e 'covr::codecov(token = "${{secrets.CODECOV_TOKEN}}")'
+
+after_success:
+  - Rscript -e 'covr::codecov()'

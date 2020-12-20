@@ -44,8 +44,6 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
     " +units=m",
     " +datum=WGS84"))
 
-#  sp::proj4string(df) <- sp::CRS(CRSstring)
-
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
     data.frame()
 
