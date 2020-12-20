@@ -187,6 +187,8 @@ This script was made for testing purposes and may be used and modified in the fu
   <!-- badges: start -->
   [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)](https://github.com/diegoalarc/GeodesiCL/actions)
   <!-- badges: end -->
-  
+  <!-- badges: start -->
+  [![Codecov test coverage](https://codecov.io/gh/diegoalarc/GeodesiCL/branch/main/graph/badge.svg)](https://codecov.io/gh/diegoalarc/GeodesiCL?branch=main)
+  <!-- badges: end -->
 [![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
