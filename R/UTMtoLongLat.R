@@ -44,23 +44,20 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
     " +units=m",
     " +datum=WGS84"))
 
-  res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
-    data.frame()
+  res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>% data.frame()
 
-  value <- tibble::as_tibble(as.data.frame(cbind(utm_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits))))
+  value <- tibble::as_tibble(as.data.frame(cbind(utm_df[,1],
+                                                 round(as.numeric(res[,1]), digits),
+                                                 round(as.numeric(res[,2]), digits))))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
-    leaflet::addMarkers(
-      data = value,
+    leaflet::addMarkers(data = value,
       as.numeric(value$Long), as.numeric(value$Lat),
-      # create custom labels
-      label = paste(
-        "Name: ", value$Pt, "<br>",
-        "Longitude: ", as.numeric(value$Long), "<br>",
-        "Latitude: ", as.numeric(value$Lat)) %>%
+      label = paste("Name: ", value$Pt, "<br>",
+                    "Longitude: ", as.numeric(value$Long), "<br>",
+                    "Latitude: ", as.numeric(value$Lat)) %>%
         lapply(htmltools::HTML)) %>%
-    # add different provider tiles
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
     leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%
     leaflet::addProviderTiles("Stamen.Terrain", group = "Stamen.Terrain") %>%

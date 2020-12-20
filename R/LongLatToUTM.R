@@ -44,6 +44,7 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
   zone <- (floor((as.numeric(longlat_df[,2]) + 180) / 6) %% 60) + 1
 
   sp::proj4string(df) <- sp::CRS("+init=epsg:4326")
+
   CRSstring <- paste0(
     "+proj=utm +zone=", zone,
     " +ellps=WGS84",
@@ -54,24 +55,22 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
     stop("multiple zone/hemisphere detected")
 
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
-    data.frame() %>%
-    dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
+    data.frame() %>% dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- tibble::as_tibble(as.data.frame(cbind(longlat_df[,1],round(as.numeric(res[,1]), digits), round(as.numeric(res[,2]), digits), as.character(res[,3]))))
+  value <- tibble::as_tibble(as.data.frame(cbind(longlat_df[,1],
+                                                 round(as.numeric(res[,1]), digits),
+                                                 round(as.numeric(res[,2]), digits),
+                                                 as.character(res[,3]))))
   names(value) <- c("Pt", "East", "North", "zone_hemisphere")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
-    leaflet::addMarkers(
-      data = df,
+    leaflet::addMarkers(data = df,
       as.numeric(df$long), as.numeric(df$lat),
-      # create custom labels
-      label = paste(
-        "Name: ", value$Pt, "<br>",
-        "East: ", as.numeric(value$East), "<br>",
-        "North: ", as.numeric(value$North), "<br>",
-        "zone hemisphere: ", as.character(value$zone_hemisphere)) %>%
+      label = paste("Name: ", value$Pt, "<br>",
+                    "East: ", as.numeric(value$East), "<br>",
+                    "North: ", as.numeric(value$North), "<br>",
+                    "zone hemisphere: ", as.character(value$zone_hemisphere)) %>%
     lapply(htmltools::HTML)) %>%
-    # add different provider tiles
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
     leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%
     leaflet::addProviderTiles("Stamen.Terrain", group = "Stamen.Terrain") %>%
