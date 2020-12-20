@@ -19,6 +19,7 @@
 \alias{HTML}
 \alias{addProviderTiles}
 \alias{as_tibble}
+\alias{profvis}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -37,6 +38,8 @@ below to see their documentation.
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
 
   \item{mapview}{\code{\link[mapview:mapView]{mapview}}}
+
+  \item{profvis}{\code{\link[profvis]{profvis}}}
 
   \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
 

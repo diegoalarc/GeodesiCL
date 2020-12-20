@@ -6,7 +6,7 @@
 #' @param units Select units for UTM to work. DEFAULT: 'm'
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return a list with a data.frame [[1]] and leaflet map [[2]].
+#' @return a list with a data.frame and leaflet map.
 #'
 #' @export
 #'
@@ -52,17 +52,6 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
     " +datum=WGS84")
   if (dplyr::n_distinct(CRSstring) > 1L)
     stop("multiple zone/hemisphere detected")
-
-#  pjct_num <- rgdal::showEPSG(paste0("+proj=utm +zone=", zone, " +ellps=WGS84 +", hemisphere))
-
-  ######
-#  epsg_utm <- leaflet::leafletCRS(
-#    crsClass = "L.Proj.CRS",
-#    code = paste0("EPSG:",pjct_num),
-#   proj4def = paste0("+proj=utm +zone=", zone, " +ellps=WGS84 +", hemisphere, " +towgs84=0,0,0,0,0,0,0 +units=", units," +no_defs"),
-#    resolutions = 0.42*(2^(14:0)),
-#    origin = c(0, 0))
-  #####
 
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>%

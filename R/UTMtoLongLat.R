@@ -7,7 +7,7 @@
 #' @param hemisphere select between north or south (written in lowercase). DEFAULT: "south"
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return a list with a data.frame [[1]] and leaflet map [[2]].
+#' @return a list with a data.frame and leaflet map.
 #'
 #' @export
 #'

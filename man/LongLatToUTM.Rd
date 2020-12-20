@@ -14,7 +14,7 @@ LongLatToUTM(longlat_df, units = "m", digits = 4)
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-a list with a data.frame [[1]] and leaflet map [[2]].
+a list with a data.frame and leaflet map.
 }
 \description{
 With this function it is possible to convert from Geographic coordinate to UTM coordinate.

@@ -64,3 +64,7 @@ leaflet::addProviderTiles
 #' @importFrom tibble as_tibble
 #' @export
 tibble::as_tibble
+
+#' @importFrom profvis profvis
+#' @export
+profvis::profvis
