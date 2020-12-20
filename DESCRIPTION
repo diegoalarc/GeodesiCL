@@ -31,6 +31,7 @@ Imports:
   mapview
 Suggests: 
     testthat (>= 3.0.0),
+    rmarkdown,
     covr
 Config/testthat/edition: 3
 VignetteBuilder:
