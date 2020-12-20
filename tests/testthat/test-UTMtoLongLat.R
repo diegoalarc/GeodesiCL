@@ -1,20 +1,22 @@
 test_that("To find the zone hemisphere from Longitude and Latitude the UTM zone works", {
-    # Longitude
-   g <- -71
-   m <- 18
-   s <- 44.86475
+    # Point name
+    Pto <- "St1"
 
-   # Value in sexagesimal
-   sexa_long <- sexagesimal(g, m, s)
+    # Value for East
+    East <- 650012.58
 
-   # Latitude
-   g1 <- -33
-   m1 <- 12
-   s1 <- 27.11457
+    # Value for North
+    North <- 5590735.41
 
-   # Value in sexagesimal
-   sexa_lat <- sexagesimal(g1, m1, s1)
+    # East and North as data.frame
+    utm_df <- data.frame(Pto,East,North)
 
-   value <- UTM_zone_hemisphere(sexa_long, sexa_lat)
-   expect_equal(UTM_zone_hemisphere(sexa_long, sexa_lat), value)
+    # Zone
+    zone <- 18
+
+    # Hemisphere could be "north" or "south"
+    hemisphere <- "south"
+
+    value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
+    expect_equal(UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)[[1]], value[[1]])
 })
