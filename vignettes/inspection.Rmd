@@ -1,12 +1,12 @@
 ---
-title: "GeodesiCL documentation for inspection"
-author: "Diego Alarcon"
+title: "Geometric Geodesy Functions"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{GeodesiCL documentation for inspection}
-  %\VignetteEngine{rmarkdown::render}
-  \usepackage[utf8]{inputenc}
+  %\VignetteIndexEntry{Geometric Geodesy Functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
+
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   echo = TRUE,
