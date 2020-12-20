@@ -4,3 +4,5 @@
 ^README\.md$
 ^NEWS\.md$
 ^data-raw$
+^\.travis\.yml$
+^\.github$
