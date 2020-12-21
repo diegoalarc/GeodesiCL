@@ -2,6 +2,9 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
+[![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)][R-CMD-check-url]
+[![Codecov test coverage](https://codecov.io/gh/diegoalarc/GeodesiCL/branch/main/graph/badge.svg)][Codecov-test-coverage-url]
+[![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)][Project-Status-url]
 
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ###### Attention: We are ready to go!!
@@ -189,14 +192,6 @@ We do hope you enjoy the package and give us your __feedback__ in order to make 
 This script was made for testing purposes and may be used and modified in the future by those who see fit.
 
 ***
-  <!-- badges: start -->
-  [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)](https://github.com/diegoalarc/GeodesiCL/actions)
-  <!-- badges: end -->
-  <!-- badges: start -->
-  [![Codecov test coverage](https://codecov.io/gh/diegoalarc/GeodesiCL/branch/main/graph/badge.svg)](https://codecov.io/gh/diegoalarc/GeodesiCL?branch=main)
-  <!-- badges: end -->
-[![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [contributors-shield]: https://img.shields.io/github/contributors/diegoalarc/GeodesiCL
@@ -209,3 +204,6 @@ This script was made for testing purposes and may be used and modified in the fu
 [issues-url]: https://github.com/diegoalarc/GeodesiCL/issues
 [license-shield]:https://img.shields.io/github/license/diegoalarc/GeodesiCL
 [license-url]: https://github.com/diegoalarc/GeodesiCL/blob/master/LICENSE.txt
+[R-CMD-check-url]:https://github.com/diegoalarc/GeodesiCL/actions
+[Codecov-test-coverage-url]:https://codecov.io/gh/diegoalarc/GeodesiCL?branch=main
+[Project-Status-url]:https://www.repostatus.org/#active
