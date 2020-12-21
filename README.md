@@ -1,3 +1,8 @@
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ###### Attention: We are ready to go!!
 ***
@@ -192,3 +197,15 @@ This script was made for testing purposes and may be used and modified in the fu
   <!-- badges: end -->
 [![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[contributors-shield]: https://img.shields.io/github/contributors/diegoalarc/GeodesiCL
+[contributors-url]: https://github.com/diegoalarc/GeodesiCL/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/diegoalarc/GeodesiCL
+[forks-url]: https://github.com/diegoalarc/GeodesiCL/network/members
+[stars-shield]: https://img.shields.io/github/stars/diegoalarc/GeodesiCL
+[stars-url]: https://github.com/diegoalarc/GeodesiCL/stargazers
+[issues-shield]:https://img.shields.io/github/issues/diegoalarc/GeodesiCL
+[issues-url]: https://github.com/diegoalarc/GeodesiCL/issues
+[license-shield]:https://img.shields.io/github/license/diegoalarc/GeodesiCL
+[license-url]: https://github.com/diegoalarc/GeodesiCL/blob/master/LICENSE.txt
