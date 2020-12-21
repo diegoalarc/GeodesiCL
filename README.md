@@ -193,6 +193,8 @@ We do hope you enjoy the package and give us your __feedback__ in order to make 
 This script was made for testing purposes and may be used and modified in the future by those who see fit.
 
 ***
+[![Github All Releases](https://img.shields.io/github/downloads/diegoalarc/GeodesiCL/total.svg)]()
+
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 [HitCount-url]: http://hits.dwyl.com/diegoalarc/GeodesiCL
