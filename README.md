@@ -194,7 +194,7 @@ We do hope you enjoy the package and give us your __feedback__ in order to make 
 This script was made for testing purposes and may be used and modified in the future by those who see fit.
 
 ***
-Package download stats
+#### Package stats
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisCL?color=green)](https://cran.r-project.org/package=GeodisCL)
 ![](https://cranlogs.r-pkg.org/badges/grand-total/GeodisCL?color=green)
