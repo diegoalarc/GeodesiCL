@@ -1,3 +1,4 @@
+[![HitCount](http://hits.dwyl.com/diegoalarc/GeodesiCL.svg)][HitCount-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -194,6 +195,7 @@ This script was made for testing purposes and may be used and modified in the fu
 ***
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+[HitCount-url]; http://hits.dwyl.com/diegoalarc/GeodesiCL
 [contributors-shield]: https://img.shields.io/github/contributors/diegoalarc/GeodesiCL
 [contributors-url]: https://github.com/diegoalarc/GeodesiCL/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/diegoalarc/GeodesiCL
