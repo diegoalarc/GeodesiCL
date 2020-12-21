@@ -1,4 +1,3 @@
-[![Profile views][Profile-views][Profile-views-url]
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -208,4 +207,3 @@ This script was made for testing purposes and may be used and modified in the fu
 [R-CMD-check-url]:https://github.com/diegoalarc/GeodesiCL/actions
 [Codecov-test-coverage-url]:https://codecov.io/gh/diegoalarc/GeodesiCL?branch=main
 [Project-Status-url]:https://www.repostatus.org/#active
-[Profile-views-url]:https://komarev.com/ghpvc/?username=diegoalarc&style=flat-square
