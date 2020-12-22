@@ -4,8 +4,9 @@
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisCL?color=green)](https://cran.r-project.org/package=GeodisCL)
 [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)][R-CMD-check-url]
 [![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)][Project-Status-url]
-###### Attention: We are ready to go!!
 
+###### Attention: We are ready to go!!
+---
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __Geometric Geodesy__ applying the necessary basic formulas.
 
