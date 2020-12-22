@@ -185,6 +185,8 @@ As entertaining fact, the name of the package is because __geodesy__ is written 
 We do hope you enjoy the package and give us your __feedback__ in order to make this package better, easy and accurate as possible! Open an issue to start a discussion:
  * <a href="https://github.com/diegoalarc/GeodesiCL/issues">`Issues press here!!!`</a>
 
+[![Issues][issues-shield]][issues-url]
+
 ***
 ### *GNU General Public License v3.0 - Copyright (C)*
 
@@ -196,7 +198,6 @@ This script was made for testing purposes and may be used and modified in the fu
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
 
 ---
 #### Package stats
