@@ -1,20 +1,18 @@
-#' Read data for test
+#' Read data in csv.
 #'
-#' @format A data frame with 19 columns:
-#' \describe{
-#'  \item{Pt}{Contains the names of each point}
-#'  \item{East}{East UTM coordinate in a \code{tibble}}
-#'  \item{North}{North UTM coordinate in a \code{tibble}}
-#'}
+#' @param x the name of the file which the data are to be read from. this is a \code{data.frame} in format csv.
+#'
 #' @return a \code{tibble}
 #' @export
 #'
+#' @seealso Package 'utils' in it 'read.table'
+#'
 #' @examples
 #' # Test data
-#' test_data
-#' print(test_data)
-#'
-#' # Test data option 2
-#' date <- test_data
-#' print(date)
-test_data <- utils::read.csv(system.file("extdata", "test.csv", package = "GeodesiCL"), sep = ",")
+#' csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
+#' data_test <- read_data(csv)
+read_data <- function(x){
+  options(digits=16)
+  values <- readr::read_csv(x)
+  return(print(values))
+}

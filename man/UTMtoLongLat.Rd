@@ -43,3 +43,6 @@ hemisphere <- "south"
 value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 print(value)
 }
+\seealso{
+\code{data.frame}
+}

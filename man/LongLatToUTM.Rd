@@ -45,3 +45,6 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
 print(value)
 }
+\seealso{
+\code{data.frame}
+}

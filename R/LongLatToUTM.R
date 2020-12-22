@@ -8,6 +8,8 @@
 #'
 #' @return a list with a data.frame and leaflet map.
 #'
+#' @seealso \code{data.frame}
+#'
 #' @export
 #'
 #' @examples

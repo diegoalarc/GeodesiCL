@@ -6,6 +6,8 @@
 #'
 #' @return leaflet map.
 #'
+#' @seealso \code{data.frame}
+#'
 #' @export
 #'
 #' @examples

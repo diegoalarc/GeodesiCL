@@ -41,3 +41,6 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 value <- PlotLongLat(longlat_df)
 print(value)
 }
+\seealso{
+\code{data.frame}
+}

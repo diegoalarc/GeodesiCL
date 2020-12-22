@@ -19,7 +19,7 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
   sp,
-  utils,
+  readr,
   dplyr, 
   magrittr,
   tibble,
