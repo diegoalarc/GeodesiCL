@@ -1,4 +1,5 @@
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/diego.alarcondiaz@gmail.com)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ###### Attention: We are ready to go!!
@@ -181,7 +182,6 @@ We do hope you enjoy the package and give us your __feedback__ in order to make 
 
 ***
 ### *GNU General Public License v3.0 - Copyright (C)*
-[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 This script was made for testing purposes and may be used and modified in the future by those who see fit.
 
