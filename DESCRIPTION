@@ -18,7 +18,8 @@ Language: en-US
 LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
-  sp, 
+  sp,
+  utils,
   dplyr, 
   magrittr,
   tibble,

@@ -20,6 +20,7 @@
 \alias{addProviderTiles}
 \alias{as_tibble}
 \alias{profvis}
+\alias{read.csv}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -44,5 +45,7 @@ below to see their documentation.
   \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
 
   \item{tibble}{\code{\link[tibble]{as_tibble}}}
+
+  \item{utils}{\code{\link[utils:read.table]{read.csv}}}
 }}
 

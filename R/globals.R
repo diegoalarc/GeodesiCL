@@ -68,3 +68,7 @@ tibble::as_tibble
 #' @importFrom profvis profvis
 #' @export
 profvis::profvis
+
+#' @importFrom utils read.csv
+#' @export
+utils::read.csv
