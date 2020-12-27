@@ -14,20 +14,14 @@
 #' @export
 #'
 #' @examples
-#' # Point name
-#' Pto <- "St1"
+#' # Load test data from the package
+#' csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 #'
-#' # Value for East
-#' East <- 650012.58
-#'
-#' # Value for North
-#' North <- 5590735.41
-#'
-#' # East and North as data.frame
-#' utm_df <- data.frame(Pto,East,North)
+#' # Point name, East and North as data.frame
+#' utm_df <- data.frame(read_data(csv))
 #'
 #' # Zone
-#' zone <- 18
+#' zone <- 19
 #'
 #' # Hemisphere could be "north" or "south"
 #' hemisphere <- "south"
