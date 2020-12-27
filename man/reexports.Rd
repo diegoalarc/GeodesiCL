@@ -21,6 +21,7 @@
 \alias{as_tibble}
 \alias{profvis}
 \alias{read_csv}
+\alias{show}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -39,6 +40,8 @@ below to see their documentation.
   \item{magrittr}{\code{\link[magrittr:pipe]{\%>\%}}}
 
   \item{mapview}{\code{\link[mapview:mapView]{mapview}}}
+
+  \item{methods}{\code{\link[methods]{show}}}
 
   \item{profvis}{\code{\link[profvis]{profvis}}}
 

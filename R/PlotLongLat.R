@@ -72,5 +72,5 @@ PlotLongLat <- function(longlat_df){
                                              "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
                               position = "topleft")
 
-  return(map)
+  methods::show(map)
 }

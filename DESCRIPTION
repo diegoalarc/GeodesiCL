@@ -22,6 +22,7 @@ Imports:
   readr,
   dplyr, 
   magrittr,
+  methods,
   tibble,
   leafpop,
   htmltools,

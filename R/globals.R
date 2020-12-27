@@ -72,3 +72,7 @@ profvis::profvis
 #' @importFrom readr read_csv
 #' @export
 readr::read_csv
+
+#' @importFrom methods show
+#' @export
+methods::show

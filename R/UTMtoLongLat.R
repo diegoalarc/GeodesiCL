@@ -66,5 +66,6 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
                                              "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
                               position = "topleft")
 
-  return(list(value, map))
+  methods::show(map)
+  return(value)
 }
