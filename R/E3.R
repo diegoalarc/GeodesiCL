@@ -30,6 +30,6 @@
 #' value <- E3(5, rad_lat, digits = 4)
 #' print(value)
 E3 <- function(x, y, digits = 4){
-  value <- (1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)
+  value <- (1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)
   return(round(value, digits))
 }

@@ -30,6 +30,6 @@
 #' value <- M(5, rad_lat, digits = 4)
 #' print(value)
 M <- function(x, y, digits = 4){
-  value <- (as.numeric(Ellipsoids[x,2])*(1 - as.numeric(Ellipsoids[x,6]))/(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)^(3/2))
+  value <- (as.numeric(Ellipsoids[x,3])*(1 - as.numeric(Ellipsoids[x,7]))/(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)^(3/2))
   return(round(value, digits))
 }

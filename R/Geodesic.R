@@ -34,12 +34,12 @@
 #' print(value)
 geodesic <- function(a, XYZ_df, digits = 4){
 #  Ellipsoids <- NULL
-  x <- as.numeric(XYZ_df[,2])
-  y <- as.numeric(XYZ_df[,3])
-  z <- as.numeric(XYZ_df[,4])
+  x <- as.numeric(XYZ_df[,3])
+  y <- as.numeric(XYZ_df[,4])
+  z <- as.numeric(XYZ_df[,5])
   d <- as.numeric(sqrt(x^2+y^2))
-  lat <- as.numeric(atan((z+as.numeric(Ellipsoids[a,5])*as.numeric(Ellipsoids[a,7])*sin(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,2])*as.numeric(Ellipsoids[a,6])*cos(atan((as.numeric(Ellipsoids[a,2])*z)/(as.numeric(Ellipsoids[a,5])*sqrt(x^2+y^2))))^3)))
-  N <- as.numeric(Ellipsoids[a,2])/sqrt(1 - as.numeric(Ellipsoids[a,6])*sin(lat)^2)
+  lat <- as.numeric(atan((z+as.numeric(Ellipsoids[a,6])*as.numeric(Ellipsoids[a,8])*sin(atan((as.numeric(Ellipsoids[a,3])*z)/(as.numeric(Ellipsoids[a,6])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,3])*as.numeric(Ellipsoids[a,7])*cos(atan((as.numeric(Ellipsoids[a,3])*z)/(as.numeric(Ellipsoids[a,6])*sqrt(x^2+y^2))))^3)))
+  N <- as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(lat)^2)
   lon <- as.numeric(atan(y/x))
   H <- as.numeric((d/cos(lat))-N)
   values <- tibble::as_tibble(as.data.frame(cbind(XYZ_df[,1],round(lat*180/pi, digits), round(lon*180/pi, digits), round(H, digits))))

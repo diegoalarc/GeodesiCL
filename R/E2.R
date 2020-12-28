@@ -21,6 +21,6 @@
 #' value <- E2(5, digits = 4)
 #' print(value)
 E2 <- function(x, digits = 4){
-  value <- 1 - as.numeric(Ellipsoids[x,6])
+  value <- 1 - as.numeric(Ellipsoids[x,7])
   return(round(value, digits))
 }
