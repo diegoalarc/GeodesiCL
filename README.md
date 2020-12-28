@@ -15,19 +15,54 @@ This package was created to introduce topographical and related engineers in the
 This was a project created between [Diego Alarcón](https://www.linkedin.com/in/diegoalarc%C3%B3nd%C3%ADaz/) and [Karla Riquelme](https://www.linkedin.com/in/karlariquelmecarrillo/) seeing the need to introduce the new generation of professionals in the learning of software language and in turn present free software.
 
 The <a href="https://en.wikipedia.org/wiki/Ellipsoid">`Ellipsoids`</a> within the package are as follows:
-| `Ellipsoids`       | `a`         | `1/f`         |
-| :----------------: | :---------: | :-----------: |
-| PSAD56             | 6378388     | 297           |
-| SAD69              | 6378160     | 298.25        |
-| WGS84              | 6378137     | 298.257223563 |
-| GRS80              | 6378137     | 298.257222101 |
-| GRS67              | 6378160     | 298.25        |
-| Airy 1830          | 6377563.396 | 299.3249646   |
-| Bessel 1841        | 6377397.155 | 299.1528434   |
-| Clarke 1866        | 6378206.4   | 294.9786982   |
-| Clarke 1880        | 6378249.145 | 293.465       |
-| International 1924 | 6378388     | 297           |
-| Krasovsky 1940     | 6378245     | 298.2997381   |
+| `Ellipsoids` | `a` | `1/f` | `description` |
+| :----------------: | :---------: | :-----------: | :----------------: |
+| MERIT | 6378137 | 298.257 | MERIT 1983 |
+| SGS85 | 6378136 | 298.257 | Soviet Geodetic System 85 |
+| GRS80 | 6378137 | 298.257222101 | GRS 1980(IUGG 1980) |
+| IAU76 | 6378140 | 298.257 | IAU 1976 |
+| airy | 6377563.396 | 299.3249646 | Airy 1830 |
+| APL4.9 | 6378137 | 298.25 | Appl. Physics. 1965 |
+| NWL9D | 6378145 | 298.25 | Naval Weapons Lab. 1965 |
+| mod_airy | 6377340.189 | 6356034.446 | Modified Airy |
+| andrae | 6377104.43 | 300 | Andrae 1876 (Den. Iclnd.) |
+| danish | 6377019.2563 | 300 | Andrae 1876 (Denmark Iceland) |
+| aust_SA | 6378160 | 298.25 | Australian Natl & S. Amer. 1969 |
+| GRS67 | 6378160 | 298.247167427 | GRS 67(IUGG 1967) |
+| GSK2011 | 6378136.5 | 298.2564151 | GSK-2011 |
+| bessel | 6377397.155 | 299.1528128 | Bessel 1841 |
+| bess_nam | 6377483.865 | 299.1528128 | Bessel 1841 (Namibia) |
+| clrk66 | 6378206.4 | 6356583.8 | Clarke 1866 |
+| clrk80 | 6378249.145 | 293.4663 | Clarke 1880 mod. |
+| clrk80ign | 6378249.2 | 293.466021293627 | Clarke 1880 (IGN). |
+| CPM | 6375738.7 | 334.29 | Comm. des Poids et Mesures 1799 |
+| delmbr | 6376428 | 311.5 | Delambre 1810 (Belgium) |
+| engelis | 6378136.05 | 298.2566 | Engelis 1985 |
+| evrst30 | 6377276.345 | 300.8017 | Everest 1830 |
+| evrst48 | 6377304.063 | 300.8017 | Everest 1948 |
+| evrst56 | 6377301.243 | 300.8017 | Everest 1956 |
+| evrst69 | 6377295.664 | 300.8017 | Everest 1969 |
+| evrstSS | 6377298.556 | 300.8017 | Everest (Sabah & Sarawak) |
+| fschr60 | 6378166 | 298.3 | Fischer (Mercury Datum) 1960 |
+| fschr60m | 6378155 | 298.3 | Modified Fischer 1960 |
+| fschr68 | 6378150 | 298.3 | Fischer 1968 |
+| helmert | 6378200 | 298.3 | Helmert 1906 |
+| hough | 6378270 | 297 | Hough |
+| intl | 6378388 | 297 | International 1909 (Hayford) |
+| krass | 6378245 | 298.3 | Krassovsky 1942 |
+| kaula | 6378163 | 298.24 | Kaula 1961 |
+| lerch | 6378139 | 298.257 | Lerch 1979 |
+| mprts | 6397300 | 191 | Maupertius 1738 |
+| new_intl | 6378157.5 | 6356772.2 | New International 1967 |
+| plessis | 6376523 | 6355863 | Plessis 1817 (France) |
+| PZ90 | 6378136 | 298.25784 | PZ-90 |
+| SEasia | 6378155 | 6356773.3205 | Southeast Asia |
+| walbeck | 6376896 | 6355834.8467 | Walbeck |
+| WGS60 | 6378165 | 298.3 | WGS 60 |
+| WGS66 | 6378145 | 298.25 | WGS 66 |
+| WGS72 | 6378135 | 298.26 | WGS 72 |
+| WGS84 | 6378137 | 298.257223563 | WGS 84 |
+| sphere | 6370997 | 6370997 | Normal Sphere (r=6370997) |
 
 ***
 ## Functions
