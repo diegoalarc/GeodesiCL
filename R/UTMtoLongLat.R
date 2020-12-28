@@ -30,7 +30,8 @@
 #' print(value)
 UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
 
-  df <- data.frame(East = as.numeric(utm_df[,2]), North = as.numeric(utm_df[,3]))
+  df <- data.frame(East = as.numeric(unlist(utm_df[,2])),
+                   North = as.numeric(unlist(utm_df[,3])))
   sp::coordinates(df) <- c("East", "North")
 
   sp::proj4string(df) <- sp::CRS(paste0(
@@ -42,9 +43,9 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", digits = 4){
 
   res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>% data.frame()
 
-  value <- tibble::as_tibble(as.data.frame(cbind(utm_df[,1],
-                                                 round(as.numeric(res[,1]), digits),
-                                                 round(as.numeric(res[,2]), digits))))
+  value <- tibble::as_tibble(as.data.frame(cbind(unlist(utm_df[,1]),
+                                                 round(as.numeric(unlist(res[,1])), digits),
+                                                 round(as.numeric(unlist(res[,2])), digits))))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%

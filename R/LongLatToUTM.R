@@ -39,11 +39,12 @@
 #' print(value)
 LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
 
-  df <- data.frame(long = round(as.numeric(longlat_df[,2]), digits), lat = round(as.numeric(longlat_df[,3]), digits))
+  df <- data.frame(long = round(as.numeric(unlist(longlat_df[,2])), digits),
+                   lat = round(as.numeric(unlist(longlat_df[,3])), digits))
   sp::coordinates(df) <- c("long", "lat")
 
-  hemisphere <- ifelse(as.numeric(longlat_df[,3]) > 0, "north", "south")
-  zone <- (floor((as.numeric(longlat_df[,2]) + 180) / 6) %% 60) + 1
+  hemisphere <- ifelse(as.numeric(unlist(longlat_df[,3])) > 0, "north", "south")
+  zone <- (floor((as.numeric(unlist(longlat_df[,2])) + 180) / 6) %% 60) + 1
 
   sp::proj4string(df) <- sp::CRS("+init=epsg:4326")
 
@@ -59,10 +60,10 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>% dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- tibble::as_tibble(as.data.frame(cbind(longlat_df[,1],
-                                                 round(as.numeric(res[,1]), digits),
-                                                 round(as.numeric(res[,2]), digits),
-                                                 as.character(res[,3]))))
+  value <- tibble::as_tibble(as.data.frame(cbind(unlist(longlat_df[,1]),
+                                                 round(as.numeric(unlist(res[,1])), digits),
+                                                 round(as.numeric(unlist(res[,2])), digits),
+                                                 as.character(unlist(res[,3])))))
   names(value) <- c("Pt", "East", "North", "zone_hemisphere")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
