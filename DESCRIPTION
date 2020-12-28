@@ -20,7 +20,9 @@ RoxygenNote: 7.1.1
 Imports: 
   sp,
   readr,
-  dplyr, 
+  dplyr,
+  utils,
+  rgdal,
   magrittr,
   methods,
   tibble,
@@ -33,7 +35,6 @@ Suggests:
     testthat (>= 3.0.0),
     rmarkdown,
     knitr,
-    rgdal,
     covr
 Config/testthat/edition: 3
 VignetteBuilder: knitr
