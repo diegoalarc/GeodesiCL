@@ -21,9 +21,7 @@
 #' @examples
 #' # Load test data from the package
 #' csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
-#'
-#' # Point name, East and North as data.frame
-#' utm_df <- data.frame(read_data(csv))
+#' data_test <- read_data(csv)
 #'
 #' # Zone
 #' zone <- 19
@@ -31,7 +29,7 @@
 #' # Hemisphere could be "north" or "south"
 #' hemisphere <- "south"
 #'
-#' value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4)
+#' value <- UTMtoLongLat(data_test, zone, hemisphere = "south", crs = 4326, digits = 4)
 #' print(value)
 UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4){
 

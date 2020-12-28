@@ -24,16 +24,18 @@
 #' # Ellipsoidal height and Horizontal distance as data.frame
 #' pto_lat <- data.frame(Pto, rad_lat)
 #'
-#' # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-#' # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-#' # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-#' value <- rSL(4, pto_lat, digits = 4)
+#' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+#' Ellip <- Ellipsoids
+#' #View(Ellip)
+#'
+#' # We choose the number 47 which is WGS84
+#' value <- rSL(47, pto_lat, digits = 4)
 #' print(value)
 rSL <- function(x, pto_lat, digits = 4){
   y <- as.numeric(pto_lat[,2])
-  r <- as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y)
-  S <- (as.numeric(Ellipsoids[x,2])*(1 - as.numeric(Ellipsoids[x,6]))/(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)^(3/2))*y
-  L <- (as.numeric(Ellipsoids[x,2])/sqrt(1 - as.numeric(Ellipsoids[x,6])*sin(y)^2)*cos(y))*y
+  r <- as.numeric(Ellipsoids[x,3])/sqrt(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)*cos(y)
+  S <- (as.numeric(Ellipsoids[x,3])*(1 - as.numeric(Ellipsoids[x,7]))/(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)^(3/2))*y
+  L <- (as.numeric(Ellipsoids[x,3])/sqrt(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)*cos(y))*y
   values <- tibble::as_tibble(data.frame(pto_lat[,1], round(r, digits), round(S, digits), round(L, digits)))
   names(values) <- c("Pt", "r", "S", "L")
   return(values)

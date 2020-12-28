@@ -4,10 +4,12 @@
 \alias{read_data}
 \title{Read data in csv.}
 \usage{
-read_data(x)
+read_data(x, digits = 4)
 }
 \arguments{
 \item{x}{the name of the file which the data are to be read from. this is a \code{data.frame} in format csv.}
+
+\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 a \code{tibble}

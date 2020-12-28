@@ -34,9 +34,9 @@
 #' print(value)
 geodesic <- function(a, XYZ_df, digits = 4){
 #  Ellipsoids <- NULL
-  x <- as.numeric(XYZ_df[,3])
-  y <- as.numeric(XYZ_df[,4])
-  z <- as.numeric(XYZ_df[,5])
+  x <- as.numeric(XYZ_df[,2])
+  y <- as.numeric(XYZ_df[,3])
+  z <- as.numeric(XYZ_df[,4])
   d <- as.numeric(sqrt(x^2+y^2))
   lat <- as.numeric(atan((z+as.numeric(Ellipsoids[a,6])*as.numeric(Ellipsoids[a,8])*sin(atan((as.numeric(Ellipsoids[a,3])*z)/(as.numeric(Ellipsoids[a,6])*sqrt(x^2+y^2))))^3)/((sqrt(x^2+y^2))-as.numeric(Ellipsoids[a,3])*as.numeric(Ellipsoids[a,7])*cos(atan((as.numeric(Ellipsoids[a,3])*z)/(as.numeric(Ellipsoids[a,6])*sqrt(x^2+y^2))))^3)))
   N <- as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(lat)^2)
