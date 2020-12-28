@@ -1,13 +1,25 @@
 ## code to prepare `Ellipsoids` dataset goes here
 ## To use the raw-data run the next line
 ## usethis::use_data_raw()
-names_elip <- c('PSAD56', 'SAD69', 'WGS84', 'GRS80', 'GRS67', 'Airy 1830', 'Bessel 1841', 'Clarke 1866', 'Clarke 1880', 'International 1924', 'Krasovsky 1940')
 
-a <-	c(6378388, 6378160, 6378137, 6378137, 6378160, 6377563.396, 6377397.155, 6378206.4, 6378249.145, 6378388, 6378245)
+ellps <- rgdal::projInfo("ellps")
 
-divF <- c(297, 298.25, 298.257223563, 298.257222101, 298.25, 299.3249646, 299.1528434, 294.9786982, 293.465, 297, 298.2997381)
+#names_elip <- c('PSAD56', 'SAD69', 'WGS84', 'GRS80', 'GRS67', 'Airy 1830', 'Bessel 1841', 'Clarke 1866', 'Clarke 1880', 'International 1924', 'Krasovsky 1940')
+names_elip <- c('PSAD56', 'SAD69', ellps$name)
+#names_elip <- ellps$name
 
-Ellipsoids <- tibble::as_tibble(as.data.frame(cbind(names_elip,
+#a <-	c(6378388, 6378160, 6378137, 6378137, 6378160, 6377563.396, 6377397.155, 6378206.4, 6378249.145, 6378388, 6378245)
+a <-	c(6378388, 6378160, as.numeric(gsub('[^0-9.]','',ellps$major)))
+#a <- as.numeric(gsub('[^0-9.]','',ellps$major))
+
+#divF <- c(297, 298.25, 298.257223563, 298.257222101, 298.25, 299.3249646, 299.1528434, 294.9786982, 293.465, 297, 298.2997381)
+divF <- c(297, 298.25, as.numeric(gsub('[^0-9.]','',ellps$ell)))
+#divF <- as.numeric(gsub('[^0-9.]','',ellps$ell))
+
+descr <- c('Provisional Southamerican 56', 'South American Datum 69', ellps$description)
+
+Ellipsoids <- tibble::as_tibble(as.data.frame(cbind(descr,
+                                  names_elip,
                                   a,
                                   divF,
                                   1/divF,
@@ -27,8 +39,10 @@ Ellipsoids <- tibble::as_tibble(as.data.frame(cbind(names_elip,
                                   (315/16384*(1-((a-1/divF*a)^2/a^2))^4+3465/65536*(1-((a-1/divF*a)^2/a^2))^5)*a*(1-(1-((a-1/divF*a)^2/a^2)))/8,
                                   (639/131072*(1-((a-1/divF*a)^2/a^2))^5)*a*(1-(1-((a-1/divF*a)^2/a^2)))/10
 )))
-names(Ellipsoids) <- c("Ellipsoids", "a", "1/f", "f", "b", "e^2", "e'^2",
+names(Ellipsoids) <- c("Description", "Ellipsoids", "a", "1/f", "f", "b", "e^2", "e'^2",
                       "A", "B", "C", "D", "E", "F",
                       "Alfa", "Beta", "Gamma", "Delta", "Epsilon", "Zeta")
 
 usethis::use_data(Ellipsoids, compress = "xz", overwrite = TRUE)
+
+#utils::write.csv(Ellipsoids, file='/home/diego/GITHUP_REPO/GeodesiCL/inst/extdata/total_data.csv')

@@ -2,7 +2,7 @@
 % Please edit documentation in R/PlotLongLat.R
 \name{PlotLongLat}
 \alias{PlotLongLat}
-\title{To plot using Geographic coordinate.}
+\title{To plot using Geographic coordinate WGS84.}
 \usage{
 PlotLongLat(longlat_df)
 }
@@ -13,7 +13,7 @@ PlotLongLat(longlat_df)
 leaflet map.
 }
 \description{
-With this function it is possible to plot using Longitude and Latitude (Geographic coordinate).
+With this function it is possible to plot using Longitude and Latitude (Geographic coordinate WGS84).
 }
 \examples{
 # Point name

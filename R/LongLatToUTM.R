@@ -1,8 +1,9 @@
 #' To convert from Geographic coordinate to UTM coordinate.
 #'
-#' With this function it is possible to convert from Geographic coordinate to UTM coordinate.
+#' With this function it is possible to convert from Geographic coordinate to UTM coordinate. It is also possible to convert from other coordinate reference systems by selecting their EPGS number to UTM coordinate. Review notes and references.
 #'
 #' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
+#' @param crs EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)
 #' @param units Select units for UTM to work. DEFAULT: 'm'
 #' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
 #'
@@ -11,6 +12,10 @@
 #' @seealso \code{data.frame}
 #'
 #' @export
+#'
+#' @note create data frame of epsg codes by epsg <- rgdal::make_EPSG()
+#'
+#' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
 #' # Point name
@@ -35,9 +40,9 @@
 #' # Longitude and Latitude as data.frame
 #' longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 #'
-#' value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
+#' value <- LongLatToUTM(longlat_df, crs = 4326, units = 'm', digits = 4)
 #' print(value)
-LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
+LongLatToUTM <- function(longlat_df, crs = 4326, units = 'm', digits = 4){
 
   df <- data.frame(long = round(as.numeric(unlist(longlat_df[,2])), digits),
                    lat = round(as.numeric(unlist(longlat_df[,3])), digits))
@@ -46,14 +51,15 @@ LongLatToUTM <- function(longlat_df, units = 'm', digits = 4){
   hemisphere <- ifelse(as.numeric(unlist(longlat_df[,3])) > 0, "north", "south")
   zone <- (floor((as.numeric(unlist(longlat_df[,2])) + 180) / 6) %% 60) + 1
 
-  sp::proj4string(df) <- sp::CRS("+init=epsg:4326")
+  sp::proj4string(df) <-sp::CRS(paste0("+init=epsg:",crs))
 
   CRSstring <- paste0(
     "+proj=utm +zone=", zone,
-    " +ellps=WGS84",
     " +", hemisphere,
+    " +datum=WGS84",
     " +units=", units,
-    " +datum=WGS84")
+    " +no_defs +type=crs")
+
   if (dplyr::n_distinct(CRSstring) > 1L)
     stop("multiple zone/hemisphere detected")
 

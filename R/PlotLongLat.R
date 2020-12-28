@@ -1,6 +1,6 @@
-#' To plot using Geographic coordinate.
+#' To plot using Geographic coordinate WGS84.
 #'
-#' With this function it is possible to plot using Longitude and Latitude (Geographic coordinate).
+#' With this function it is possible to plot using Longitude and Latitude (Geographic coordinate WGS84).
 #'
 #' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
 #'
@@ -37,19 +37,13 @@
 #' print(value)
 PlotLongLat <- function(longlat_df){
 
-  df <- data.frame(Long = as.numeric(unlist(longlat_df[,2])),
-                   Lat = as.numeric(unlist(longlat_df[,3])))
+  value <- data.frame(Pt = unlist(longlat_df[,1]),
+                      Long = as.numeric(unlist(longlat_df[,2])),
+                      Lat = as.numeric(unlist(longlat_df[,3])))
 
-  sp::coordinates(df) <- c("Long", "Lat")
+  sp::coordinates(value) <- c("Long", "Lat")
 
-  sp::proj4string(df) <- sp::CRS("+init=epsg:4326")
-
-  res <- sp::spTransform(df, sp::CRS("+init=epsg:4326")) %>%
-    data.frame()
-
-  value <- as.data.frame(cbind(unlist(longlat_df[,1]),as.numeric(unlist(res[,1])),
-                               as.numeric(unlist(res[,2]))))
-  names(value) <- c("Pt", "Long", "Lat")
+  sp::proj4string(value) <- sp::CRS("+proj=longlat +datum=WGS84")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
     leaflet::addMarkers(

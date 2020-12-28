@@ -7,7 +7,7 @@
 E3(x, y, digits = 4)
 }
 \arguments{
-\item{x}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
+\item{x}{Selection of Ellipsoid.}
 
 \item{y}{Latitude in radians.}
 
@@ -19,6 +19,9 @@ value
 \description{
 To calculate the value for the function 1-e^2*sen(lat)^2.
 }
+\note{
+create data frame of epsg codes by epsg <- rgdal::make_EPSG()
+}
 \examples{
 # Lat
 g <- -33
@@ -28,9 +31,14 @@ s <- 30.123456
 rad_lat <- radians(g, m, s)
 print(rad_lat)
 
-# Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-# 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-# 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-value <- E3(4, rad_lat, digits = 4)
+# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+Ellip <- Ellipsoids
+#View(Ellip)
+
+# We choose the number 5 which is GRS80
+value <- E3(5, rad_lat, digits = 4)
 print(value)
+}
+\references{
+https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 }

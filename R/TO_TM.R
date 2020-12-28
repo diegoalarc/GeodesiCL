@@ -2,7 +2,7 @@
 #'
 #' With this function it is possible to convert from Geographic coordinate to TM using the Central meridian, Scale factor Ko, False East, False North and obtain the decimal precision that you assign.
 #'
-#' @param a Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
+#' @param a Selection of Ellipsoid.
 #' @param longlat_df Sexagesimal longitude and latitude as dataframe.
 #' @param d Central meridian.
 #' @param e Scale factor Ko.
@@ -12,6 +12,10 @@
 #'
 #' @return data.frame with the data in the following order: "East", "North", "X", "Y".
 #' @export
+#'
+#' @note create data frame of epsg codes by epsg <- rgdal::make_EPSG()
+#'
+#' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
 #' # Test data
@@ -45,14 +49,14 @@
 #' # ELLIPSOIDAL HEIGHT (h)
 #' h <- 31.885
 #'
-#' # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-#' # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-#' # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-#' value <- TO_TM(4, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
+#' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+#' Ellip <- Ellipsoids
+#' #View(Ellip)
+#'
+#' # We choose the number 47 which is WGS84
+#' value <- TO_TM(a = 47, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 #' print(value)
-TO_TM <- function(a, longlat_df, d, e, f, g, digits = 4){
-  #  Ellipsoids <- NULL
-  #  Sin_1 <- NULL
+TO_TM <- function(a = 47, longlat_df, d, e, f, g, digits = 4){
   b <- as.numeric(longlat_df[,2])
   c <- as.numeric(longlat_df[,3])
   N <- as.numeric(Ellipsoids[a,2])/sqrt(1-as.numeric(Ellipsoids[a,6])*sin(c*pi/180)^2)

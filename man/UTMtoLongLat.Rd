@@ -4,7 +4,7 @@
 \alias{UTMtoLongLat}
 \title{To convert from UTM to Geographic coordinate.}
 \usage{
-UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
+UTMtoLongLat(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4)
 }
 \arguments{
 \item{utm_df}{Point name, East and North UTM in a data.frame.}
@@ -13,13 +13,18 @@ UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
 
 \item{hemisphere}{select between north or south (written in lowercase). DEFAULT: "south"}
 
+\item{crs}{EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)}
+
 \item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 a list with a data.frame and leaflet map.
 }
 \description{
-With this function it is possible to convert from UTM coordinate to Geographic coordinate.
+With this function it is possible to convert from UTM coordinate to Geographic coordinate. It is also possible to convert to other coordinate reference systems by selecting their EPGS number. Review notes and references.
+}
+\note{
+create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
 # Load test data from the package
@@ -34,8 +39,11 @@ zone <- 19
 # Hemisphere could be "north" or "south"
 hemisphere <- "south"
 
-value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)
+value <- UTMtoLongLat(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4)
 print(value)
+}
+\references{
+https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 }
 \seealso{
 \code{data.frame}

@@ -4,10 +4,12 @@
 \alias{LongLatToUTM}
 \title{To convert from Geographic coordinate to UTM coordinate.}
 \usage{
-LongLatToUTM(longlat_df, units = "m", digits = 4)
+LongLatToUTM(longlat_df, crs = 4326, units = "m", digits = 4)
 }
 \arguments{
 \item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
+
+\item{crs}{EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)}
 
 \item{units}{Select units for UTM to work. DEFAULT: 'm'}
 
@@ -17,7 +19,10 @@ LongLatToUTM(longlat_df, units = "m", digits = 4)
 a list with a data.frame and leaflet map.
 }
 \description{
-With this function it is possible to convert from Geographic coordinate to UTM coordinate.
+With this function it is possible to convert from Geographic coordinate to UTM coordinate. It is also possible to convert from other coordinate reference systems by selecting their EPGS number to UTM coordinate. Review notes and references.
+}
+\note{
+create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
 # Point name
@@ -42,8 +47,11 @@ sexa_lat <- sexagesimal(g1, m1, s1)
 # Longitude and Latitude as data.frame
 longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
-value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
+value <- LongLatToUTM(longlat_df, crs = 4326, units = 'm', digits = 4)
 print(value)
+}
+\references{
+https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 }
 \seealso{
 \code{data.frame}

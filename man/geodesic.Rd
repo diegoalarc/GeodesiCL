@@ -7,7 +7,7 @@
 geodesic(a, XYZ_df, digits = 4)
 }
 \arguments{
-\item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
+\item{a}{Selection of Ellipsoid.}
 
 \item{XYZ_df}{Sexagesimal longitude and latitude as dataframe.}
 
@@ -18,6 +18,9 @@ data.frame with the data in the following order: "Pt", "Lat", "Lon", "H".
 }
 \description{
 With this function it is possible to convert from Cartesian coordinate to Geographic coordinate and obtain the decimal precision that you assign.
+}
+\note{
+create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
 # Point name
@@ -31,9 +34,14 @@ Z <- -3473256.69328603
 # Pto, X, Y and Z as data.frame
 XYZ_df <- as.data.frame(cbind(Pto, X, Y, Z))
 
-# Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-# 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-# 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-value <- geodesic(4, XYZ_df, digits = 4)
+# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+Ellip <- Ellipsoids
+#View(Ellip)
+
+# We choose the number 5 which is GRS80
+value <- geodesic(5, XYZ_df, digits = 4)
 print(value)
+}
+\references{
+https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 }

@@ -7,7 +7,7 @@
 cartesian(a, longlat_df, digits = 4)
 }
 \arguments{
-\item{a}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
+\item{a}{Selection of Ellipsoid.}
 
 \item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
 
@@ -18,6 +18,9 @@ data.frame with the data in the following order: "Pt", "X", "Y", "Z".
 }
 \description{
 With this function it is possible to convert from Geographic coordinate to Cartesian coordinate and obtain the decimal precision that you assign.
+}
+\note{
+create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
 # Point name
@@ -46,7 +49,14 @@ h <- 31.885
 # Longitude and Latitude as data.frame
 longlat_df <- data.frame(Pto, sexa_long, sexa_lat, h)
 
-# Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
-value <- cartesian(4, longlat_df, digits = 4)
+# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+Ellip <- Ellipsoids
+#View(Ellip)
+
+# We choose the number 5 which is GRS80
+value <- cartesian(5, longlat_df, digits = 4)
 print(value)
+}
+\references{
+https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 }

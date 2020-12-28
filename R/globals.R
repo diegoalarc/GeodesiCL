@@ -76,3 +76,15 @@ readr::read_csv
 #' @importFrom methods show
 #' @export
 methods::show
+
+#' @importFrom rgdal projInfo
+#' @export
+rgdal::projInfo
+
+#' @importFrom utils write.csv
+#' @export
+utils::write.csv
+
+#' @importFrom utils View
+#' @export
+utils::View

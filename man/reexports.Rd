@@ -22,6 +22,9 @@
 \alias{profvis}
 \alias{read_csv}
 \alias{show}
+\alias{projInfo}
+\alias{write.csv}
+\alias{View}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -47,8 +50,12 @@ below to see their documentation.
 
   \item{readr}{\code{\link[readr:read_delim]{read_csv}}}
 
+  \item{rgdal}{\code{\link[rgdal]{projInfo}}}
+
   \item{sp}{\code{\link[sp:CRS-class]{CRS}}, \code{\link[sp]{SpatialPoints}}, \code{\link[sp]{coordinates}}, \code{\link[sp:is.projected]{proj4string}}, \code{\link[sp]{spTransform}}}
 
   \item{tibble}{\code{\link[tibble]{as_tibble}}}
+
+  \item{utils}{\code{\link[utils]{View}}, \code{\link[utils:write.table]{write.csv}}}
 }}
 
