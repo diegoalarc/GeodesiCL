@@ -84,7 +84,3 @@ rgdal::projInfo
 #' @importFrom utils write.csv
 #' @export
 utils::write.csv
-
-#' @importFrom utils View
-#' @export
-utils::View

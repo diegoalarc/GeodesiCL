@@ -24,7 +24,6 @@
 \alias{show}
 \alias{projInfo}
 \alias{write.csv}
-\alias{View}
 \title{Objects exported from other packages}
 \keyword{internal}
 \description{
@@ -56,6 +55,6 @@ below to see their documentation.
 
   \item{tibble}{\code{\link[tibble]{as_tibble}}}
 
-  \item{utils}{\code{\link[utils]{View}}, \code{\link[utils:write.table]{write.csv}}}
+  \item{utils}{\code{\link[utils:write.table]{write.csv}}}
 }}
 
