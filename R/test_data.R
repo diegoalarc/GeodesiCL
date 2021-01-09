@@ -6,7 +6,7 @@
 #' @return a \code{tibble}
 #' @export
 #'
-#' @seealso Package 'utils' in it 'read.table'
+#' @seealso Package 'tibble' as 'readr'
 #'
 #' @examples
 #' # Test data

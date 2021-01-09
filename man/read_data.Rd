@@ -23,5 +23,5 @@ csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 data_test <- read_data(csv)
 }
 \seealso{
-Package 'utils' in it 'read.table'
+Package 'tibble' as 'readr'
 }
