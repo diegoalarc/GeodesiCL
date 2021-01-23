@@ -91,7 +91,6 @@ LongLatToUTM <- function(longlat_df, crs = 4326, units = 'm', digits = 4){
                                              "Stamen.Terrain", "Esri.WorldStreetMap",
                                              "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
                               position = "topleft")
-
   methods::show(map)
   return(value)
 }
