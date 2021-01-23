@@ -19,7 +19,6 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
   sp,
-  utf8,
   readr,
   dplyr,
   rgdal,
