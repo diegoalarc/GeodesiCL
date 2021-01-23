@@ -22,5 +22,5 @@ test_that("To convert from Geographic coordinate to UTM coordinate works", {
    longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
    value <- LongLatToUTM(longlat_df, units = 'm', digits = 4)
-   expect_equal((LongLatToUTM(longlat_df, units = 'm', digits = 4))[[1]], value[[1]])
+   expect_equal((LongLatToUTM(longlat_df, units = 'm', digits = 4)), value)
 })
