@@ -12,7 +12,6 @@ test_that("To convert from Cartesian coordinate to Geographic coordinate works",
 
    # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
    Ellip <- Ellipsoids
-   View(Ellip)
 
    # We choose the number 5 which is GRS80
    value <- geodesic(5, XYZ_df, digits = 4)

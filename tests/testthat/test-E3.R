@@ -5,7 +5,6 @@ test_that("To calculate 1-e^2*sen(lat)^2 works", {
    s <- 30.123456
 
    Ellip <- Ellipsoids
-   View(Ellip)
 
    rad_lat <- radians(g, m, s)
    print(rad_lat)
