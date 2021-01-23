@@ -13,9 +13,11 @@ test_that("To calculate the value of r, S and L works", {
   # Ellipsoidal height and Horizontal distance as data.frame
   pto_lat <- data.frame(Pto, rad_lat)
 
-  # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-  # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-  # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-  value <- rSL(4, pto_lat, digits = 4)
-  expect_equal(rSL(4, pto_lat, digits = 4), value)
+  # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+  Ellip <- Ellipsoids
+  #View(Ellip)
+
+  # We choose the number 47 which is WGS84
+  value <- rSL(47, pto_lat, digits = 4)
+  expect_equal(rSL(47, pto_lat, digits = 4), value)
 })

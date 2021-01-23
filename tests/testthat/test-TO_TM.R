@@ -30,9 +30,11 @@ test_that("To convert from Geographic coordinate to TM works", {
    # ELLIPSOIDAL HEIGHT (h)
    h <- 31.885
 
-   # Ellipsoids are: 1 = 'PSAD56', 2 = 'SAD69', 3 = 'WGS84', 4 = 'GRS80',
-   # 5 = 'GRS67', 6 = 'Airy 1830', 7 = 'Bessel 1841', 8 = 'Clarke 1880',
-   # 9 = 'Clarke 1866', 10 = 'International 1924', 11 = 'Krasovsky 1940'
-   value <- TO_TM(4, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
-   expect_equal(TO_TM(4, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4), value)
+   # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+   Ellip <- Ellipsoids
+   #View(Ellip)
+
+   # We choose the number 47 which is WGS84
+   value <- TO_TM(a = 47, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
+   expect_equal(TO_TM(47, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4), value)
 })
