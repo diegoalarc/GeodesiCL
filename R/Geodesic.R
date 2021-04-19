@@ -53,7 +53,8 @@ geodesic <- function(a, XYZ_df, digits = 4){
                               cos(atan((as.numeric(Ellipsoids[a,3])*z)/
                                          (as.numeric(Ellipsoids[a,6])*
                                             sqrt(x^2+y^2))))^3)))
-  N <- as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(lat)^2)
+  N <- as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*
+                                          sin(lat)^2)
   lon <- as.numeric(atan(y/x))
   H <- as.numeric((d/cos(lat))-N)
   values <- tibble::as_tibble(as.data.frame(

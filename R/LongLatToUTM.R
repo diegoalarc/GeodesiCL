@@ -1,6 +1,9 @@
 #' To convert from Geographic coordinate to UTM coordinate.
 #'
-#' With this function it is possible to convert from Geographic coordinate to UTM coordinate. It is also possible to convert from other coordinate reference systems by selecting their EPGS number to UTM coordinate. Review notes and references.
+#' With this function it is possible to convert from Geographic coordinate
+#' to UTM coordinate. It is also possible to convert from other coordinate
+#' reference systems by selecting their EPGS number to UTM coordinate.
+#' Review notes and references.
 #'
 #' @param longlat_df Point name, Sexagesimal longitude and latitude as
 #' dataframe.
