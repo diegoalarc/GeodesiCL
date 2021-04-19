@@ -7,7 +7,8 @@ test_that("To calculate the value of N works", {
    rad_lat <- radians(g, m, s)
    print(rad_lat)
 
-   # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+   # To know the ellipsoids and the order open the Ellipsoids in the package
+   # and look for it number
    Ellip <- Ellipsoids
    #View(Ellip)
 

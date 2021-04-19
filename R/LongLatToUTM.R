@@ -2,10 +2,12 @@
 #'
 #' With this function it is possible to convert from Geographic coordinate to UTM coordinate. It is also possible to convert from other coordinate reference systems by selecting their EPGS number to UTM coordinate. Review notes and references.
 #'
-#' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
-#' @param crs EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)
+#' @param longlat_df Point name, Sexagesimal longitude and latitude as
+#' dataframe.
+#' @param crs EPGS number of the new coordinate reference system to transform.
+#' DEFAULT: 4326 (WGS84)
 #' @param units Select units for UTM to work. DEFAULT: 'm'
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return a list with a data.frame and leaflet map.
 #'
@@ -62,16 +64,18 @@ LongLatToUTM <- function(longlat_df, crs = 4326, units = 'm', digits = 4){
     " +units=", units,
     " +no_defs +type=crs")
 
-  if (dplyr::n_distinct(CRSstring) > 1L)
+  if(dplyr::n_distinct(CRSstring) > 1L)
     stop("multiple zone/hemisphere detected")
 
   res <- sp::spTransform(df, sp::CRS(CRSstring[1L])) %>%
     data.frame() %>% dplyr::mutate(zone_hemisphere = paste(zone,hemisphere))
 
-  value <- tibble::as_tibble(as.data.frame(cbind(unlist(longlat_df[,1]),
-                                                 round(as.numeric(unlist(res[,1])), digits),
-                                                 round(as.numeric(unlist(res[,2])), digits),
-                                                 as.character(unlist(res[,3])))))
+  value <- tibble::as_tibble(as.data.frame(
+    cbind(unlist(longlat_df[,1]),
+          round(as.numeric(unlist(res[,1])), digits),
+          round(as.numeric(unlist(res[,2])), digits),
+          as.character(unlist(res[,3])))))
+
   names(value) <- c("Pt", "East", "North", "zone_hemisphere")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
@@ -80,19 +84,26 @@ LongLatToUTM <- function(longlat_df, crs = 4326, units = 'm', digits = 4){
       label = paste("Name: ", value$Pt, "<br>",
                     "East: ", as.numeric(value$East), "<br>",
                     "North: ", as.numeric(value$North), "<br>",
-                    "zone hemisphere: ", as.character(value$zone_hemisphere)) %>%
+                    "zone hemisphere: ",
+                    as.character(value$zone_hemisphere)) %>%
     lapply(htmltools::HTML)) %>%
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
     leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%
     leaflet::addProviderTiles("Stamen.Terrain", group = "Stamen.Terrain") %>%
-    leaflet::addProviderTiles("Esri.WorldStreetMap", group = "Esri.WorldStreetMap") %>%
+    leaflet::addProviderTiles("Esri.WorldStreetMap",
+                              group = "Esri.WorldStreetMap") %>%
     leaflet::addProviderTiles("Wikimedia", group = "Wikimedia") %>%
-    leaflet::addProviderTiles("CartoDB.Positron", group = "CartoDB.Positron") %>%
-    leaflet::addProviderTiles("Esri.WorldImagery", group = "Esri.WorldImagery") %>%
+    leaflet::addProviderTiles("CartoDB.Positron",
+                              group = "CartoDB.Positron") %>%
+    leaflet::addProviderTiles("Esri.WorldImagery",
+                              group = "Esri.WorldImagery") %>%
     leaflet::addLayersControl(baseGroups = c("OpenStreetMap", "Stamen.Toner",
-                                             "Stamen.Terrain", "Esri.WorldStreetMap",
-                                             "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
+                                             "Stamen.Terrain",
+                                             "Esri.WorldStreetMap",
+                                             "Wikimedia", "CartoDB.Positron",
+                                             "Esri.WorldImagery"),
                               position = "topleft")
+
   methods::show(map)
   return(value)
 }

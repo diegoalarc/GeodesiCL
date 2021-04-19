@@ -9,15 +9,17 @@ cartesian(a, longlat_df, digits = 4)
 \arguments{
 \item{a}{Selection of Ellipsoid.}
 
-\item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
+\item{longlat_df}{Point name, Sexagesimal longitude and latitude as
+dataframe.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 data.frame with the data in the following order: "Pt", "X", "Y", "Z".
 }
 \description{
-With this function it is possible to convert from Geographic coordinate to Cartesian coordinate and obtain the decimal precision that you assign.
+With this function it is possible to convert from Geographic coordinate
+to Cartesian coordinate and obtain the decimal precision that you assign.
 }
 \note{
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
@@ -50,7 +52,8 @@ h <- 31.885
 # Longitude and Latitude as data.frame
 longlat_df <- data.frame(Pto, sexa_long, sexa_lat, h)
 
-# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+# To know the ellipsoids and the order open the Ellipsoids in the package
+# and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
 

@@ -9,13 +9,14 @@ arch(x, digits = 4)
 \arguments{
 \item{x}{Rope}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
 }
 \description{
-With this function it is possible to perform a reduction from chord to elliptical bow.
+With this function it is possible to perform a reduction from
+chord to elliptical bow.
 }
 \examples{
 \donttest{

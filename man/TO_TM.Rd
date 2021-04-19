@@ -19,13 +19,16 @@ TO_TM(a = 47, longlat_df, d, e, f, g, digits = 4)
 
 \item{g}{False North (FN).}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-data.frame with the data in the following order: "East", "North", "X", "Y".
+data.frame with the data in the following order: "East", "North",
+"X", "Y".
 }
 \description{
-With this function it is possible to convert from Geographic coordinate to TM using the Central meridian, Scale factor Ko, False East, False North and obtain the decimal precision that you assign.
+With this function it is possible to convert from Geographic coordinate
+to TM using the Central meridian, Scale factor Ko, False East, False North
+and obtain the decimal precision that you assign.
 }
 \note{
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
@@ -63,7 +66,8 @@ longlat_df <- as.data.frame(cbind(Pto,sexa_long,sexa_lat))
 # ELLIPSOIDAL HEIGHT (h)
 h <- 31.885
 
-# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+# To know the ellipsoids and the order open the Ellipsoids in the package
+# and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
 

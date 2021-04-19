@@ -1,4 +1,5 @@
-test_that("To convert separated data in Degrees Minutes and Seconds to Radians works", {
+test_that("To convert separated data in Degrees Minutes and Seconds to Radians
+          works", {
   # Lat
   g <- -33
   m <- 38

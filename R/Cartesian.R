@@ -1,10 +1,12 @@
 #' To convert from Geographic coordinate to Cartesian coordinate.
 #'
-#' With this function it is possible to convert from Geographic coordinate to Cartesian coordinate and obtain the decimal precision that you assign.
+#' With this function it is possible to convert from Geographic coordinate
+#' to Cartesian coordinate and obtain the decimal precision that you assign.
 #'
 #' @param a Selection of Ellipsoid.
-#' @param longlat_df Point name, Sexagesimal longitude and latitude as dataframe.
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param longlat_df Point name, Sexagesimal longitude and latitude as
+#' dataframe.
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return data.frame with the data in the following order: "Pt", "X", "Y", "Z".
 #' @export
@@ -41,7 +43,8 @@
 #' # Longitude and Latitude as data.frame
 #' longlat_df <- data.frame(Pto, sexa_long, sexa_lat, h)
 #'
-#' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+#' # To know the ellipsoids and the order open the Ellipsoids in the package
+#' # and look for it number
 #' Ellip <- Ellipsoids
 #' #View(Ellip)
 #'
@@ -53,10 +56,16 @@ cartesian <- function(a, longlat_df, digits = 4){
   b <- as.numeric(longlat_df[,4])
   c <- as.numeric((longlat_df[,2])*pi/180)
   d <- as.numeric((longlat_df[,3])*pi/180)
-  valueX <- (as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2)+b)*cos(d)*cos(c)
-  valueY <- (as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2)+b)*cos(d)*sin(c)
-  valueZ <- ((as.numeric(Ellipsoids[a,3])/sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2))*(1 - as.numeric(Ellipsoids[a,7]))+b)*sin(d)
-  values <- tibble::as_tibble(as.data.frame(cbind(longlat_df[,1], round(valueX, digits), round(valueY, digits), round(valueZ, digits))))
+  valueX <- (as.numeric(Ellipsoids[a,3])/
+               sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2)+b)*cos(d)*cos(c)
+  valueY <- (as.numeric(Ellipsoids[a,3])/
+               sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2)+b)*cos(d)*sin(c)
+  valueZ <- ((as.numeric(Ellipsoids[a,3])/
+                sqrt(1 - as.numeric(Ellipsoids[a,7])*sin(d)^2))*
+               (1 - as.numeric(Ellipsoids[a,7]))+b)*sin(d)
+  values <- tibble::as_tibble(as.data.frame(
+    cbind(longlat_df[,1], round(valueX, digits), round(valueY, digits),
+          round(valueZ, digits))))
   names(values) <- c("Pt", "X", "Y", "Z")
   return(values)
 }

@@ -7,15 +7,18 @@
 geodis(Data_fm, digits = 4)
 }
 \arguments{
-\item{Data_fm}{Point name, Ellipsoidal height and Horizontal distance as dataframe.}
+\item{Data_fm}{Point name, Ellipsoidal height and Horizontal distance as
+dataframe.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
-data.frame with the data in the following order: "Pt", "Kh(h)", "GEODESIC DISTANCE".
+data.frame with the data in the following order: "Pt", "Kh(h)",
+"GEODESIC DISTANCE".
 }
 \description{
-With this function it is possible to perform a reduction of the horizontal distance to the Ellipsoid.
+With this function it is possible to perform a reduction of the horizontal
+distance to the Ellipsoid.
 }
 \examples{
 \donttest{

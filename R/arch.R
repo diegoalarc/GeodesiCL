@@ -1,9 +1,10 @@
 #' Rope reduction to elliptical arch.
 #'
-#' With this function it is possible to perform a reduction from chord to elliptical bow.
+#' With this function it is possible to perform a reduction from
+#' chord to elliptical bow.
 #'
 #' @param x Rope
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return value
 #' @export

@@ -13,7 +13,8 @@ test_that("To calculate the value of r, S and L works", {
   # Ellipsoidal height and Horizontal distance as data.frame
   pto_lat <- data.frame(Pto, rad_lat)
 
-  # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+  # To know the ellipsoids and the order open the Ellipsoids in the package
+  # and look for it number
   Ellip <- Ellipsoids
   #View(Ellip)
 

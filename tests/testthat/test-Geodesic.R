@@ -1,4 +1,5 @@
-test_that("To convert from Cartesian coordinate to Geographic coordinate works", {
+test_that("To convert from Cartesian coordinate to Geographic coordinate works",
+          {
    # Point name
    Pto <- "St1"
 
@@ -10,7 +11,8 @@ test_that("To convert from Cartesian coordinate to Geographic coordinate works",
    # Pto, X, Y and Z as data.frame
    XYZ_df <- as.data.frame(cbind(Pto, X, Y, Z))
 
-   # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+   # To know the ellipsoids and the order open the Ellipsoids in the package
+   # and look for it number
    Ellip <- Ellipsoids
 
    # We choose the number 5 which is GRS80

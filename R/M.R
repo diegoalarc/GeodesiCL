@@ -4,7 +4,7 @@
 #'
 #' @param x Selection of Ellipsoid.
 #' @param y Latitude in radians.
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return value
 #' @export
@@ -23,7 +23,8 @@
 #' rad_lat <- radians(g, m, s)
 #' print(rad_lat)
 #'
-#' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+#' # To know the ellipsoids and the order open the Ellipsoids in the package
+#' # and look for it number
 #' Ellip <- Ellipsoids
 #' #View(Ellip)
 #'
@@ -32,6 +33,7 @@
 #' print(value)
 #' }
 M <- function(x, y, digits = 4){
-  value <- (as.numeric(Ellipsoids[x,3])*(1 - as.numeric(Ellipsoids[x,7]))/(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)^(3/2))
+  value <- (as.numeric(Ellipsoids[x,3])*(1 - as.numeric(Ellipsoids[x,7]))/
+              (1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)^(3/2))
   return(round(value, digits))
 }

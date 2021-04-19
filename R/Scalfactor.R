@@ -2,10 +2,12 @@
 #'
 #' With this function it is possible to calculate the scale factor.
 #'
-#' @param EAST_Geodist_df Point name, East coordinate and Geodesic distance as data.frame.
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param EAST_Geodist_df Point name, East coordinate and Geodesic distance as
+#' data.frame.
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
-#' @return data.frame with the data in the following order: "Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM".
+#' @return data.frame with the data in the following order: "Pt", "X", "K UTM",
+#' "D UTM", "DIF D-S", "PPM".
 #' @export
 #'
 #' @examples
@@ -41,8 +43,12 @@ scalfactor <- function(EAST_Geodist_df, digits = 4){
   D_UTM <- as.numeric(y*K_UTM)
   DIF_DS <- as.numeric(D_UTM-y)
   PPM <- as.numeric((DIF_DS/D_UTM)*1000000)
-  values <- tibble::as_tibble(as.data.frame(cbind(EAST_Geodist_df[,1],round(valueX, digits), round(K_UTM, digits), round(D_UTM, digits),
-                       round(DIF_DS, digits), round(PPM, digits))))
+  values <- tibble::as_tibble(as.data.frame(cbind(EAST_Geodist_df[,1],
+                                                  round(valueX, digits),
+                                                  round(K_UTM, digits),
+                                                  round(D_UTM, digits),
+                                                  round(DIF_DS, digits),
+                                                  round(PPM, digits))))
   names(values) <- c("Pt", "X", "K UTM","D UTM", "DIF D-S", "PPM")
   return(values)
 }

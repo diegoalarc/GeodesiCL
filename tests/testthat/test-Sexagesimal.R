@@ -1,4 +1,5 @@
-test_that("To convert separated data in Degrees Minutes and Seconds to Decimal degrees works", {
+test_that("To convert separated data in Degrees Minutes and Seconds to
+          Decimal degrees works", {
   # Latitude
   g <- -33
   m <- 38

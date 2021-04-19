@@ -11,7 +11,7 @@ M(x, y, digits = 4)
 
 \item{y}{Latitude in radians.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -32,7 +32,8 @@ s <- 30.123456
 rad_lat <- radians(g, m, s)
 print(rad_lat)
 
-# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+# To know the ellipsoids and the order open the Ellipsoids in the package
+# and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
 

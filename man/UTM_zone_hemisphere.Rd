@@ -15,7 +15,8 @@ UTM_zone_hemisphere(x, y)
 value
 }
 \description{
-With this function it is possible to find the zone hemisphere from Geographic coordinate to obtain the UTM zone.
+With this function it is possible to find the zone hemisphere
+from Geographic coordinate to obtain the UTM zone.
 }
 \examples{
 \donttest{

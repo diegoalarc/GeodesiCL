@@ -7,13 +7,15 @@
 LongLatToUTM(longlat_df, crs = 4326, units = "m", digits = 4)
 }
 \arguments{
-\item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
+\item{longlat_df}{Point name, Sexagesimal longitude and latitude as
+dataframe.}
 
-\item{crs}{EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)}
+\item{crs}{EPGS number of the new coordinate reference system to transform.
+DEFAULT: 4326 (WGS84)}
 
 \item{units}{Select units for UTM to work. DEFAULT: 'm'}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 a list with a data.frame and leaflet map.

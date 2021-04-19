@@ -1,4 +1,5 @@
-test_that("To find the zone hemisphere from Longitude and Latitude the UTM zone works", {
+test_that("To find the zone hemisphere from Longitude and Latitude the
+          UTM zone works", {
     # Longitude
    g <- -71
    m <- 18

@@ -7,11 +7,12 @@
 rSL(x, pto_lat, digits = 4)
 }
 \arguments{
-\item{x}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',    3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
+\item{x}{Selection of Ellipsoid to work between 1 = 'PSAD-56', 2 = 'SAD-69',
+3 = 'WGS-84',    4 ='GRS-80 (SIRGAS)'.}
 
 \item{pto_lat}{Point name and the latitude in radians as data.frame.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 data.frame with the data in the following order: "Pt", "r", "S", "L".
@@ -35,7 +36,8 @@ print(rad_lat)
 # Ellipsoidal height and Horizontal distance as data.frame
 pto_lat <- data.frame(Pto, rad_lat)
 
-# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+# To know the ellipsoids and the order open the Ellipsoids in the package
+# and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
 

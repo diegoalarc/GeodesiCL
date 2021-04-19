@@ -1,4 +1,5 @@
-test_that("To convert from Geographic coordinate to Cartesian coordinate works", {
+test_that("To convert from Geographic coordinate to Cartesian coordinate works",
+          {
    # Point name
    Pto <- "St1"
 
@@ -25,7 +26,8 @@ test_that("To convert from Geographic coordinate to Cartesian coordinate works",
    # Longitude and Latitude as data.frame
    longlat_df <- data.frame(Pto, sexa_long, sexa_lat, h)
 
-   # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',	4 ='GRS-80 (SIRGAS)'.
+   # Ellipsoids are: 1 = 'PSAD-56', 2 = 'SAD-69',	3 = 'WGS-84',
+   # 4 ='GRS-80 (SIRGAS)'.
    value <- cartesian(4, longlat_df, digits = 4)
 
    expect_equal(cartesian(4, longlat_df, digits = 4), value)

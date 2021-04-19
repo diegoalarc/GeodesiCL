@@ -1,4 +1,5 @@
-#' Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GRS-80 SIRGAS.
+#' Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84,
+#' GRS-80 SIRGAS.
 #'
 #' @format A data frame with 20 columns:
 #' \describe{

@@ -3,7 +3,7 @@
 #' To calculate the value for the function 1-e^2.
 #'
 #' @param x Selection of Ellipsoid.
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return value
 #' @export
@@ -14,7 +14,8 @@
 #'
 #' @examples
 #' \donttest{
-#' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+#' # To know the ellipsoids and the order open the Ellipsoids in the package
+#' # and look for it number
 #' Ellip <- Ellipsoids
 #' #View(Ellip)
 #'

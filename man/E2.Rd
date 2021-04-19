@@ -9,7 +9,7 @@ E2(x, digits = 4)
 \arguments{
 \item{x}{Selection of Ellipsoid.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
@@ -22,7 +22,8 @@ create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
 \donttest{
-# To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
+# To know the ellipsoids and the order open the Ellipsoids in the package
+# and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
 

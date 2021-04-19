@@ -1,12 +1,17 @@
 #' To convert from UTM to Geographic coordinate.
 #'
-#' With this function it is possible to convert from UTM coordinate to Geographic coordinate. It is also possible to convert to other coordinate reference systems by selecting their EPGS number. Review notes and references.
+#' With this function it is possible to convert from UTM coordinate
+#' to Geographic coordinate. It is also possible to convert to other
+#' coordinate reference systems by selecting their EPGS number.
+#' Review notes and references.
 #'
 #' @param utm_df Point name, East and North UTM in a data.frame.
 #' @param zone Select UTM zone to work.
-#' @param hemisphere select between north or south (written in lowercase). DEFAULT: "south"
-#' @param crs EPGS number of the new coordinate reference system to transform. DEFAULT: 4326 (WGS84)
-#' @param digits Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4
+#' @param hemisphere select between north or south (written in lowercase).
+#' DEFAULT: "south"
+#' @param crs EPGS number of the new coordinate reference system to transform.
+#' DEFAULT: 4326 (WGS84)
+#' @param digits Number of digits are \code{\link{round}ed} to. DEFAULT: 4
 #'
 #' @return a list with a data.frame and leaflet map.
 #'
@@ -30,10 +35,12 @@
 #' # Hemisphere could be "north" or "south"
 #' hemisphere <- "south"
 #'
-#' value <- UTMtoLongLat(data_test, zone, hemisphere = "south", crs = 4326, digits = 4)
+#' value <- UTMtoLongLat(data_test, zone, hemisphere = "south", crs = 4326,
+#'                       digits = 4)
 #' print(value)
 #' }
-UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4){
+UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326,
+                         digits = 4){
 
   df <- data.frame(East = as.numeric(unlist(utm_df[,2])),
                    North = as.numeric(unlist(utm_df[,3])))
@@ -46,11 +53,14 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326, digits 
     " +units=m",
     " +no_defs +type=crs"))
 
-  res <- sp::spTransform(df, sp::CRS(paste0("+init=epsg:",crs))) %>% data.frame()
+  res <- sp::spTransform(df, sp::CRS(paste0("+init=epsg:",crs))) %>%
+    data.frame()
 
   value <- tibble::as_tibble(as.data.frame(cbind(unlist(utm_df[,1]),
-                                                 round(as.numeric(unlist(res[,1])), digits),
-                                                 round(as.numeric(unlist(res[,2])), digits))))
+                                                 round(as.numeric(
+                                                   unlist(res[,1])), digits),
+                                                 round(as.numeric(
+                                                   unlist(res[,2])), digits))))
   names(value) <- c("Pt", "Long", "Lat")
 
   map <- leaflet::leaflet(value) %>% leaflet::addTiles() %>%
@@ -63,13 +73,18 @@ UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326, digits 
     leaflet::addProviderTiles("OpenStreetMap", group = "OpenStreetMap") %>%
     leaflet::addProviderTiles("Stamen.Toner", group = "Stamen.Toner") %>%
     leaflet::addProviderTiles("Stamen.Terrain", group = "Stamen.Terrain") %>%
-    leaflet::addProviderTiles("Esri.WorldStreetMap", group = "Esri.WorldStreetMap") %>%
+    leaflet::addProviderTiles("Esri.WorldStreetMap",
+                              group = "Esri.WorldStreetMap") %>%
     leaflet::addProviderTiles("Wikimedia", group = "Wikimedia") %>%
-    leaflet::addProviderTiles("CartoDB.Positron", group = "CartoDB.Positron") %>%
-    leaflet::addProviderTiles("Esri.WorldImagery", group = "Esri.WorldImagery") %>%
+    leaflet::addProviderTiles("CartoDB.Positron",
+                              group = "CartoDB.Positron") %>%
+    leaflet::addProviderTiles("Esri.WorldImagery",
+                              group = "Esri.WorldImagery") %>%
     leaflet::addLayersControl(baseGroups = c("OpenStreetMap", "Stamen.Toner",
-                                             "Stamen.Terrain", "Esri.WorldStreetMap",
-                                             "Wikimedia", "CartoDB.Positron", "Esri.WorldImagery"),
+                                             "Stamen.Terrain",
+                                             "Esri.WorldStreetMap",
+                                             "Wikimedia", "CartoDB.Positron",
+                                             "Esri.WorldImagery"),
                               position = "topleft")
 
   methods::show(map)

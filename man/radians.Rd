@@ -13,13 +13,14 @@ radians(x, y, z, digits = 4)
 
 \item{z}{Value of Seconds in Latitude or Longitude.}
 
-\item{digits}{Number of digits the seconds are \code{\link{round}ed} to. DEFAULT: 4}
+\item{digits}{Number of digits are \code{\link{round}ed} to. DEFAULT: 4}
 }
 \value{
 value
 }
 \description{
-With this function it is possible to convert separated data in Degrees Minutes and Seconds to Radians.
+With this function it is possible to convert separated data in
+Degrees Minutes and Seconds to Radians.
 }
 \examples{
 \donttest{

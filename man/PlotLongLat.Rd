@@ -7,13 +7,15 @@
 PlotLongLat(longlat_df)
 }
 \arguments{
-\item{longlat_df}{Point name, Sexagesimal longitude and latitude as dataframe.}
+\item{longlat_df}{Point name, Sexagesimal longitude and latitude as
+dataframe.}
 }
 \value{
 leaflet map.
 }
 \description{
-With this function it is possible to plot using Longitude and Latitude (Geographic coordinate WGS84).
+With this function it is possible to plot using Longitude and
+Latitude (Geographic coordinate WGS84).
 }
 \examples{
 \donttest{
