@@ -33,6 +33,7 @@ Imports:
   mapview
 Suggests: 
     testthat (>= 3.0.0),
+    markdown,
     rmarkdown,
     knitr,
     covr
