@@ -21,7 +21,10 @@ DEFAULT: 4326 (WGS84)}
 a list with a data.frame and leaflet map.
 }
 \description{
-With this function it is possible to convert from Geographic coordinate to UTM coordinate. It is also possible to convert from other coordinate reference systems by selecting their EPGS number to UTM coordinate. Review notes and references.
+With this function it is possible to convert from Geographic coordinate
+to UTM coordinate. It is also possible to convert from other coordinate
+reference systems by selecting their EPGS number to UTM coordinate.
+Review notes and references.
 }
 \note{
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
