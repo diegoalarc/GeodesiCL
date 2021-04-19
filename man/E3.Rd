@@ -23,6 +23,7 @@ To calculate the value for the function 1-e^2*sen(lat)^2.
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Lat
 g <- -33
 m <- 38
@@ -38,6 +39,7 @@ Ellip <- Ellipsoids
 # We choose the number 5 which is GRS80
 value <- E3(5, rad_lat, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

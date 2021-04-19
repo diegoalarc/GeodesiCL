@@ -23,6 +23,7 @@ To calculate the value for the function of M.
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Latitude
 g <- -33
 m <- 38
@@ -38,6 +39,7 @@ Ellip <- Ellipsoids
 # We choose the number 5 which is GRS80
 value <- M(5, rad_lat, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

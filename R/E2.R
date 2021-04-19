@@ -13,6 +13,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
 #' Ellip <- Ellipsoids
 #' #View(Ellip)
@@ -20,6 +21,7 @@
 #' # We choose the number 5 which is GRS80
 #' value <- E2(5, digits = 4)
 #' print(value)
+#' }
 E2 <- function(x, digits = 4){
   value <- 1 - as.numeric(Ellipsoids[x,7])
   return(round(value, digits))

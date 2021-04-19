@@ -18,6 +18,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Test data
 #' CM <- -69.00000
 #' SC_FACTOR_Ko <- 0.99960
@@ -56,6 +57,7 @@
 #' # We choose the number 47 which is WGS84
 #' value <- TO_TM(a = 47, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 #' print(value)
+#' }
 TO_TM <- function(a = 47, longlat_df, d, e, f, g, digits = 4){
   b <- as.numeric(longlat_df[,2])
   c <- as.numeric(longlat_df[,3])

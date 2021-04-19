@@ -11,12 +11,14 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Lat
 #' g <- -33
 #' m <- 38
 #' s <- 30.123456
 #' value <- radians(g, m, s, digits = 4)
 #' print(value)
+#' }
 radians <- function(x, y, z, digits = 4){
   value <- (x-(y/60)-(z/3600))*pi/180
   return(round(value, digits))

@@ -9,9 +9,11 @@
 #' @seealso Package 'tibble' as 'readr'
 #'
 #' @examples
+#' \dontrun{
 #' # Test data
 #' csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 #' data_test <- read_data(csv)
+#' }
 read_data <- function(x, digits = 4){
   values <- readr::read_csv(x)
   values1 <- tibble::as_tibble(data.frame(Pt = unlist(values$Pt),

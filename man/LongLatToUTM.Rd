@@ -25,6 +25,7 @@ With this function it is possible to convert from Geographic coordinate to UTM c
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -49,6 +50,7 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
 value <- LongLatToUTM(longlat_df, crs = 4326, units = 'm', digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

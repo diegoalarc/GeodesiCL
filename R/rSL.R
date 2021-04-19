@@ -10,6 +10,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -31,6 +32,7 @@
 #' # We choose the number 47 which is WGS84
 #' value <- rSL(47, pto_lat, digits = 4)
 #' print(value)
+#' }
 rSL <- function(x, pto_lat, digits = 4){
   y <- as.numeric(pto_lat[,2])
   r <- as.numeric(Ellipsoids[x,3])/sqrt(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)*cos(y)

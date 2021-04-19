@@ -18,9 +18,11 @@ a \code{tibble}
 Read data in csv.
 }
 \examples{
+\dontrun{
 # Test data
 csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 data_test <- read_data(csv)
+}
 }
 \seealso{
 Package 'tibble' as 'readr'

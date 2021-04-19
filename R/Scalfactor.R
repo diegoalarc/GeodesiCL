@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -31,6 +32,7 @@
 #'
 #' value <- scalfactor(EAST_Geodist_df, digits = 4)
 #' print(value)
+#' }
 scalfactor <- function(EAST_Geodist_df, digits = 4){
   x <- as.numeric(EAST_Geodist_df[,2])
   y <- as.numeric(EAST_Geodist_df[,3])

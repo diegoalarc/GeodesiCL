@@ -18,6 +18,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -42,6 +43,7 @@
 #'
 #' value <- LongLatToUTM(longlat_df, crs = 4326, units = 'm', digits = 4)
 #' print(value)
+#' }
 LongLatToUTM <- function(longlat_df, crs = 4326, units = 'm', digits = 4){
 
   df <- data.frame(long = round(as.numeric(unlist(longlat_df[,2])), digits),

@@ -9,11 +9,13 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Test data
 #' ROPE <- 50000
 #'
 #' value <- arch(ROPE, digits = 4)
 #' print(value)
+#' }
 arch <- function(x, digits = 4){
   value1 <- as.numeric((x^3)/(24*63780000*63780000))
   value2 <- as.numeric(value1*1000000)

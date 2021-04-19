@@ -21,6 +21,7 @@ To calculate the value for the function 1-e^2.
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # To know the ellipsoids and the order open the Ellipsoids in the package and look for it number
 Ellip <- Ellipsoids
 #View(Ellip)
@@ -28,6 +29,7 @@ Ellip <- Ellipsoids
 # We choose the number 5 which is GRS80
 value <- E2(5, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

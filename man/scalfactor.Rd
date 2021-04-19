@@ -18,6 +18,7 @@ data.frame with the data in the following order: "Pt", "X", "K UTM","D UTM", "DI
 With this function it is possible to calculate the scale factor.
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -40,4 +41,5 @@ EAST_Geodist_df <- as.data.frame(cbind(Pto, EAST, geodis[,3]))
 
 value <- scalfactor(EAST_Geodist_df, digits = 4)
 print(value)
+}
 }

@@ -18,9 +18,11 @@ value
 With this function it is possible to perform a reduction from chord to elliptical bow.
 }
 \examples{
+\donttest{
 # Test data
 ROPE <- 50000
 
 value <- arch(ROPE, digits = 4)
 print(value)
+}
 }

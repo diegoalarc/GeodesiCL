@@ -16,6 +16,7 @@ leaflet map.
 With this function it is possible to plot using Longitude and Latitude (Geographic coordinate WGS84).
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -40,6 +41,7 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
 value <- PlotLongLat(longlat_df)
 print(value)
+}
 }
 \seealso{
 \code{data.frame}

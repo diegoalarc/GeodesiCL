@@ -14,6 +14,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Latitude
 #' g <- -33
 #' m <- 38
@@ -29,6 +30,7 @@
 #' # We choose the number 5 which is GRS80
 #' value <- N(5, rad_lat, digits = 4)
 #' print(value)
+#' }
 N <- function(x, y, digits = 4){
   value <- as.numeric(Ellipsoids[x,3])/sqrt(1 - as.numeric(Ellipsoids[x,7])*sin(y)^2)
   return(round(value, digits))

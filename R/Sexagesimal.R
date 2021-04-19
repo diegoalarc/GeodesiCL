@@ -11,12 +11,14 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Latitude
 #' g <- -33
 #' m <- 38
 #' s <- 30.123456
 #' value <- sexagesimal(g, m, s, digits = 4)
 #' print(value)
+#' }
 sexagesimal <- function(x, y, z, digits = 4){
   value <- as.numeric(x-(y/60)-(z/3600))
   return(round(value, digits))

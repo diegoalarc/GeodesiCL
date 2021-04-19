@@ -25,7 +25,7 @@
 #' }
 #' @references https://github.com/diegoalarc/GeodesiCL
 #' @examples
-#' \dontrun{
+#' \donttest{
 #'  Ellipsoids
 #' }
 "Ellipsoids"

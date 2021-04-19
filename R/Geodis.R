@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -23,6 +24,7 @@
 #'
 #' value <- geodis(Ellips_Horzdist_df, digits = 4)
 #' print(value)
+#' }
 geodis <- function(Data_fm, digits = 4){
   x <- as.numeric(Data_fm[,2])
   y <- as.numeric(Data_fm[,3])

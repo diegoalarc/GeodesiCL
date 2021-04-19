@@ -9,6 +9,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' #' # Longitude
 #' g <- -71
 #' m <- 18
@@ -27,6 +28,7 @@
 #'
 #' value <- UTM_zone_hemisphere(sexa_long, sexa_lat)
 #' print(value)
+#' }
 UTM_zone_hemisphere <- function(x, y) {
   value1 <- (floor((x + 180) / 6) %% 60) + 1
   value2 <- ifelse(y > 0, "north", "south")

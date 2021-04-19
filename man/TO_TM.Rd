@@ -31,6 +31,7 @@ With this function it is possible to convert from Geographic coordinate to TM us
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Test data
 CM <- -69.00000
 SC_FACTOR_Ko <- 0.99960
@@ -69,6 +70,7 @@ Ellip <- Ellipsoids
 # We choose the number 47 which is WGS84
 value <- TO_TM(a = 47, longlat_df, CM, SC_FACTOR_Ko, FE, FN, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

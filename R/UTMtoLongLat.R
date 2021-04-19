@@ -19,6 +19,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Load test data from the package
 #' csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 #' data_test <- read_data(csv)
@@ -31,6 +32,7 @@
 #'
 #' value <- UTMtoLongLat(data_test, zone, hemisphere = "south", crs = 4326, digits = 4)
 #' print(value)
+#' }
 UTMtoLongLat <- function(utm_df, zone, hemisphere = "south", crs = 4326, digits = 4){
 
   df <- data.frame(East = as.numeric(unlist(utm_df[,2])),

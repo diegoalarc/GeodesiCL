@@ -14,6 +14,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -47,6 +48,7 @@
 #' # We choose the number 5 which is GRS80
 #' value <- cartesian(5, longlat_df, digits = 4)
 #' print(value)
+#' }
 cartesian <- function(a, longlat_df, digits = 4){
   b <- as.numeric(longlat_df[,4])
   c <- as.numeric((longlat_df[,2])*pi/180)

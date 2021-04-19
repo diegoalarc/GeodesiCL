@@ -18,6 +18,7 @@ value
 With this function it is possible to find the zone hemisphere from Geographic coordinate to obtain the UTM zone.
 }
 \examples{
+\donttest{
 #' # Longitude
 g <- -71
 m <- 18
@@ -36,4 +37,5 @@ sexa_lat <- sexagesimal(g1, m1, s1)
 
 value <- UTM_zone_hemisphere(sexa_long, sexa_lat)
 print(value)
+}
 }

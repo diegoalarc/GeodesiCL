@@ -27,6 +27,7 @@ With this function it is possible to convert from UTM coordinate to Geographic c
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Load test data from the package
 csv <- system.file("extdata", "test.csv", package = "GeodesiCL")
 data_test <- read_data(csv)
@@ -39,6 +40,7 @@ hemisphere <- "south"
 
 value <- UTMtoLongLat(data_test, zone, hemisphere = "south", crs = 4326, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

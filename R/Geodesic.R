@@ -14,6 +14,7 @@
 #' @references https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -32,6 +33,7 @@
 #' # We choose the number 5 which is GRS80
 #' value <- geodesic(5, XYZ_df, digits = 4)
 #' print(value)
+#' }
 geodesic <- function(a, XYZ_df, digits = 4){
 #  Ellipsoids <- NULL
   x <- as.numeric(XYZ_df[,2])

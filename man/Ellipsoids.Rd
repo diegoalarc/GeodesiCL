@@ -36,7 +36,7 @@ Ellipsoids
 Contains the values for conversion of the Ellipsoids PSAD-56, SAD-69, WGS-84, GRS-80 SIRGAS.
 }
 \examples{
-\dontrun{
+\donttest{
  Ellipsoids
 }
 }

@@ -18,6 +18,7 @@ data.frame with the data in the following order: "Pt", "Kh(h)", "GEODESIC DISTAN
 With this function it is possible to perform a reduction of the horizontal distance to the Ellipsoid.
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -32,4 +33,5 @@ Ellips_Horzdist_df <- data.frame(Pto, h, Dhz)
 
 value <- geodis(Ellips_Horzdist_df, digits = 4)
 print(value)
+}
 }

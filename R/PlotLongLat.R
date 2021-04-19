@@ -11,6 +11,7 @@
 #' @export
 #'
 #' @examples
+#' \donttest{
 #' # Point name
 #' Pto <- "St1"
 #'
@@ -35,6 +36,7 @@
 #'
 #' value <- PlotLongLat(longlat_df)
 #' print(value)
+#' }
 PlotLongLat <- function(longlat_df){
 
   value <- data.frame(Pt = unlist(longlat_df[,1]),

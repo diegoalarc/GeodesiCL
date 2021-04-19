@@ -23,6 +23,7 @@ With this function it is possible to convert from Cartesian coordinate to Geogra
 create data frame of epsg codes by epsg <- rgdal::make_EPSG()
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -41,6 +42,7 @@ Ellip <- Ellipsoids
 # We choose the number 5 which is GRS80
 value <- geodesic(5, XYZ_df, digits = 4)
 print(value)
+}
 }
 \references{
 https://github.com/OSGeo/PROJ & https://github.com/cran/rgdal

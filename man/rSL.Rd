@@ -20,6 +20,7 @@ data.frame with the data in the following order: "Pt", "r", "S", "L".
 With this function it is possible to calculate the value of r, S and L.
 }
 \examples{
+\donttest{
 # Point name
 Pto <- "St1"
 
@@ -41,4 +42,5 @@ Ellip <- Ellipsoids
 # We choose the number 47 which is WGS84
 value <- rSL(47, pto_lat, digits = 4)
 print(value)
+}
 }
