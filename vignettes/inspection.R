@@ -53,7 +53,7 @@ zone <- 18
 
 # Hemisphere could be "north" or "south"
 hemisphere <- "south"
- 
+
 profile <- profvis(for (i in seq_len(100)) (UTMtoLongLat(utm_df, zone, hemisphere = "south", digits = 4)))
 profile
 
@@ -82,4 +82,3 @@ longlat_df <- data.frame(Pto,sexa_long,sexa_lat)
 
 profile <- profvis(for (i in seq_len(100)) (LongLatToUTM(longlat_df, units = 'm', digits = 4)))
 profile
-
