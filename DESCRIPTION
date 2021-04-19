@@ -2,7 +2,6 @@ Type: Package
 Package: GeodesiCL
 Title: Geometric Geodesy Functions
 Version: 1.0.0
-Date: 2020-12-10
 Authors@R: c(
     person("Diego Alonso", "Alarcon Diaz", email = "diego.alarcondiaz@gmail.com", role = c("cre","aut")),
     person("Karla Francisca", "Riquelme Carrillo", email = "karla.rcarrillo@outlook.com", role = "aut"))
@@ -32,10 +31,10 @@ Imports:
   leaflet,
   profvis,
   mapview
-Suggests: 
-    testthat,
-    markdown,
-    rmarkdown,
-    covr
+Suggests:
+  testthat,
+  markdown,
+  rmarkdown,
+  covr
 Config/testthat/edition: 3
 VignetteBuilder: knitr
