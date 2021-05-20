@@ -37,4 +37,3 @@ Suggests:
   rmarkdown,
   covr
 Config/testthat/edition: 3
-VignetteBuilder: knitr
