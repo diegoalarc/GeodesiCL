@@ -23,6 +23,7 @@ Imports:
   rgdal,
   utils,
   knitr,
+  BiocManager,
   magrittr,
   methods,
   tibble,
