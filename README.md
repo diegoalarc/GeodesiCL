@@ -9,7 +9,7 @@
 ###### Attention: We are ready to go!!
 
 ---
-<img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="130" height="150" />
+<img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="160" height="180" />
 
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __Geometric Geodesy__ applying the necessary basic formulas.
