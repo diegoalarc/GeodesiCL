@@ -1,5 +1,5 @@
-Type: Package
 Package: GeodesiCL
+Type: Package
 Title: Geometric Geodesy Functions
 Version: 1.0.0
 Authors@R: c(
@@ -11,7 +11,6 @@ URL: https://github.com/diegoalarc/GeodesiCL
 BugReports: https://github.com/diegoalarc/GeodesiCL/issues
 Depends:
     R (>= 3.5.0)
-Date: 2021-05-21
 Roxygen: list(markdown = TRUE)
 Encoding: UTF-8
 Language: en-US
@@ -19,11 +18,13 @@ LazyData: true
 RoxygenNote: 7.1.1
 Imports: 
   sp,
+  xml2,
   readr,
   dplyr,
   rgdal,
   utils,
   knitr,
+  rvest,
   magrittr,
   methods,
   tibble,
