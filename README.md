@@ -9,7 +9,7 @@
 ###### Attention: We are ready to go!!
 
 ---
-<img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="160" height="180" />
+<img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="150" height="170" />
 
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __Geometric Geodesy__ applying the necessary basic formulas.
@@ -246,12 +246,10 @@ This script was made for testing purposes and may be used and modified in the fu
 ![](https://cranlogs.r-pkg.org/badges/GeodisCL?color=green)
 ![](https://cranlogs.r-pkg.org/badges/last-week/GeodisCL?color=green)
 [![Github All Releases](https://img.shields.io/github/downloads/diegoalarc/GeodesiCL/total.svg)]()
-[![HitCount](http://hits.dwyl.com/diegoalarc/GeodesiCL.svg)][HitCount-url]
 [![Codecov test coverage](https://codecov.io/gh/diegoalarc/GeodesiCL/branch/main/graph/badge.svg)][Codecov-test-coverage-url]
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[HitCount-url]: http://hits.dwyl.com/diegoalarc/GeodesiCL
 [contributors-shield]: https://img.shields.io/github/contributors/diegoalarc/GeodesiCL
 [contributors-url]: https://github.com/diegoalarc/GeodesiCL/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/diegoalarc/GeodesiCL
