@@ -203,7 +203,7 @@ After we already have the `system dependencies`, to use this package you should 
 install.packages("devtools")
 devtools::install_github("diegoalarc/GeodesiCL")
 ```
-!["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/man/image/r1.png "Example Image")
+!["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/r1.png "Example Image")
 
 ### Second option
 
@@ -212,7 +212,7 @@ If you already have experience using [R](https://www.r-project.org/) & [RStudio]
 ```r
 devtools::install_github("diegoalarc/GeodesiCL")
 ```
-!["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/man/image/r2.png "Example Image 2")
+!["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/r2.png "Example Image 2")
 
 ***
 ### Interesting fact
