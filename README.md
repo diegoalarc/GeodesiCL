@@ -1,7 +1,7 @@
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ***
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisCL?color=green)](https://cran.r-project.org/package=GeodisCL)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisiCL?color=green)](https://CRAN.R-project.org/package=GeodesiCL)
 [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)][R-CMD-check-url]
 [![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)][Project-Status-url]
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/diego.alarcondiaz@gmail.com)
@@ -210,9 +210,8 @@ devtools::install_github("diegoalarc/GeodesiCL")
 If you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a>  you could just copy the following command:
 
 ```r
-devtools::install_github("diegoalarc/GeodesiCL")
+install.packages("GeodesiCL")
 ```
-!["Example Image 2"](https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/r2.png "Example Image 2")
 
 ***
 ### Interesting fact
