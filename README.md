@@ -249,6 +249,7 @@ This script was made for testing purposes and may be used and modified in the fu
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
 [contributors-shield]: https://img.shields.io/github/contributors/diegoalarc/GeodesiCL
 [contributors-url]: https://github.com/diegoalarc/GeodesiCL/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/diegoalarc/GeodesiCL
