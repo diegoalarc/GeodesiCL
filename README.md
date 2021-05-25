@@ -1,7 +1,7 @@
 # <a href="https://github.com/diegoalarc/GeodesiCL">`GeodesiCL`</a>: A little journey into Geometric Geodesy.
 ***
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisiCL?color=green)](https://CRAN.R-project.org/package=GeodesiCL)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/GeodisiCL?color=brightgreen)](https://cran.r-project.org/web/checks/check_results_GeodesiCL.html)
 [![R-CMD-check](https://github.com/diegoalarc/GeodesiCL/workflows/R-CMD-check/badge.svg)][R-CMD-check-url]
 [![Project Status: Active ??? The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)][Project-Status-url]
 [![Say Thanks!](https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg)](https://saythanks.io/to/diego.alarcondiaz@gmail.com)
