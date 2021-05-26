@@ -1,6 +1,6 @@
-# GeodesiCL 1.0.0
+# GeodesiCL 1.0.1
 =====================================
-Initial release to CRAN (2015-09-05) with the following functions: 
+Initial release to CRAN (2021-05-25) with the following functions: 
 
 * arch()
 * cartesia()
@@ -15,7 +15,7 @@ Initial release to CRAN (2015-09-05) with the following functions:
 * radians()
 * rSL()
 * scalfactor()
-* sexagesimal()
+* sexagesimal() digits problem fixed 
 * Sin_1
 * TO_TM()
 * UTM_zone_hemisphere()
