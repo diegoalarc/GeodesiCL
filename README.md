@@ -12,6 +12,35 @@
 ---
 <img align="right" src="https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/logo.png" width="150" height="170" />
 
+## Installation
+#### Install system dependencies
+Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system:
+
+ * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/).
+ * Ubuntu: `sudo apt install gdal-bin libgdal-dev`
+ * MacOS: `brew install gdal --HEAD` or `brew install gdal`
+
+For more information on GDAL installation [Click here!](https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91)
+
+We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
+
+### First option
+
+After we already have the `system dependencies`, to use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/). Next, you need to install the <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a> package in order to start with the installation of the `GeodesiCL` package, then just copy and paste the following command into the [RStudio](https://rstudio.com/) console:
+
+```r
+install.packages("devtools")
+devtools::install_github("diegoalarc/GeodesiCL")
+```
+### Second option
+
+If you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), you could just copy the following command:
+
+```r
+install.packages("GeodesiCL")
+```
+
+***
 ## To begin with
 This package was created to introduce topographical and related engineers in the area of [Topography](https://en.wikipedia.org/wiki/Topography) and [Geodesy](https://en.wikipedia.org/wiki/Geodesy) as a basic introduction to __Geometric Geodesy__ applying the necessary basic formulas.
 
@@ -180,38 +209,6 @@ example(UTMtoLongLat)
 ?UTM_zone_hemisphere
 
 example(UTM_zone_hemisphere)
-```
-
-***
-
-## Installation
-#### Install system dependencies
-Please make sure that the [GDAL](https://www.gdal.org/) libraries are installed on your system:
-
- * Windows: use the [OSGeo4W installer](https://trac.osgeo.org/osgeo4w/).
- * Ubuntu: `sudo apt install gdal-bin libgdal-dev`
- * MacOS: `brew install gdal --HEAD` or `brew install gdal`
-
-For more information on GDAL installation [Click here!](https://medium.com/@egiron/how-to-install-gdal-and-qgis-on-macos-catalina-ca690dca4f91)
-
-We currently have two ways to install this package, as it is not yet finalized for posting to [CRAN Project](https://cran.r-project.org/).
-
-### First option
-
-After we already have the `system dependencies`, to use this package you should install [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/). Next, you need to install the <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a> package in order to start with the installation of the `GeodesiCL` package, then just copy and paste the following command into the [RStudio](https://rstudio.com/) console:
-
-```r
-install.packages("devtools")
-devtools::install_github("diegoalarc/GeodesiCL")
-```
-!["Example Image"](https://github.com/diegoalarc/GeodesiCL/blob/main/inst/figures/r1.png "Example Image")
-
-### Second option
-
-If you already have experience using [R](https://www.r-project.org/) & [RStudio](https://rstudio.com/), and also have installed <a href="https://www.r-project.org/nosvn/pandoc/devtools.html">`devtools`</a>  you could just copy the following command:
-
-```r
-install.packages("GeodesiCL")
 ```
 
 ***
