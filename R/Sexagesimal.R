@@ -22,5 +22,5 @@
 #' }
 sexagesimal <- function(x, y, z, digits = 4){
   value <- as.numeric(x-(y/60)-(z/3600))
-  return(round(value, digits))
+  return(as.numeric(format(round(value, digits), nsmall = digits)))
 }
