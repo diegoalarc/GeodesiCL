@@ -48,6 +48,9 @@ install.packages("GeodesiCL")
 ***
 ## Inside the package
 
+Check the PDF manual [here](https://cran.r-project.org/web/packages/GeodesiCL/GeodesiCL.pdf).
+
+### Quick overview
 The <a href="https://en.wikipedia.org/wiki/Ellipsoid">`Ellipsoids`</a> within the package are as follows:
 
 |`Number`|`Description`|`Ellipsoids`|`a`|`1/f`|
