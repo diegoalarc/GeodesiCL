@@ -8,3 +8,8 @@
 0 errors | 0 warnings | 0 note
 
 * This is a new release.
+
+## Resubmission
+This is a resubmission. In this version I have:
+
+* sexagesimal() digits problem fixed.
